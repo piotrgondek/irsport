@@ -1,12 +1,12 @@
 import React from 'react';
+import './App.css';
 import {
-  CardMedia,
   CssBaseline,
   ThemeProvider,
 } from '@mui/material';
-import intro from './assets/intro.mp4';
 import { dark, light } from './themes';
 import AppBar from './AppBar';
+import Intro from './Intro';
 import Coach from './Coach';
 import Timetable from './Timetable';
 import Cooperation from './Cooperation';
@@ -20,13 +20,7 @@ const App: React.FC<AppProps> = ({ autoPlay }) => (
   <ThemeProvider theme={dark}>
     <CssBaseline />
     <AppBar />
-    <CardMedia
-      component="video"
-      src={intro}
-      autoPlay={autoPlay}
-      loop
-      muted
-    />
+    <Intro autoPlay={autoPlay} />
     <Coach />
     <ThemeProvider theme={light}>
       <Timetable />

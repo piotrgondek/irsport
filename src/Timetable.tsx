@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-  Card,
-  CardContent,
+  Grid,
+  Paper,
   Table,
   TableBody,
   TableCell,
@@ -16,29 +16,43 @@ const Timetable: React.FC = () => {
   const memTable = React.useMemo(() => table, []);
 
   return (
-    <Card className="treningi">
-      <CardContent>
-        <Typography variant="h2">Harmonogram zajęć</Typography>
-        <TableContainer>
-          <Table>
-            <TableHead>
-              <TableRow>
-                {days.map((day) => <TableCell style={{ width: '1rem' }} key={day}>{day}</TableCell>)}
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {events.map((event) => (
-                <TableRow key={event}>
-                  {days.map((day) => (
-                    <TableCell key={day}>{memTable[day][event]}</TableCell>
-                  ))}
+    <Paper className="treningi">
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        sx={{
+          minHeight: '100vh',
+        }}
+      >
+        <Grid
+          item
+          xs={11}
+          md={10}
+          lg={8}
+        >
+          <Typography variant="h2">Harmonogram zajęć</Typography>
+          <TableContainer>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  {days.map((day) => <TableCell style={{ width: '1rem' }} key={day}>{day}</TableCell>)}
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </CardContent>
-    </Card>
+              </TableHead>
+              <TableBody>
+                {events.map((event) => (
+                  <TableRow key={event}>
+                    {days.map((day) => (
+                      <TableCell key={day}>{memTable[day][event]}</TableCell>
+                    ))}
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Grid>
+      </Grid>
+    </Paper>
   );
 };
 

@@ -9,11 +9,9 @@ const Coach: React.FC = () => (
     className="trener-adam-wargal"
     container
     justifyContent="center"
+    alignItems="center"
     sx={{
-      marginY: {
-        xs: 0,
-        md: 12,
-      },
+      minHeight: '100vh',
     }}
   >
     <Grid
