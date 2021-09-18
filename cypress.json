@@ -1,0 +1,8 @@
+{
+  "viewportWidth": 1536,
+  "viewportHeight": 960,
+  "component": {
+    "testFiles": "**/*.test.{js,ts,jsx,tsx}",
+    "componentFolder": "./src"
+  }
+}
