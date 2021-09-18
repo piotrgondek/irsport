@@ -47,7 +47,7 @@ const AppBar: React.FC<AppBarProps> = (props) => {
         if (selectedSection) {
           props[selectedSection]
             .current!
-            .scrollIntoView({ block: 'end', behavior: 'smooth' });
+            .scrollIntoView({ block: 'start', behavior: 'smooth' });
         }
       },
       [selectedSection],
