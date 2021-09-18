@@ -5,6 +5,10 @@ import App from './App';
 describe('App', () => {
   it('renders whole page', () => {
     mount(<App />);
-    cy.matchImageSnapshot();
+    cy.matchImageSnapshot('entering');
+    cy.get('.trener-adam-wargal').scrollIntoView();
+    cy.matchImageSnapshot('coach');
+    cy.get('.treningi').scrollIntoView();
+    cy.matchImageSnapshot('trainings');
   });
 });
