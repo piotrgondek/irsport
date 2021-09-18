@@ -5,24 +5,34 @@ import {
   ThemeProvider,
 } from '@mui/material';
 import intro from './assets/intro.mp4';
-import { dark } from './themes';
+import { dark, light } from './themes';
 import AppBar from './AppBar';
 import Coach from './Coach';
 import Timetable from './Timetable';
+import Cooperation from './Cooperation';
+import SpeedDial from './SpeedDial';
 
-const App: React.FC = () => (
+interface AppProps {
+  autoPlay: boolean
+}
+
+const App: React.FC<AppProps> = ({ autoPlay }) => (
   <ThemeProvider theme={dark}>
     <CssBaseline />
     <AppBar />
     <CardMedia
       component="video"
       src={intro}
-      autoPlay
+      autoPlay={autoPlay}
       loop
       muted
     />
     <Coach />
-    <Timetable />
+    <ThemeProvider theme={light}>
+      <Timetable />
+    </ThemeProvider>
+    <Cooperation />
+    <SpeedDial />
   </ThemeProvider>
 );
 

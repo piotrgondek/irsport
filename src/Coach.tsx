@@ -6,6 +6,7 @@ import adamWargal from './assets/AdamWargal.jpg';
 
 const Coach: React.FC = () => (
   <Grid
+    className="trener-adam-wargal"
     container
     justifyContent="center"
     sx={{

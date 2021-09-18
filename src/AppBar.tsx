@@ -3,6 +3,7 @@ import {
   AppBar as MuiAppBar,
   Button,
   Drawer,
+  Fab,
   IconButton,
   List,
   ListItem,
@@ -13,7 +14,7 @@ import {
   Typography,
   useScrollTrigger,
 } from '@mui/material';
-import { Facebook, YouTube } from '@mui/icons-material';
+import { Facebook, YouTube, Close } from '@mui/icons-material';
 
 interface Props {
   children: React.ReactElement
@@ -45,14 +46,23 @@ const AppBar: React.FC = () => {
       <HideOnScroll>
         <MuiAppBar position="sticky">
           <Toolbar>
-            <IconButton edge="start">
-              <Facebook />
-            </IconButton>
-            <IconButton edge="start">
+            <IconButton
+              edge="start"
+              href="https://www.youtube.com/channel/UCu0dFoZJMJmgubPZqP0Q6Qw/videos"
+              target="_blank"
+            >
               <YouTube />
+            </IconButton>
+            <IconButton
+              edge="start"
+              href="https://www.facebook.com/IRSsportywalki"
+              target="_blank"
+            >
+              <Facebook />
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>IRS</Typography>
             <Button
+              className="open-rodo"
               color="inherit"
               onClick={handleOpenDrawer}
             >
@@ -73,11 +83,24 @@ const AppBar: React.FC = () => {
           },
         }}
         >
-          <Typography variant="h3" gutterBottom>
+          <Fab
+            className="close-rodo"
+            size="small"
+            color="secondary"
+            onClick={handleCloseDrawer}
+            sx={{
+              position: 'absolute',
+              top: (theme) => theme.spacing(2),
+              right: (theme) => theme.spacing(4),
+            }}
+          >
+            <Close />
+          </Fab>
+          <Typography variant="h2" gutterBottom>
             Ochrona danych osobowych
           </Typography>
 
-          <Typography variant="h4">
+          <Typography variant="h3">
             Administratorami danych osobowych są
           </Typography>
 
@@ -98,7 +121,7 @@ const AppBar: React.FC = () => {
             Przetwarzanie danych osobowych odbywa się na zasadach współadministracji (art. 26 RODO)
           </Typography>
 
-          <Typography variant="h4">
+          <Typography variant="h3">
             Cel przetwarzania danych:
           </Typography>
 
@@ -120,24 +143,24 @@ const AppBar: React.FC = () => {
             </ListItem>
           </List>
 
-          <Typography>
+          <Typography variant="h3">
             Podstawa przetwarzania danych:
           </Typography>
 
-          <Typography variant="body2">
+          <Typography gutterBottom>
             Art. 6 ust. 1 lit b) RODO – wykonanie umowy, której stroną jest osoba, której dane dotyczą.
           </Typography>
 
-          <Typography>
+          <Typography variant="h4">
             Dane osobowe nie są przekazywane odbiorcom.
           </Typography>
 
-          <Typography>
+          <Typography gutterBottom>
             Dane będą przechowywane przez okres trwania umowy oraz po jej zakończeniu przez czas niezbędny do
             zabezpieczenia dochodzenia roszczeń.
           </Typography>
 
-          <Typography>
+          <Typography variant="h3">
             Osoba, której dane dotyczą, ma prawo:
           </Typography>
 
@@ -169,7 +192,7 @@ const AppBar: React.FC = () => {
             </ListItem>
           </List>
 
-          <Typography variant="h4">
+          <Typography variant="h3">
             Podanie danych osobowych jest dobrowolne, jednak warunkuje udział w zajęciach sportowych prowadzonych
             przez IRS i Wargalsport.
           </Typography>
