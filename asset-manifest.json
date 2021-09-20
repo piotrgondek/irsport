@@ -1,26 +1,28 @@
 {
   "files": {
-    "main.css": "/react-basics/static/css/main.bab0b925.chunk.css",
-    "main.js": "/react-basics/static/js/main.1d97bdce.chunk.js",
-    "main.js.map": "/react-basics/static/js/main.1d97bdce.chunk.js.map",
-    "runtime-main.js": "/react-basics/static/js/runtime-main.7beee824.js",
-    "runtime-main.js.map": "/react-basics/static/js/runtime-main.7beee824.js.map",
-    "static/css/2.f663ce83.chunk.css": "/react-basics/static/css/2.f663ce83.chunk.css",
-    "static/js/2.8d07648e.chunk.js": "/react-basics/static/js/2.8d07648e.chunk.js",
-    "static/js/2.8d07648e.chunk.js.map": "/react-basics/static/js/2.8d07648e.chunk.js.map",
-    "static/js/3.ebf625a2.chunk.js": "/react-basics/static/js/3.ebf625a2.chunk.js",
-    "static/js/3.ebf625a2.chunk.js.map": "/react-basics/static/js/3.ebf625a2.chunk.js.map",
-    "index.html": "/react-basics/index.html",
-    "static/css/2.f663ce83.chunk.css.map": "/react-basics/static/css/2.f663ce83.chunk.css.map",
-    "static/css/main.bab0b925.chunk.css.map": "/react-basics/static/css/main.bab0b925.chunk.css.map",
-    "static/js/2.8d07648e.chunk.js.LICENSE.txt": "/react-basics/static/js/2.8d07648e.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/react-basics/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2"
+    "main.css": "/irsport/static/css/main.578ef51a.chunk.css",
+    "main.js": "/irsport/static/js/main.720cae1f.chunk.js",
+    "main.js.map": "/irsport/static/js/main.720cae1f.chunk.js.map",
+    "runtime-main.js": "/irsport/static/js/runtime-main.884f4d14.js",
+    "runtime-main.js.map": "/irsport/static/js/runtime-main.884f4d14.js.map",
+    "static/css/2.7adab8b9.chunk.css": "/irsport/static/css/2.7adab8b9.chunk.css",
+    "static/js/2.2bc39b93.chunk.js": "/irsport/static/js/2.2bc39b93.chunk.js",
+    "static/js/2.2bc39b93.chunk.js.map": "/irsport/static/js/2.2bc39b93.chunk.js.map",
+    "static/js/3.f959d22b.chunk.js": "/irsport/static/js/3.f959d22b.chunk.js",
+    "static/js/3.f959d22b.chunk.js.map": "/irsport/static/js/3.f959d22b.chunk.js.map",
+    "index.html": "/irsport/index.html",
+    "static/css/2.7adab8b9.chunk.css.map": "/irsport/static/css/2.7adab8b9.chunk.css.map",
+    "static/css/main.578ef51a.chunk.css.map": "/irsport/static/css/main.578ef51a.chunk.css.map",
+    "static/js/2.2bc39b93.chunk.js.LICENSE.txt": "/irsport/static/js/2.2bc39b93.chunk.js.LICENSE.txt",
+    "static/media/AdamWargal.813bdb39.jpg": "/irsport/static/media/AdamWargal.813bdb39.jpg",
+    "static/media/intro.c45ec456.mp4": "/irsport/static/media/intro.c45ec456.mp4",
+    "static/media/index.css": "/irsport/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.7beee824.js",
-    "static/css/2.f663ce83.chunk.css",
-    "static/js/2.8d07648e.chunk.js",
-    "static/css/main.bab0b925.chunk.css",
-    "static/js/main.1d97bdce.chunk.js"
+    "static/js/runtime-main.884f4d14.js",
+    "static/css/2.7adab8b9.chunk.css",
+    "static/js/2.2bc39b93.chunk.js",
+    "static/css/main.578ef51a.chunk.css",
+    "static/js/main.720cae1f.chunk.js"
   ]
 }
