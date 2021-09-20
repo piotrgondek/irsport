@@ -1,25 +1,28 @@
 {
   "files": {
-    "main.js": "/irsport/static/js/main.3f5cfbdd.chunk.js",
-    "main.js.map": "/irsport/static/js/main.3f5cfbdd.chunk.js.map",
-    "runtime-main.js": "/irsport/static/js/runtime-main.b422e6e9.js",
-    "runtime-main.js.map": "/irsport/static/js/runtime-main.b422e6e9.js.map",
+    "main.css": "/irsport/static/css/main.578ef51a.chunk.css",
+    "main.js": "/irsport/static/js/main.0b39f71f.chunk.js",
+    "main.js.map": "/irsport/static/js/main.0b39f71f.chunk.js.map",
+    "runtime-main.js": "/irsport/static/js/runtime-main.358fc20d.js",
+    "runtime-main.js.map": "/irsport/static/js/runtime-main.358fc20d.js.map",
     "static/css/2.7adab8b9.chunk.css": "/irsport/static/css/2.7adab8b9.chunk.css",
-    "static/js/2.367c17ae.chunk.js": "/irsport/static/js/2.367c17ae.chunk.js",
-    "static/js/2.367c17ae.chunk.js.map": "/irsport/static/js/2.367c17ae.chunk.js.map",
-    "static/js/3.6a9fa151.chunk.js": "/irsport/static/js/3.6a9fa151.chunk.js",
-    "static/js/3.6a9fa151.chunk.js.map": "/irsport/static/js/3.6a9fa151.chunk.js.map",
+    "static/js/2.f3ec0159.chunk.js": "/irsport/static/js/2.f3ec0159.chunk.js",
+    "static/js/2.f3ec0159.chunk.js.map": "/irsport/static/js/2.f3ec0159.chunk.js.map",
+    "static/js/3.9bd83133.chunk.js": "/irsport/static/js/3.9bd83133.chunk.js",
+    "static/js/3.9bd83133.chunk.js.map": "/irsport/static/js/3.9bd83133.chunk.js.map",
     "index.html": "/irsport/index.html",
     "static/css/2.7adab8b9.chunk.css.map": "/irsport/static/css/2.7adab8b9.chunk.css.map",
-    "static/js/2.367c17ae.chunk.js.LICENSE.txt": "/irsport/static/js/2.367c17ae.chunk.js.LICENSE.txt",
+    "static/css/main.578ef51a.chunk.css.map": "/irsport/static/css/main.578ef51a.chunk.css.map",
+    "static/js/2.f3ec0159.chunk.js.LICENSE.txt": "/irsport/static/js/2.f3ec0159.chunk.js.LICENSE.txt",
     "static/media/AdamWargal.813bdb39.jpg": "/irsport/static/media/AdamWargal.813bdb39.jpg",
     "static/media/intro.c45ec456.mp4": "/irsport/static/media/intro.c45ec456.mp4",
     "static/media/index.css": "/irsport/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.b422e6e9.js",
+    "static/js/runtime-main.358fc20d.js",
     "static/css/2.7adab8b9.chunk.css",
-    "static/js/2.367c17ae.chunk.js",
-    "static/js/main.3f5cfbdd.chunk.js"
+    "static/js/2.f3ec0159.chunk.js",
+    "static/css/main.578ef51a.chunk.css",
+    "static/js/main.0b39f71f.chunk.js"
   ]
 }
