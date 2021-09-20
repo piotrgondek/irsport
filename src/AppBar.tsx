@@ -1,37 +1,33 @@
+/* eslint-disable react/no-unused-prop-types */
 import React from 'react';
 import {
   AppBar as MuiAppBar,
-  Button,
   Drawer,
   Fab,
   IconButton,
   List,
   ListItem,
+  ListItemIcon,
   ListItemText,
+  Menu,
+  MenuItem,
   Paper,
-  Slide,
   Toolbar,
   Typography,
-  useScrollTrigger,
 } from '@mui/material';
-import { Facebook, YouTube, Close } from '@mui/icons-material';
+import {
+  Facebook, YouTube, Close, Menu as MenuIcon, AssignmentInd, Person, Schedule,
+} from '@mui/icons-material';
 
-interface Props {
-  children: React.ReactElement
+interface AppBarProps {
+  coach: React.MutableRefObject<HTMLElement | null>
+  timetable: React.MutableRefObject<HTMLElement | null>
 }
 
-const HideOnScroll: React.FC<Props> = ({ children }) => {
-  const trigger = useScrollTrigger();
+type Section = keyof AppBarProps;
 
-  return (
-    <Slide appear={false} direction="down" in={!trigger}>
-      {children}
-    </Slide>
-  );
-};
-
-const AppBar: React.FC = () => {
-  const [openDrawer, setOpenDrawer] = React.useState<boolean>();
+const AppBar: React.FC<AppBarProps> = (props) => {
+  const [isDrawerOpened, setOpenDrawer] = React.useState<boolean>();
 
   const handleOpenDrawer = () => {
     setOpenDrawer(true);
@@ -41,40 +37,116 @@ const AppBar: React.FC = () => {
     setOpenDrawer(false);
   };
 
+  const MenuButton: React.FC = () => {
+    const [selectedSection, setSelectedSection] = React.useState<Section>();
+    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+    const open = Boolean(anchorEl);
+
+    React.useEffect(
+      () => {
+        if (selectedSection) {
+          props[selectedSection]
+            .current!
+            .scrollIntoView({ block: 'end', behavior: 'smooth' });
+        }
+      },
+      [selectedSection],
+    );
+
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+      setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+
+    const scrollTo = (section: Section) => () => {
+      handleClose();
+      setSelectedSection(section);
+    };
+
+    return (
+      <>
+        <IconButton
+          id="irsMenu"
+          size="large"
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          sx={{ mr: 2 }}
+          onClick={handleClick}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Menu
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            'aria-labelledby': 'basic-button',
+          }}
+        >
+          <MenuItem
+            id="irsAdamWargal"
+            onClick={scrollTo('coach')}
+          >
+            <ListItemIcon>
+              <Person />
+            </ListItemIcon>
+            <ListItemText>Trener</ListItemText>
+          </MenuItem>
+          <MenuItem
+            id="irsTreningi"
+            onClick={scrollTo('timetable')}
+          >
+            <ListItemIcon>
+              <Schedule />
+            </ListItemIcon>
+            <ListItemText>Harmonogram treningów</ListItemText>
+          </MenuItem>
+          <MenuItem
+            id="irsRODO"
+            onClick={handleOpenDrawer}
+            className="open-rodo"
+          >
+            <ListItemIcon>
+              <AssignmentInd />
+            </ListItemIcon>
+            <ListItemText>RODO</ListItemText>
+          </MenuItem>
+        </Menu>
+      </>
+    );
+  };
+
   return (
     <>
-      <HideOnScroll>
-        <MuiAppBar position="sticky">
-          <Toolbar>
-            <IconButton
-              edge="start"
-              href="https://www.youtube.com/channel/UCu0dFoZJMJmgubPZqP0Q6Qw/videos"
-              target="_blank"
-            >
-              <YouTube />
-            </IconButton>
-            <IconButton
-              edge="start"
-              href="https://www.facebook.com/IRSsportywalki"
-              target="_blank"
-            >
-              <Facebook />
-            </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>IRS</Typography>
-            <Button
-              className="open-rodo"
-              color="inherit"
-              onClick={handleOpenDrawer}
-            >
-              RODO
-            </Button>
-          </Toolbar>
-        </MuiAppBar>
-      </HideOnScroll>
+      <MuiAppBar>
+        <Toolbar>
+          <MenuButton />
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            IRS Sport
+          </Typography>
+          <IconButton
+            edge="end"
+            href="https://www.youtube.com/channel/UCu0dFoZJMJmgubPZqP0Q6Qw/videos"
+            target="_blank"
+          >
+            <YouTube />
+          </IconButton>
+          <IconButton
+            edge="end"
+            href="https://www.facebook.com/IRSsportywalki"
+            target="_blank"
+          >
+            <Facebook />
+          </IconButton>
+        </Toolbar>
+      </MuiAppBar>
       <Drawer
-        anchor="right"
         onClose={handleCloseDrawer}
-        open={openDrawer}
+        open={isDrawerOpened}
       >
         <Paper sx={{
           p: {

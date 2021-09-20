@@ -16,18 +16,26 @@ interface AppProps {
   autoPlay: boolean
 }
 
-const App: React.FC<AppProps> = ({ autoPlay }) => (
-  <ThemeProvider theme={dark}>
-    <CssBaseline />
-    <AppBar />
-    <Intro autoPlay={autoPlay} />
-    <Coach />
-    <ThemeProvider theme={light}>
-      <Timetable />
+const App: React.FC<AppProps> = ({ autoPlay }) => {
+  const coachRef = React.useRef<HTMLElement>(null);
+  const timetableRef = React.useRef<HTMLElement>(null);
+
+  return (
+    <ThemeProvider theme={dark}>
+      <CssBaseline />
+      <AppBar
+        coach={coachRef}
+        timetable={timetableRef}
+      />
+      <Intro autoPlay={autoPlay} />
+      <Coach ref={coachRef} />
+      <ThemeProvider theme={light}>
+        <Timetable ref={timetableRef} />
+      </ThemeProvider>
+      <Cooperation />
+      <SpeedDial />
     </ThemeProvider>
-    <Cooperation />
-    <SpeedDial />
-  </ThemeProvider>
-);
+  );
+};
 
 export default App;

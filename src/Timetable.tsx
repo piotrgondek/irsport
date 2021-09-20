@@ -12,11 +12,14 @@ import {
 } from '@mui/material';
 import { days, table, events } from './data/trainings';
 
-const Timetable: React.FC = () => {
+const Timetable = React.forwardRef<HTMLElement>((_, ref) => {
   const memTable = React.useMemo(() => table, []);
 
   return (
-    <Paper className="treningi">
+    <Paper
+      className="irs-treningi"
+      ref={ref as any}
+    >
       <Grid
         container
         justifyContent="center"
@@ -31,7 +34,7 @@ const Timetable: React.FC = () => {
           md={10}
           lg={8}
         >
-          <Typography variant="h2">Harmonogram zajęć</Typography>
+          <Typography variant="h2">Harmonogram treningów</Typography>
           <TableContainer>
             <Table>
               <TableHead>
@@ -54,6 +57,6 @@ const Timetable: React.FC = () => {
       </Grid>
     </Paper>
   );
-};
+});
 
 export default Timetable;

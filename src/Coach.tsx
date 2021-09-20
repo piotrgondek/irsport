@@ -4,9 +4,10 @@ import {
 } from '@mui/material';
 import adamWargal from './assets/AdamWargal.jpg';
 
-const Coach: React.FC = () => (
+const Coach = React.forwardRef<HTMLElement>((_, ref) => (
   <Grid
-    className="trener-adam-wargal"
+    ref={ref as any}
+    className="irs-adam-wargal"
     container
     justifyContent="center"
     alignItems="center"
@@ -54,6 +55,6 @@ const Coach: React.FC = () => (
       </Card>
     </Grid>
   </Grid>
-);
+));
 
 export default Coach;

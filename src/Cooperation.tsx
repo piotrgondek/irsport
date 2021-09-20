@@ -22,7 +22,7 @@ const Cooperation: React.FC = () => {
 
   return (
     <Grid
-      className="partnerzy"
+      className="irs-partnerzy"
       container
       direction="row"
       justifyContent="space-evenly"

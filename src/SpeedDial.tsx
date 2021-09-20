@@ -23,19 +23,19 @@ const SpeedDial: React.FC = () => {
     },
     {
       icon: (
-        <IconButton href="tel:535673205" target="_blank">
-          <Phone />
-        </IconButton>
-      ),
-      name: '535 673 205',
-    },
-    {
-      icon: (
         <IconButton href="https://goo.gl/maps/iEsyVu59UeEajRh18" target="_blank">
           <Map />
         </IconButton>
       ),
       name: 'ul. Wrocławska 11a Kraków',
+    },
+    {
+      icon: (
+        <IconButton href="tel:535673205" target="_blank">
+          <Phone />
+        </IconButton>
+      ),
+      name: '535 673 205',
     },
   ],
   []);
@@ -45,8 +45,14 @@ const SpeedDial: React.FC = () => {
       ariaLabel="Kontakt"
       sx={{
         position: 'fixed',
-        bottom: (theme) => theme.spacing(6),
-        right: (theme) => theme.spacing(6),
+        bottom: (theme) => ({
+          xs: theme.spacing(2),
+          lg: theme.spacing(6),
+        }),
+        right: (theme) => ({
+          xs: theme.spacing(2),
+          lg: theme.spacing(6),
+        }),
       }}
       icon={(
         <Contacts

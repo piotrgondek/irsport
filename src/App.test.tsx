@@ -10,12 +10,12 @@ describe('App', () => {
 
   it('renders whole page', () => {
     mount(<App autoPlay={false} />);
-    cy.get('.trener-adam-wargal').scrollIntoView();
-    cy.matchImageSnapshot('coach');
-    cy.get('.treningi').scrollIntoView();
-    cy.matchImageSnapshot('trainings');
-    cy.get('.partnerzy').scrollIntoView();
-    cy.matchImageSnapshot('partnerzy');
+    cy.get('.irs-adam-wargal').scrollIntoView();
+    cy.matchImageSnapshot('01 Coach');
+    cy.get('.irs-treningi').scrollIntoView();
+    cy.matchImageSnapshot('02 Timetable');
+    cy.get('.irs-partnerzy').scrollIntoView();
+    cy.matchImageSnapshot('03 Cooperation');
   });
 
   it('opens speed dial menu', () => {
@@ -26,9 +26,10 @@ describe('App', () => {
 
   it('displayes RODO', () => {
     mount(<App autoPlay={false} />);
-    cy.get('.open-rodo').click();
-    cy.matchImageSnapshot('rodoVisible');
+    cy.get('#irsMenu').click();
+    cy.get('#irsRODO').click();
+    cy.matchImageSnapshot('01 RODO visible');
     cy.get('.close-rodo').click();
-    cy.matchImageSnapshot('rodoInvisible');
+    cy.matchImageSnapshot('02 RODO invisible');
   });
 });
