@@ -1,7 +1,7 @@
 {
   "name": "react-basics",
   "version": "0.1.0",
-  "homepage": "https://piotrgondek.github.io/irsport",
+  "homepage": "https://irsport.pl",
   "private": true,
   "dependencies": {
     "@commitlint/cli": "13.1.0",
