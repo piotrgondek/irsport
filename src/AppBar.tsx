@@ -38,7 +38,7 @@ const AppBar: React.FC<AppBarProps> = (props) => {
   };
 
   const MenuButton: React.FC = () => {
-    const [selectedSection, setSelectedSection] = React.useState<Section>();
+    const [selectedSection, setSelectedSection] = React.useState<Section | undefined>();
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
 
@@ -48,6 +48,7 @@ const AppBar: React.FC<AppBarProps> = (props) => {
           props[selectedSection]
             .current!
             .scrollIntoView({ block: 'start', behavior: 'smooth' });
+          setSelectedSection(undefined);
         }
       },
       [selectedSection],
