@@ -48,7 +48,7 @@ module.exports = {
     // '@typescript-eslint/no-use-before-define': ['error'],
     // 'no-shadow': 'off', // because of '@typescript-eslint/no-shadow'
     // '@typescript-eslint/no-shadow': ['error'],
-    // 'max-len': ['error', { code: 120 }],
+    'max-len': ['error', { code: 120 }],
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
   },
 };
