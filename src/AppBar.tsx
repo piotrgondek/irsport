@@ -11,13 +11,19 @@ import {
   ListItemText,
   Menu,
   MenuItem,
-  Paper,
   Toolbar,
   Typography,
 } from '@mui/material';
 import {
-  Facebook, YouTube, Close, Menu as MenuIcon, AssignmentInd, Person, Schedule,
+  Facebook,
+  YouTube,
+  Close,
+  Menu as MenuIcon,
+  AssignmentInd,
+  Person,
+  Schedule,
 } from '@mui/icons-material';
+import RodoPoint from './RodoPoint';
 
 interface AppBarProps {
   coach: React.MutableRefObject<HTMLElement | null>
@@ -149,34 +155,20 @@ const AppBar: React.FC<AppBarProps> = (props) => {
         onClose={handleCloseDrawer}
         open={isDrawerOpened}
       >
-        <Paper sx={{
-          p: {
-            xs: 2,
-            md: 12,
-          },
-        }}
+        <Fab
+          className="close-rodo"
+          size="small"
+          color="secondary"
+          onClick={handleCloseDrawer}
+          sx={{
+            position: 'absolute',
+            top: (theme) => theme.spacing(2),
+            right: (theme) => theme.spacing(4),
+          }}
         >
-          <Fab
-            className="close-rodo"
-            size="small"
-            color="secondary"
-            onClick={handleCloseDrawer}
-            sx={{
-              position: 'absolute',
-              top: (theme) => theme.spacing(2),
-              right: (theme) => theme.spacing(4),
-            }}
-          >
-            <Close />
-          </Fab>
-          <Typography variant="h2" gutterBottom>
-            Ochrona danych osobowych
-          </Typography>
-
-          <Typography variant="h3">
-            Administratorami danych osobowych są
-          </Typography>
-
+          <Close />
+        </Fab>
+        <RodoPoint header="Administratorami danych osobowych są">
           <List>
             <ListItem>
               <ListItemText>
@@ -190,14 +182,12 @@ const AppBar: React.FC<AppBarProps> = (props) => {
             </ListItem>
           </List>
 
-          <Typography gutterBottom>
+          <Typography variant="body2">
             Przetwarzanie danych osobowych odbywa się na zasadach współadministracji (art. 26 RODO)
           </Typography>
+        </RodoPoint>
 
-          <Typography variant="h3">
-            Cel przetwarzania danych:
-          </Typography>
-
+        <RodoPoint header="Cel przetwarzania danych">
           <List>
             <ListItem>
               <ListItemText>
@@ -215,28 +205,22 @@ const AppBar: React.FC<AppBarProps> = (props) => {
               </ListItemText>
             </ListItem>
           </List>
+        </RodoPoint>
 
-          <Typography variant="h3">
-            Podstawa przetwarzania danych:
-          </Typography>
-
-          <Typography gutterBottom>
+        <RodoPoint header="Podstawa przetwarzania danych">
+          <Typography variant="body1">
             Art. 6 ust. 1 lit b) RODO – wykonanie umowy, której stroną jest osoba, której dane dotyczą.
           </Typography>
+        </RodoPoint>
 
-          <Typography variant="h4">
-            Dane osobowe nie są przekazywane odbiorcom.
-          </Typography>
-
-          <Typography gutterBottom>
+        <RodoPoint header="Dane osobowe nie są przekazywane odbiorcom">
+          <Typography variant="body1">
             Dane będą przechowywane przez okres trwania umowy oraz po jej zakończeniu przez czas niezbędny do
             zabezpieczenia dochodzenia roszczeń.
           </Typography>
+        </RodoPoint>
 
-          <Typography variant="h3">
-            Osoba, której dane dotyczą, ma prawo:
-          </Typography>
-
+        <RodoPoint header="Osoba, której dane dotyczą, ma prawo">
           <List>
             <ListItem>
               <ListItemText>
@@ -265,11 +249,11 @@ const AppBar: React.FC<AppBarProps> = (props) => {
             </ListItem>
           </List>
 
-          <Typography variant="h3">
+          <Typography variant="body2">
             Podanie danych osobowych jest dobrowolne, jednak warunkuje udział w zajęciach sportowych prowadzonych
             przez IRS i Wargalsport.
           </Typography>
-        </Paper>
+        </RodoPoint>
       </Drawer>
     </>
   );
