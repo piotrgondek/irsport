@@ -14,6 +14,7 @@ import {
   MenuItem,
   Toolbar,
   Typography,
+  SvgIcon,
 } from '@mui/material';
 import {
   Facebook,
@@ -26,6 +27,7 @@ import {
   PlayCircle,
 } from '@mui/icons-material';
 import RodoPoint from './RodoPoint';
+import { ReactComponent as IrsIcon } from './assets/IRS.svg';
 
 interface AppBarProps {
   coach: React.MutableRefObject<HTMLElement | null>
@@ -145,6 +147,12 @@ const AppBar: React.FC<AppBarProps> = (props) => {
       <MuiAppBar>
         <Toolbar>
           <MenuButton />
+          <SvgIcon
+            fontSize="large"
+            component={IrsIcon}
+            viewBox="0 0 1786 1586"
+            sx={{ mr: 2 }}
+          />
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             IRS Sport
           </Typography>
