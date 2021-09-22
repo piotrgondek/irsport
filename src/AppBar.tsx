@@ -2,6 +2,7 @@
 import React from 'react';
 import {
   AppBar as MuiAppBar,
+  Divider,
   Drawer,
   Fab,
   IconButton,
@@ -13,6 +14,7 @@ import {
   MenuItem,
   Toolbar,
   Typography,
+  SvgIcon,
 } from '@mui/material';
 import {
   Facebook,
@@ -22,12 +24,15 @@ import {
   AssignmentInd,
   Person,
   Schedule,
+  PlayCircle,
 } from '@mui/icons-material';
 import RodoPoint from './RodoPoint';
+import { ReactComponent as IrsIcon } from './assets/IRS.svg';
 
 interface AppBarProps {
   coach: React.MutableRefObject<HTMLElement | null>
   timetable: React.MutableRefObject<HTMLElement | null>
+  movies: React.MutableRefObject<HTMLElement | null>
 }
 
 type Section = keyof AppBarProps;
@@ -113,6 +118,16 @@ const AppBar: React.FC<AppBarProps> = (props) => {
             <ListItemText>Harmonogram treningów</ListItemText>
           </MenuItem>
           <MenuItem
+            id="irsFilmy"
+            onClick={scrollTo('movies')}
+          >
+            <ListItemIcon>
+              <PlayCircle />
+            </ListItemIcon>
+            <ListItemText>Filmy</ListItemText>
+          </MenuItem>
+          <Divider />
+          <MenuItem
             id="irsRODO"
             onClick={handleOpenDrawer}
             className="open-rodo"
@@ -132,6 +147,12 @@ const AppBar: React.FC<AppBarProps> = (props) => {
       <MuiAppBar>
         <Toolbar>
           <MenuButton />
+          <SvgIcon
+            fontSize="large"
+            component={IrsIcon}
+            viewBox="0 0 1786 1586"
+            sx={{ mr: 2 }}
+          />
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             IRS Sport
           </Typography>

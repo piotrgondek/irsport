@@ -1,46 +1,58 @@
 import React from 'react';
 import {
+  Box,
   Grid,
-  Typography,
+  useMediaQuery,
 } from '@mui/material';
 import YouTube from 'react-youtube';
+import SectionGrid from './SectionGrid';
+import { dark } from './themes';
 
-const videos = [
-  'uJPirDGjdKE',
-  'OiN01w9Dyds',
-  'VaQuUCqgTnA',
-  'sut_mn5XRXk',
-  'ibcZHeJip_Y',
-].map((video) => (
-  <Grid
-    item
-    xs={12}
-    sx={{
-      textAlign: 'center',
-    }}
-  >
-    <YouTube
-      videoId={video}
-      opts={{
-        width: '1000vw',
-        // height: '100',
-      }}
-    />
-  </Grid>
-));
+const Movies = React.forwardRef((_, ref) => {
+  const lg = useMediaQuery(dark.breakpoints.up('md'));
 
-const Movies: React.FC = () => (
-  <>
-    <Typography variant="h2">YouTube</Typography>
-    <Grid
-      rowSpacing={2}
-      container
-      justifyContent="space-around"
-      alignItems="stretch"
+  const videos = React.useMemo<string[]>(
+    () => [
+      '-5G9aAxYNVc',
+      'uJPirDGjdKE',
+      'OiN01w9Dyds',
+      'VaQuUCqgTnA',
+      'sut_mn5XRXk',
+      'ibcZHeJip_Y',
+    ],
+    [],
+  );
+
+  return (
+    <Box
+      className="irs-filmy"
+      ref={ref as any}
     >
-      {videos}
-    </Grid>
-  </>
-);
+      <SectionGrid>
+        <Grid
+          container
+          spacing={2}
+        >
+          {videos.map((video) => (
+            <Grid
+              key={video}
+              item
+              md={6}
+              xs={12}
+            >
+              <YouTube
+                videoId={video}
+                opts={{
+                  width: '100%',
+                  height: lg ? '200px' : '160px',
+                }}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </SectionGrid>
+    </Box>
+  );
+});
 
 export default Movies;

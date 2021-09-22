@@ -11,6 +11,7 @@ import Coach from './Coach';
 import Timetable from './Timetable';
 import Cooperation from './Cooperation';
 import SpeedDial from './SpeedDial';
+import Movies from './Movies';
 
 interface AppProps {
   autoPlay: boolean
@@ -19,6 +20,7 @@ interface AppProps {
 const App: React.FC<AppProps> = ({ autoPlay }) => {
   const coachRef = React.useRef<HTMLElement>(null);
   const timetableRef = React.useRef<HTMLElement>(null);
+  const moviewsRef = React.useRef<HTMLElement>(null);
 
   return (
     <ThemeProvider theme={dark}>
@@ -26,13 +28,17 @@ const App: React.FC<AppProps> = ({ autoPlay }) => {
       <AppBar
         coach={coachRef}
         timetable={timetableRef}
+        movies={moviewsRef}
       />
       <Intro autoPlay={autoPlay} />
       <Coach ref={coachRef} />
       <ThemeProvider theme={light}>
         <Timetable ref={timetableRef} />
       </ThemeProvider>
-      <Cooperation />
+      <Movies ref={moviewsRef} />
+      <ThemeProvider theme={light}>
+        <Cooperation />
+      </ThemeProvider>
       <SpeedDial />
     </ThemeProvider>
   );

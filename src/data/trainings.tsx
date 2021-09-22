@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import * as React from 'react';
 
 export const days = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek'];
@@ -7,55 +8,52 @@ export const table = {
     null,
     (
       <>
-        <div>Kickboxing</div>
-        <div>IRS kids dzieci</div>
-        <div>17:00 - 18:00</div>
+        <Typography variant="body1">Kickboxing</Typography>
+        <Typography variant="body2">IRS kids dzieci</Typography>
+        <Typography variant="overline">17:00 - 18:00</Typography>
       </>
     ),
     (
       <>
-        <div>Boks dla kobiet</div>
-        <div>łączona</div>
-        <div>18:00 - 19:00</div>
+        <Typography variant="body1">Boks dla kobiet</Typography>
+        <Typography variant="body2">łączona</Typography>
+        <Typography variant="overline">18:00 - 19:00</Typography>
       </>
     ),
     (
       <>
-        <div>Boks</div>
-        <div>zaawansowana</div>
-        <div>19:00 - 20:00</div>
+        <Typography variant="body1">Boks</Typography>
+        <Typography variant="body2">zaawansowana</Typography>
+        <Typography variant="overline">19:00 - 20:00</Typography>
       </>
     ),
   ],
   [days[1]]: [
     (
       <>
-        <div>Boks</div>
-        <div>8:00 - 9:00</div>
+        <Typography variant="body1">Boks</Typography>
+        <Typography variant="overline">8:00 - 9:00</Typography>
       </>
     ),
     (
       <>
-        <div>Kickboxing</div>
-        <div>łączona</div>
-        <div>17:00 - 18:00</div>
+        <Typography variant="body1">Kickboxing</Typography>
+        <Typography variant="body2">łączona</Typography>
+        <Typography variant="overline">17:00 - 18:00</Typography>
       </>
     ),
     (
       <>
-        <div>
-          Fight Cross
-          <br />
-          trening siłowo-wytrzymałościowy
-        </div>
-        <div>18:00 - 19:00</div>
+        <Typography variant="body1">Fight Cross</Typography>
+        <Typography variant="body2">trening siłowo-wytrzymałościowy</Typography>
+        <Typography variant="overline">18:00 - 19:00</Typography>
       </>
     ),
     (
       <>
-        <div>Boks</div>
-        <div>początkująca</div>
-        <div>19:00 - 20:00</div>
+        <Typography variant="body1">Boks</Typography>
+        <Typography variant="body2">początkująca</Typography>
+        <Typography variant="overline">19:00 - 20:00</Typography>
       </>
     ),
   ],
@@ -63,52 +61,52 @@ export const table = {
     null,
     (
       <>
-        <div>Kickboxing</div>
-        <div>IRS kids dzieci</div>
-        <div>17:00 - 18:00</div>
+        <Typography variant="body1">Kickboxing</Typography>
+        <Typography variant="body2">IRS kids dzieci</Typography>
+        <Typography variant="overline">17:00 - 18:00</Typography>
       </>
     ),
     (
       <>
-        <div>Boks</div>
-        <div>zaawansowana</div>
-        <div>18:00 - 19:00</div>
+        <Typography variant="body1">Boks</Typography>
+        <Typography variant="body2">zaawansowana</Typography>
+        <Typography variant="overline">18:00 - 19:00</Typography>
       </>
     ),
     (
       <>
-        <div>Boks</div>
-        <div>sparingi</div>
-        <div>19:00 - 20:00</div>
+        <Typography variant="body1">Boks</Typography>
+        <Typography variant="body2">sparingi</Typography>
+        <Typography variant="overline">19:00 - 20:00</Typography>
       </>
     ),
   ],
   [days[3]]: [
     (
       <>
-        <div>Boks</div>
-        <div>8:00 - 9:00</div>
+        <Typography variant="body1">Boks</Typography>
+        <Typography variant="overline">8:00 - 9:00</Typography>
       </>
     ),
     (
       <>
-        <div>Kickboxing</div>
-        <div>łączona</div>
-        <div>17:00 - 18:00</div>
+        <Typography variant="body1">Kickboxing</Typography>
+        <Typography variant="body2">łączona</Typography>
+        <Typography variant="overline">17:00 - 18:00</Typography>
       </>
     ),
     (
       <>
-        <div>Boks dla kobiet</div>
-        <div>zaawansowana</div>
-        <div>18:00 - 19:00</div>
+        <Typography variant="body1">Boks dla kobiet</Typography>
+        <Typography variant="body2">zaawansowana</Typography>
+        <Typography variant="overline">18:00 - 19:00</Typography>
       </>
     ),
     (
       <>
-        <div>Boks</div>
-        <div>zaawansowana</div>
-        <div>19:00 - 20:00</div>
+        <Typography variant="body1">Boks</Typography>
+        <Typography variant="body2">zaawansowana</Typography>
+        <Typography variant="overline">19:00 - 20:00</Typography>
       </>
     ),
   ],
@@ -117,16 +115,16 @@ export const table = {
     null,
     (
       <>
-        <div>Boks dla kobiet</div>
-        <div>początkująca</div>
-        <div>18:00 - 19:00</div>
+        <Typography variant="body1">Boks dla kobiet</Typography>
+        <Typography variant="body2">początkująca</Typography>
+        <Typography variant="overline">18:00 - 19:00</Typography>
       </>
     ),
     (
       <>
-        <div>Boks</div>
-        <div>początkująca</div>
-        <div>19:00 - 20:00</div>
+        <Typography variant="body1">Boks</Typography>
+        <Typography variant="body2">początkująca</Typography>
+        <Typography variant="overline">19:00 - 20:00</Typography>
       </>
     ),
   ],
