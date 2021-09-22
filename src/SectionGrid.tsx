@@ -23,7 +23,7 @@ const SectionGrid: React.FC = ({ children }) => (
       lg={6}
       md={8}
       sm={10}
-      xs={12}
+      xs={11}
     >
       {children}
     </Grid>

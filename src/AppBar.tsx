@@ -2,6 +2,7 @@
 import React from 'react';
 import {
   AppBar as MuiAppBar,
+  Divider,
   Drawer,
   Fab,
   IconButton,
@@ -22,12 +23,14 @@ import {
   AssignmentInd,
   Person,
   Schedule,
+  PlayCircle,
 } from '@mui/icons-material';
 import RodoPoint from './RodoPoint';
 
 interface AppBarProps {
   coach: React.MutableRefObject<HTMLElement | null>
   timetable: React.MutableRefObject<HTMLElement | null>
+  movies: React.MutableRefObject<HTMLElement | null>
 }
 
 type Section = keyof AppBarProps;
@@ -112,6 +115,16 @@ const AppBar: React.FC<AppBarProps> = (props) => {
             </ListItemIcon>
             <ListItemText>Harmonogram treningów</ListItemText>
           </MenuItem>
+          <MenuItem
+            id="irsFilmy"
+            onClick={scrollTo('movies')}
+          >
+            <ListItemIcon>
+              <PlayCircle />
+            </ListItemIcon>
+            <ListItemText>Filmy</ListItemText>
+          </MenuItem>
+          <Divider />
           <MenuItem
             id="irsRODO"
             onClick={handleOpenDrawer}

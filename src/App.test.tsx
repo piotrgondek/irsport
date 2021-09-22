@@ -14,8 +14,10 @@ describe('App', () => {
     cy.matchImageSnapshot('01 Coach');
     cy.get('.irs-treningi').scrollIntoView();
     cy.matchImageSnapshot('02 Timetable');
-    cy.get('.irs-partnerzy').scrollIntoView();
-    cy.matchImageSnapshot('03 Cooperation');
+    // cy.get('.irs-filmy').scrollIntoView();
+    // cy.matchImageSnapshot('03 Moviews');
+    // cy.get('.irs-partnerzy').scrollIntoView();
+    // cy.matchImageSnapshot('04 Cooperation');
   });
 
   it('opens speed dial menu', () => {
