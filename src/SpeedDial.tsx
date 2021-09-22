@@ -36,6 +36,7 @@ const SpeedDial: React.FC = () => {
         </IconButton>
       ),
       name: '535 673 205',
+      isMain: true,
     },
   ],
   []);
@@ -65,6 +66,9 @@ const SpeedDial: React.FC = () => {
           key={action.name}
           icon={action.icon}
           tooltipTitle={action.name}
+          sx={{
+            backgroundColor: ({ palette: { primary: { dark, main } } }) => (action.isMain ? dark : main),
+          }}
         />
       ))}
     </MuiSpeedDial>
