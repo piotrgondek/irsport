@@ -14,7 +14,7 @@ const Intro: React.FC<IntroProps> = ({ autoPlay }) => (
     sx={{
       position: 'relative',
       padding: '0',
-      height: '100%',
+      height: '100vh',
       overflow: 'hidden',
     }}
   >
