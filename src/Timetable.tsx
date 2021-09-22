@@ -26,7 +26,11 @@ const Timetable = React.forwardRef<HTMLElement>((_, ref) => {
           <Table>
             <TableHead>
               <TableRow>
-                {days.map((day) => <TableCell style={{ width: '1rem' }} key={day}>{day}</TableCell>)}
+                {days.map((day) => (
+                  <TableCell style={{ width: '1rem' }} key={day}>
+                    <Typography variant="subtitle1">{day}</Typography>
+                  </TableCell>
+                ))}
               </TableRow>
             </TableHead>
             <TableBody>
