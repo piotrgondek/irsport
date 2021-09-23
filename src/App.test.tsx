@@ -20,11 +20,11 @@ describe('App', () => {
     // cy.matchImageSnapshot('04 Cooperation');
   });
 
-  it('opens speed dial menu', () => {
-    mount(<App autoPlay={false} />);
-    cy.get('.irs-kontakt').click();
-    cy.matchImageSnapshot('speedDialMenu');
-  });
+  // it('opens speed dial menu', () => {
+  // mount(<App autoPlay={false} />);
+  // cy.get('.irs-kontakt').click();
+  // cy.matchImageSnapshot('speedDialMenu');
+  // });
 
   it('displayes RODO', () => {
     mount(<App autoPlay={false} />);

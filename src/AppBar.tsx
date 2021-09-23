@@ -15,6 +15,7 @@ import {
   Toolbar,
   Typography,
   SvgIcon,
+  useMediaQuery,
 } from '@mui/material';
 import {
   Facebook,
@@ -25,20 +26,24 @@ import {
   Person,
   Schedule,
   PlayCircle,
+  ContactPhone,
 } from '@mui/icons-material';
 import RodoPoint from './RodoPoint';
 import { ReactComponent as IrsIcon } from './assets/IRS.svg';
+import { dark } from './themes';
 
 interface AppBarProps {
   coach: React.MutableRefObject<HTMLElement | null>
   timetable: React.MutableRefObject<HTMLElement | null>
   movies: React.MutableRefObject<HTMLElement | null>
+  footer: React.MutableRefObject<HTMLElement | null>
 }
 
 type Section = keyof AppBarProps;
 
 const AppBar: React.FC<AppBarProps> = (props) => {
   const [isDrawerOpened, setOpenDrawer] = React.useState<boolean>();
+  const md = useMediaQuery(dark.breakpoints.up('md'));
 
   const handleOpenDrawer = () => {
     setOpenDrawer(true);
@@ -126,6 +131,17 @@ const AppBar: React.FC<AppBarProps> = (props) => {
             </ListItemIcon>
             <ListItemText>Filmy</ListItemText>
           </MenuItem>
+          {md && (
+            <MenuItem
+              id="irsFooter"
+              onClick={scrollTo('footer')}
+            >
+              <ListItemIcon>
+                <ContactPhone />
+              </ListItemIcon>
+              <ListItemText>Kontakt</ListItemText>
+            </MenuItem>
+          )}
           <Divider />
           <MenuItem
             id="irsRODO"
