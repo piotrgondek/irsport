@@ -23,8 +23,6 @@ const Coach = React.forwardRef<HTMLElement>((_, ref) => (
         />
         <CardContent>
           <Typography variant="h2">Adam Wargal</Typography>
-        </CardContent>
-        <CardContent>
           <Typography variant="body1" gutterBottom>
             Zaczynałem od treningu Taekwondo
             w 1993 roku na jednym z krakowski osiedli. Jako zawodnik zdobywałem medale
