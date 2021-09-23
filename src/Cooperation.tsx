@@ -29,7 +29,7 @@ const Cooperation: React.FC = () => {
         justifyContent="space-evenly"
         alignItems="center"
         sx={{
-          marginY: 10,
+          paddingY: 4,
         }}
       >
         {images.map((image) => (

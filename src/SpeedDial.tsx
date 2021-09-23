@@ -8,7 +8,7 @@ import {
   Contacts,
   Phone,
   Mail,
-  Map,
+  LocationOn,
 } from '@mui/icons-material';
 
 const SpeedDial: React.FC = () => {
@@ -24,7 +24,7 @@ const SpeedDial: React.FC = () => {
     {
       icon: (
         <IconButton href="https://goo.gl/maps/iEsyVu59UeEajRh18" target="_blank">
-          <Map />
+          <LocationOn />
         </IconButton>
       ),
       name: 'ul. Wrocławska 11a Kraków',
@@ -47,7 +47,7 @@ const SpeedDial: React.FC = () => {
       sx={{
         position: 'fixed',
         bottom: (theme) => ({
-          xs: theme.spacing(2),
+          xs: theme.spacing(9),
           lg: theme.spacing(6),
         }),
         right: (theme) => ({

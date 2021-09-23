@@ -9,7 +9,7 @@ import SectionGrid from './SectionGrid';
 import { dark } from './themes';
 
 const Movies = React.forwardRef((_, ref) => {
-  const lg = useMediaQuery(dark.breakpoints.up('md'));
+  const md = useMediaQuery(dark.breakpoints.up('md'));
 
   const videos = React.useMemo<string[]>(
     () => [
@@ -44,7 +44,7 @@ const Movies = React.forwardRef((_, ref) => {
                 videoId={video}
                 opts={{
                   width: '100%',
-                  height: lg ? '200px' : '160px',
+                  height: md ? '200px' : '160px',
                 }}
               />
             </Grid>
