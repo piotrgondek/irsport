@@ -26,8 +26,8 @@ const Intro: React.FC<IntroProps> = ({ autoPlay }) => (
       muted
       sx={{
         width: 'auto',
-        minWidth: '100%',
-        minHeight: '100%',
+        minWidth: 1,
+        minHeight: 1,
         position: 'absolute',
         left: '50%',
         top: '50%',
