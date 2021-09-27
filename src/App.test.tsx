@@ -9,15 +9,12 @@ describe('App', () => {
   });
 
   it('renders whole page', () => {
+    cy.viewport('iphone-6');
     mount(<App autoPlay={false} />);
-    cy.get('.irs-adam-wargal').scrollIntoView();
-    cy.matchImageSnapshot('01 Coach');
-    cy.get('.irs-treningi').scrollIntoView();
-    cy.matchImageSnapshot('02 Timetable');
-    cy.get('.irs-filmy').scrollIntoView();
-    cy.matchImageSnapshot('03 Moviews');
-    cy.get('.irs-partnerzy').scrollIntoView();
-    cy.matchImageSnapshot('04 Cooperation');
+    for (let i = 0; i < 11; i += 1) {
+      cy.scrollTo(0, 500 * i);
+      cy.matchImageSnapshot(`${i}`);
+    }
   });
 
   // it('opens speed dial menu', () => {
@@ -27,6 +24,7 @@ describe('App', () => {
   // });
 
   it('displayes RODO', () => {
+    cy.viewport('iphone-6');
     mount(<App autoPlay={false} />);
     cy.get('#irsMenu').click();
     cy.get('#irsRODO').click();

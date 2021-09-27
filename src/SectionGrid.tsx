@@ -19,9 +19,9 @@ const SectionGrid: React.FC = ({ children }) => (
   >
     <Grid
       item
-      xl={5}
-      lg={6}
-      md={8}
+      xl={7}
+      lg={8}
+      md={9}
       sm={10}
       xs={11}
     >

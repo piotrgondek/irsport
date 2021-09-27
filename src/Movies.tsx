@@ -44,6 +44,7 @@ const Movies = React.forwardRef((_, ref) => {
             <Grid
               key={video}
               item
+              xl={4}
               md={6}
               xs={12}
             >
@@ -98,6 +99,7 @@ const Movies = React.forwardRef((_, ref) => {
                       <PlayCircleFilledWhite
                         sx={{
                           fontSize: '5rem',
+                          color: (theme) => theme.palette.common.white,
                         }}
                       />
                     </CardMedia>

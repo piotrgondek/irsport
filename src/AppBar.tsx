@@ -27,6 +27,7 @@ import {
   Schedule,
   PlayCircle,
   ContactPhone,
+  MonetizationOn,
 } from '@mui/icons-material';
 import RodoPoint from './RodoPoint';
 import { ReactComponent as IrsIcon } from './assets/IRS.svg';
@@ -37,6 +38,7 @@ interface AppBarProps {
   timetable: React.MutableRefObject<HTMLElement | null>
   movies: React.MutableRefObject<HTMLElement | null>
   footer: React.MutableRefObject<HTMLElement | null>
+  pricing: React.MutableRefObject<HTMLElement | null>
 }
 
 type Section = keyof AppBarProps;
@@ -121,6 +123,15 @@ const AppBar: React.FC<AppBarProps> = (props) => {
               <Schedule />
             </ListItemIcon>
             <ListItemText>Harmonogram treningów</ListItemText>
+          </MenuItem>
+          <MenuItem
+            id="irsCenning"
+            onClick={scrollTo('pricing')}
+          >
+            <ListItemIcon>
+              <MonetizationOn />
+            </ListItemIcon>
+            <ListItemText>Cennik wejść</ListItemText>
           </MenuItem>
           <MenuItem
             id="irsFilmy"
