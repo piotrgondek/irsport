@@ -79,8 +79,8 @@ jobs:
       - name: Install
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: yarn install
-      - name: Tests
-        run: yarn test
+      # - name: Tests
+        # run: yarn test
       - name: Cypress artifacts
         if: ${{ failure() }}
         uses: actions/upload-artifact@v2
