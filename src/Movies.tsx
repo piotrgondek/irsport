@@ -84,7 +84,7 @@ const Movies = React.forwardRef((_, ref) => {
                       image={`http://img.youtube.com/vi/${video}/0.jpg`}
                       sx={{
                         backgroundPosition: 'center',
-                        backgroundSize: 'auto',
+                        backgroundSize: '100%',
                         cursor: 'pointer',
                         height: {
                           xs: '160px',
