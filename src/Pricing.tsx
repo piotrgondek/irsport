@@ -60,7 +60,7 @@ const Pricing = React.forwardRef((_, ref) => {
     () => [
       'Opłata wpisowa roczna na ubezpieczenie i związki sportowe 100PLN.',
       'Pierwszy trening gratis.',
-      'Karnety ważne jeden miesiąc.',
+      'Wejścia ważne jeden miesiąc.',
     ],
     [],
   );
