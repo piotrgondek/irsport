@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@commitlint/cli": "13.1.0",
-    "@commitlint/config-angular": "13.1.0",
+    "@commitlint/config-angular": "13.2.0",
     "@cypress/react": "5.10.0",
     "@cypress/webpack-dev-server": "1.6.0",
     "@emotion/react": "11.4.1",
