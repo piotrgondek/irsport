@@ -86,8 +86,12 @@ const Pricing = React.forwardRef((_, ref) => {
               <Card
                 sx={{
                   position: 'relative',
-                  m: offer.recommended ? 0 : 2,
-                  p: {
+                  marginX: offer.recommended ? 0 : 2,
+                  paddingY: {
+                    md: 6,
+                    xs: 1,
+                  },
+                  paddingX: {
                     md: offer.recommended ? 8 : 6,
                     xs: offer.recommended ? 3 : 1,
                   },
