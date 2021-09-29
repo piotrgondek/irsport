@@ -64,6 +64,10 @@ const Movies = React.forwardRef((_, ref) => {
                         '&:last-child': {
                           p: 0,
                         },
+                        '> div': {
+                          width: 1,
+                          height: 1,
+                        },
                       }}
                     >
                       <YouTube

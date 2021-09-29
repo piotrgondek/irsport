@@ -82,18 +82,17 @@ const Pricing = React.forwardRef((_, ref) => {
               item
               md={offer.full ? 12 : 6}
               xs={12}
-              sx={{
-                position: 'relative',
-              }}
             >
               <Card
                 sx={{
+                  position: 'relative',
+                  m: offer.recommended ? 0 : 2,
                   p: {
-                    md: 6,
-                    xs: 1,
+                    md: offer.recommended ? 8 : 6,
+                    xs: offer.recommended ? 3 : 1,
                   },
                 }}
-                elevation={offer.recommended ? 4 : 1}
+                elevation={offer.recommended ? 6 : 1}
               >
                 <CardContent
                   sx={{
@@ -121,9 +120,11 @@ const Pricing = React.forwardRef((_, ref) => {
                     <Chip
                       sx={{
                         position: 'absolute',
-                        top: 22,
-                        left: -12,
-                        transform: 'rotate(-33deg)',
+                        bottom: 22,
+                        left: -53,
+                        transform: 'rotate(33deg)',
+                        boxShadow: 6,
+                        paddingX: 5,
                       }}
                       label="najczęstrzy wybór"
                       color="info"
