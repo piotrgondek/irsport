@@ -15,7 +15,7 @@
     "@mui/material": "5.0.2",
     "@types/cypress-image-snapshot": "3.1.6",
     "@types/node": "16.10.2",
-    "@types/react": "17.0.24",
+    "@types/react": "17.0.25",
     "@types/react-dom": "17.0.9",
     "@typescript-eslint/eslint-plugin": "4.32.0",
     "@typescript-eslint/parser": "4.32.0",
