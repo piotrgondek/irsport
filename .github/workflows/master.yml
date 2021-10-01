@@ -88,38 +88,8 @@ jobs:
           name: Cypress artifacts
           path: cypress/*
 
-  publish:
-    needs: ['eslint', 'tests']
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js lts/*
-        uses: actions/setup-node@v2
-        with:
-          node-version: lts/*
-      - name: Cache node modules
-        id: cache-nodemodules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: |
-            node_modules
-            /home/runner/.cache/Cypress
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
-      - name: Install
-        if: steps.cache-nodemodules.outputs.cache-hit != 'true'
-        run: yarn install
-      - name: Publish
-        run: yarn run semantic-release
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
   deploy:
-    needs: ['publish']
+    needs: ['eslint', 'tests']
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
@@ -147,4 +117,34 @@ jobs:
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           yarn run deploy -u "github-actions-bot <support+actions@github.com>"
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish:
+    needs: ['deploy']
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js lts/*
+        uses: actions/setup-node@v2
+        with:
+          node-version: lts/*
+      - name: Cache node modules
+        id: cache-nodemodules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: |
+            node_modules
+            /home/runner/.cache/Cypress
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+      - name: Install
+        if: steps.cache-nodemodules.outputs.cache-hit != 'true'
+        run: yarn install
+      - name: Publish
+        run: yarn run semantic-release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
