@@ -14,6 +14,7 @@ import Cooperation from './Cooperation';
 import Movies from './Movies';
 import Footer from './Footer';
 import Pricing from './Pricing';
+import Map from './Map';
 
 interface AppProps {
   autoPlay: boolean
@@ -25,6 +26,7 @@ const App: React.FC<AppProps> = ({ autoPlay }) => {
   const moviewsRef = React.useRef<HTMLElement>(null);
   const footerRef = React.useRef<HTMLElement>(null);
   const pricingRef = React.useRef<HTMLElement>(null);
+  const mapRef = React.useRef<HTMLElement>(null);
 
   return (
     <ThemeProvider theme={dark}>
@@ -35,6 +37,7 @@ const App: React.FC<AppProps> = ({ autoPlay }) => {
         timetable={timetableRef}
         movies={moviewsRef}
         footer={footerRef}
+        map={mapRef}
       />
       <Intro autoPlay={autoPlay} />
       <Coach ref={coachRef} />
@@ -44,10 +47,15 @@ const App: React.FC<AppProps> = ({ autoPlay }) => {
       <Pricing ref={pricingRef} />
       <ThemeProvider theme={light}>
         <Paper>
-          <Movies ref={moviewsRef} />
+          <Map ref={mapRef} />
         </Paper>
       </ThemeProvider>
-      <Cooperation />
+      <Movies ref={moviewsRef} />
+      <ThemeProvider theme={light}>
+        <Paper>
+          <Cooperation />
+        </Paper>
+      </ThemeProvider>
       <Footer ref={footerRef} />
     </ThemeProvider>
   );
