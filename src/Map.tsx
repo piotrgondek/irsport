@@ -14,7 +14,7 @@ const MapWrapper = GoogleApiWrapper({
     containerStyle={{
       position: 'relative',
       width: '100%',
-      height: '75vh',
+      height: '70vh',
     }}
     style={{
       width: '100%',
