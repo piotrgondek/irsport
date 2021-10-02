@@ -1,35 +1,41 @@
+/* eslint-disable cypress/no-unnecessary-waiting */
 import React from 'react';
 import { mount } from '@cypress/react';
 import App from './App';
 
 describe('App', () => {
-  before(() => {
-    // eslint-disable-next-line cypress/no-unnecessary-waiting
-    cy.wait(3000);
-  });
+  [
+    'iphone-6',
+    // 'macbook-15',
+  ].forEach((viewport) => {
+    it(`${viewport}`, () => {
+      cy.intercept({
+        method: 'GET',
+        url: '*',
+      }).as('gets');
 
-  it('renders whole page', () => {
-    cy.viewport('iphone-6');
-    mount(<App autoPlay={false} />);
-    for (let i = 0; i < 11; i += 1) {
-      cy.scrollTo(0, 500 * i);
-      cy.matchImageSnapshot(`${i}`);
-    }
-  });
+      mount(<App autoPlay={false} />);
 
-  // it('opens speed dial menu', () => {
-  // mount(<App autoPlay={false} />);
-  // cy.get('.irs-kontakt').click();
-  // cy.matchImageSnapshot('speedDialMenu');
-  // });
+      cy.wait('@gets');
 
-  it('displayes RODO', () => {
-    cy.viewport('iphone-6');
-    mount(<App autoPlay={false} />);
-    cy.get('#irsMenu').click();
-    cy.get('#irsRODO').click();
-    cy.matchImageSnapshot('01 RODO visible');
-    cy.get('.close-rodo').click();
-    cy.matchImageSnapshot('02 RODO invisible');
+      cy.viewport(viewport as any);
+
+      cy.matchImageSnapshot(
+        `[${viewport}] Whole page`,
+        {
+          capture: 'fullPage',
+        },
+      );
+
+      cy.get('#irsMenu').click();
+      cy.matchImageSnapshot(`[${viewport}] Open menu`);
+
+      cy.get('#irsRODO').click();
+      cy.wait(1000);
+      cy.matchImageSnapshot(`[${viewport}] 01 RODO visible`);
+
+      cy.get('.close-rodo').click();
+      cy.matchImageSnapshot(`[${viewport}] 02 RODO invisible`);
+    });
   });
 });
