@@ -1,7 +1,6 @@
 {
-  "component": {
-    "testFiles": "**/*.test.{js,ts,jsx,tsx}",
-    "componentFolder": "./src"
-  },
-  "video": false
+  "viewportWidth": 360,
+  "viewportHeight": 640,
+  "video": false,
+  "baseUrl": "http://localhost:3000"
 }

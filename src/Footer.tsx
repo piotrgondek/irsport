@@ -21,10 +21,7 @@ const Footer = React.forwardRef((_, ref) => {
   const md = useMediaQuery(dark.breakpoints.up('md'));
 
   return (
-    <Box
-      className="irs-footer"
-      ref={ref as any}
-    >
+    <Box ref={ref as any}>
       {md
         ? (
           <Container

@@ -16,10 +16,7 @@ const Timetable = React.forwardRef<HTMLElement>((_, ref) => {
   const memTable = React.useMemo(() => table, []);
 
   return (
-    <Paper
-      className="irs-treningi"
-      ref={ref as any}
-    >
+    <Paper ref={ref as any}>
       <SectionGrid>
         <Typography variant="h2">Harmonogram treningów</Typography>
         <TableContainer>

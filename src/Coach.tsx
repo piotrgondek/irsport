@@ -10,10 +10,7 @@ import adamWargal from './assets/AdamWargal.jpg';
 import SectionGrid from './SectionGrid';
 
 const Coach = React.forwardRef<HTMLElement>((_, ref) => (
-  <Box
-    ref={ref as any}
-    className="irs-adam-wargal"
-  >
+  <Box ref={ref as any}>
     <SectionGrid>
       <Card>
         <CardMedia

@@ -80,7 +80,12 @@ jobs:
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: yarn install
       - name: Tests
-        run: CHOKIDAR_USEPOLLING=1 yarn test
+        uses: cypress-io/github-action@v2
+        with:
+          start: yarn start
+          wait-on: http://localhost:3000
+        env:
+          CHOKIDAR_USEPOLLING: 1
       - name: Cypress artifacts
         if: ${{ failure() }}
         uses: actions/upload-artifact@v2
