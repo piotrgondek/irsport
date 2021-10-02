@@ -6,9 +6,11 @@ import App from './App';
 describe('App', () => {
   [
     'iphone-6',
-    // 'macbook-15',
-  ].forEach((viewport) => {
+    'macbook-15',
+  ].forEach((viewport, i) => {
     it(`${viewport}`, () => {
+      cy.wait(3000);
+
       cy.intercept({
         method: 'GET',
         url: '*',
@@ -16,7 +18,7 @@ describe('App', () => {
 
       mount(<App autoPlay={false} />);
 
-      cy.wait('@gets');
+      if (i === 0) { cy.wait('@gets'); }
 
       cy.viewport(viewport as any);
 
