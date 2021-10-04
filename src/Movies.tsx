@@ -31,10 +31,7 @@ const Movies = React.forwardRef((_, ref) => {
   };
 
   return (
-    <Box
-      className="irs-filmy"
-      ref={ref as any}
-    >
+    <Box ref={ref as any}>
       <SectionGrid>
         <Grid
           container

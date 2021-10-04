@@ -56,9 +56,7 @@ const SpeedDial: React.FC = () => {
         }),
       }}
       icon={(
-        <Contacts
-          className="irs-kontakt"
-        />
+        <Contacts />
     )}
     >
       {actions.map((action) => (

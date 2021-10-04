@@ -66,10 +66,7 @@ const Pricing = React.forwardRef((_, ref) => {
   );
 
   return (
-    <Box
-      className="irs-cennik"
-      ref={ref as any}
-    >
+    <Box ref={ref as any}>
       <SectionGrid>
         <Typography variant="h2">Cennik wejść</Typography>
         <Grid

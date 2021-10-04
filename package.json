@@ -44,10 +44,10 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "cypress run-ct",
+    "test": "cypress run",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "eslint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "eslint-fix": "npm run eslint -- --fix",
     "semantic-release": "semantic-release"
   },
