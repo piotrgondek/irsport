@@ -2,7 +2,7 @@
 describe('App', () => {
   [
     [375, 667],
-    [280, 800],
+    [1440, 900],
   ].forEach(([width, height]) => {
     const viewport = `${width}x${height}`;
 
