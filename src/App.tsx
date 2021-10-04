@@ -16,11 +16,7 @@ import Footer from './Footer';
 import Pricing from './Pricing';
 import Map from './Map';
 
-interface AppProps {
-  autoPlay: boolean
-}
-
-const App: React.FC<AppProps> = ({ autoPlay }) => {
+const App: React.FC = () => {
   const coachRef = React.useRef<HTMLElement>(null);
   const timetableRef = React.useRef<HTMLElement>(null);
   const moviewsRef = React.useRef<HTMLElement>(null);
@@ -39,7 +35,7 @@ const App: React.FC<AppProps> = ({ autoPlay }) => {
         footer={footerRef}
         map={mapRef}
       />
-      <Intro autoPlay={autoPlay} />
+      <Intro />
       <Coach ref={coachRef} />
       <ThemeProvider theme={light}>
         <Timetable ref={timetableRef} />
