@@ -6,11 +6,7 @@ import {
 import intro from './assets/intro.mp4';
 import intro2 from './assets/intro2.mp4';
 
-interface IntroProps {
-  autoPlay: boolean
-}
-
-const Intro: React.FC<IntroProps> = ({ autoPlay }) => {
+const Intro: React.FC = () => {
   const videos = React.useMemo<Array<string>>(() => [intro, intro2], []);
   const [videoId, setVideoId] = React.useState<number>(0);
 
@@ -31,7 +27,7 @@ const Intro: React.FC<IntroProps> = ({ autoPlay }) => {
         component="video"
         onEnded={changeVideo}
         src={videos[videoId]}
-        autoPlay={autoPlay}
+        autoPlay
         muted
         sx={{
           width: 'auto',
