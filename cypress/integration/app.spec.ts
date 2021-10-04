@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-// TODO remove classes from sections
 describe('App', () => {
   [
     [375, 667],
