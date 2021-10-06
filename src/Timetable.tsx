@@ -9,16 +9,37 @@ import {
   TableRow,
   Typography,
 } from '@mui/material';
-import { days, table, events } from './data/trainings';
+import { useTranslation } from 'react-i18next';
+import {
+  days, table, events, CellContent,
+} from './data/trainings';
 import SectionGrid from './SectionGrid';
 
+interface CellRowProps {
+  cellContent: CellContent | null;
+  variant: keyof CellContent;
+}
+
+const CellRow: React.FC<CellRowProps> = ({ cellContent, variant }) => {
+  const { t } = useTranslation();
+
+  return (cellContent && cellContent[variant]
+    ? (
+      <Typography variant="body1">
+        {t(`timetable.${cellContent[variant]}` as any)}
+      </Typography>
+    )
+    : null);
+};
+
 const Timetable = React.forwardRef<HTMLElement>((_, ref) => {
+  const { t } = useTranslation();
   const memTable = React.useMemo(() => table, []);
 
   return (
     <Paper ref={ref as any}>
       <SectionGrid>
-        <Typography variant="h2">Harmonogram treningów</Typography>
+        <Typography variant="h2">{t('appbar.menu.timetable')}</Typography>
         <TableContainer>
           <Table>
             <TableHead>
@@ -30,7 +51,7 @@ const Timetable = React.forwardRef<HTMLElement>((_, ref) => {
                       width: '1rem',
                     }}
                   >
-                    <Typography variant="subtitle1">{day}</Typography>
+                    <Typography variant="subtitle1">{t(`timetable.days.${day}` as any)}</Typography>
                   </TableCell>
                 ))}
               </TableRow>
@@ -39,7 +60,11 @@ const Timetable = React.forwardRef<HTMLElement>((_, ref) => {
               {events.map((event) => (
                 <TableRow key={event}>
                   {days.map((day) => (
-                    <TableCell key={day}>{memTable[day][event]}</TableCell>
+                    <TableCell key={day}>
+                      <CellRow variant="body1" cellContent={memTable[day][event]} />
+                      <CellRow variant="body2" cellContent={memTable[day][event]} />
+                      <Typography variant="overline">{memTable[day][event]?.overline}</Typography>
+                    </TableCell>
                   ))}
                 </TableRow>
               ))}

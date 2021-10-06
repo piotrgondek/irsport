@@ -15,9 +15,11 @@ import {
 import {
   ContactPhone, LocationOn, Mail, Phone,
 } from '@mui/icons-material';
+import { useTranslation } from 'react-i18next';
 import { dark } from './themes';
 
 const Footer = React.forwardRef((_, ref) => {
+  const { t } = useTranslation();
   const md = useMediaQuery(dark.breakpoints.up('md'));
 
   return (
@@ -45,13 +47,13 @@ const Footer = React.forwardRef((_, ref) => {
                 />
               </CardContent>
               <CardContent>
-                <Typography variant="subtitle1">Kontakt</Typography>
+                <Typography variant="subtitle1">{t('contact.header')}</Typography>
                 <Typography variant="body2">
                   <Link
                     href="tel:535673205"
                     target="_blank"
                   >
-                    tel: 535 673 205
+                    {t('contact.phone')}
                   </Link>
                 </Typography>
                 <Typography variant="body2">
@@ -59,7 +61,7 @@ const Footer = React.forwardRef((_, ref) => {
                     href="mailto:instytutrozwojusportu@gmail.com"
                     target="_blank"
                   >
-                    instytutrozwojusportu@gmail.com
+                    {t('contact.email')}
                   </Link>
                 </Typography>
                 <Typography variant="body2">
@@ -67,7 +69,7 @@ const Footer = React.forwardRef((_, ref) => {
                     href="https://goo.gl/maps/iEsyVu59UeEajRh18"
                     target="_blank"
                   >
-                    ul. Wrocławska 11a Kraków
+                    {t('contact.address')}
                   </Link>
                 </Typography>
               </CardContent>

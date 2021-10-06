@@ -16,6 +16,7 @@ import {
   Typography,
   SvgIcon,
   useMediaQuery,
+  Button,
 } from '@mui/material';
 import {
   Facebook,
@@ -30,9 +31,11 @@ import {
   MonetizationOn,
   LocationOn,
 } from '@mui/icons-material';
+import { useTranslation } from 'react-i18next';
 import RodoPoint from './RodoPoint';
 import { ReactComponent as IrsIcon } from './assets/IRS.svg';
 import { dark } from './themes';
+import resources from './i18n/config';
 
 interface AppBarProps {
   coach: React.MutableRefObject<HTMLElement | null>
@@ -48,6 +51,7 @@ type Section = keyof AppBarProps;
 const AppBar: React.FC<AppBarProps> = (props) => {
   const [isDrawerOpened, setOpenDrawer] = React.useState<boolean>();
   const md = useMediaQuery(dark.breakpoints.up('md'));
+  const { t, i18n } = useTranslation();
 
   const handleOpenDrawer = () => {
     setOpenDrawer(true);
@@ -55,6 +59,13 @@ const AppBar: React.FC<AppBarProps> = (props) => {
 
   const handleCloseDrawer = () => {
     setOpenDrawer(false);
+  };
+
+  const otherLanguage = () => Object.keys(resources).find((lang) => lang !== i18n.language);
+
+  const changeLanguage = () => {
+    const newLanguage = otherLanguage();
+    i18n.changeLanguage(newLanguage);
   };
 
   const MenuButton: React.FC = () => {
@@ -115,7 +126,7 @@ const AppBar: React.FC<AppBarProps> = (props) => {
             <ListItemIcon>
               <Person />
             </ListItemIcon>
-            <ListItemText>Trener</ListItemText>
+            <ListItemText>{t('appbar.menu.coach')}</ListItemText>
           </MenuItem>
           <MenuItem
             id="irsTreningi"
@@ -124,7 +135,7 @@ const AppBar: React.FC<AppBarProps> = (props) => {
             <ListItemIcon>
               <Schedule />
             </ListItemIcon>
-            <ListItemText>Harmonogram treningów</ListItemText>
+            <ListItemText>{t('appbar.menu.timetable')}</ListItemText>
           </MenuItem>
           <MenuItem
             id="irsCennink"
@@ -133,7 +144,7 @@ const AppBar: React.FC<AppBarProps> = (props) => {
             <ListItemIcon>
               <MonetizationOn />
             </ListItemIcon>
-            <ListItemText>Cennik wejść</ListItemText>
+            <ListItemText>{t('appbar.menu.pricing')}</ListItemText>
           </MenuItem>
           <MenuItem
             id="irsMap"
@@ -142,7 +153,7 @@ const AppBar: React.FC<AppBarProps> = (props) => {
             <ListItemIcon>
               <LocationOn />
             </ListItemIcon>
-            <ListItemText>Lokalizacja</ListItemText>
+            <ListItemText>{t('appbar.menu.location')}</ListItemText>
           </MenuItem>
           <MenuItem
             id="irsFilmy"
@@ -151,7 +162,7 @@ const AppBar: React.FC<AppBarProps> = (props) => {
             <ListItemIcon>
               <PlayCircle />
             </ListItemIcon>
-            <ListItemText>Filmy</ListItemText>
+            <ListItemText>{t('appbar.menu.movies')}</ListItemText>
           </MenuItem>
           {md && (
             <MenuItem
@@ -161,7 +172,7 @@ const AppBar: React.FC<AppBarProps> = (props) => {
               <ListItemIcon>
                 <ContactPhone />
               </ListItemIcon>
-              <ListItemText>Kontakt</ListItemText>
+              <ListItemText>{t('appbar.menu.contact')}</ListItemText>
             </MenuItem>
           )}
           <Divider />
@@ -173,7 +184,7 @@ const AppBar: React.FC<AppBarProps> = (props) => {
             <ListItemIcon>
               <AssignmentInd />
             </ListItemIcon>
-            <ListItemText>RODO</ListItemText>
+            <ListItemText>{t('appbar.menu.rodo')}</ListItemText>
           </MenuItem>
         </Menu>
       </>
@@ -191,8 +202,12 @@ const AppBar: React.FC<AppBarProps> = (props) => {
             viewBox="0 0 1786 1586"
             sx={{ mr: 2 }}
           />
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            IRS Sport
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1 }}
+          >
+            {t('appbar.irsport')}
           </Typography>
           <IconButton
             edge="end"
@@ -208,6 +223,9 @@ const AppBar: React.FC<AppBarProps> = (props) => {
           >
             <Facebook />
           </IconButton>
+          <Button onClick={changeLanguage}>
+            {otherLanguage()}
+          </Button>
         </Toolbar>
       </MuiAppBar>
       <Drawer
@@ -227,90 +245,88 @@ const AppBar: React.FC<AppBarProps> = (props) => {
         >
           <Close />
         </Fab>
-        <RodoPoint header="Administratorami danych osobowych są">
+        <RodoPoint header={t('rodo.point1.header')}>
           <List>
             <ListItem>
               <ListItemText>
-                Stowarzyszenie Instytut Rozwoju Sportu z siedzibą w Krakowie ul. Łużycka 14.
+                {t('rodo.point1.point1')}
               </ListItemText>
             </ListItem>
             <ListItem>
               <ListItemText>
-                Przedsiębiorstwo Wargalsport z siedzibą w Krakowie ul. Łużycka 14.
+                {t('rodo.point1.point2')}
               </ListItemText>
             </ListItem>
           </List>
 
           <Typography variant="body2">
-            Przetwarzanie danych osobowych odbywa się na zasadach współadministracji (art. 26 RODO)
+            {t('rodo.point1.footer')}
           </Typography>
         </RodoPoint>
 
-        <RodoPoint header="Cel przetwarzania danych">
+        <RodoPoint header={t('rodo.point2.header')}>
           <List>
             <ListItem>
               <ListItemText>
-                prowadzenie zajęć sportowych, w szczególności treningów boksu, kickboxingu, taekwando, fight cross,
+                {t('rodo.point2.point1')}
               </ListItemText>
             </ListItem>
             <ListItem>
               <ListItemText>
-                udział w zawodach sportowych
+                {t('rodo.point2.point2')}
               </ListItemText>
             </ListItem>
             <ListItem>
               <ListItemText>
-                członkostwo w Stowarzyszeniu Instytut Rozwoju Sportu
+                {t('rodo.point2.point3')}
               </ListItemText>
             </ListItem>
           </List>
         </RodoPoint>
 
-        <RodoPoint header="Podstawa przetwarzania danych">
+        <RodoPoint header={t('rodo.point3.header')}>
           <Typography variant="body1">
-            Art. 6 ust. 1 lit b) RODO – wykonanie umowy, której stroną jest osoba, której dane dotyczą.
+            {t('rodo.point3.content')}
           </Typography>
         </RodoPoint>
 
-        <RodoPoint header="Dane osobowe nie są przekazywane odbiorcom">
+        <RodoPoint header={t('rodo.point4.header')}>
           <Typography variant="body1">
-            Dane będą przechowywane przez okres trwania umowy oraz po jej zakończeniu przez czas niezbędny do
-            zabezpieczenia dochodzenia roszczeń.
+            {t('rodo.point4.content')}
           </Typography>
         </RodoPoint>
 
-        <RodoPoint header="Osoba, której dane dotyczą, ma prawo">
+        <RodoPoint header={t('rodo.point5.header')}>
           <List>
             <ListItem>
               <ListItemText>
-                dostępu do dotyczących jej danych,
+                {t('rodo.point5.point1')}
               </ListItemText>
             </ListItem>
             <ListItem>
               <ListItemText>
-                sprostowania dotyczących jej danych,
+                {t('rodo.point5.point2')}
               </ListItemText>
             </ListItem>
             <ListItem>
               <ListItemText>
-                usunięcia lub ograniczenia przetwarzania danych,
+                {t('rodo.point5.point3')}
               </ListItemText>
             </ListItem>
             <ListItem>
               <ListItemText>
-                wniesienia sprzeciwu wobec przetwarzania.
+                {t('rodo.point5.point4')}
               </ListItemText>
             </ListItem>
             <ListItem>
               <ListItemText>
-                wniesienia skargi do organu nadzorczego
+                {t('rodo.point5.point5')}
               </ListItemText>
             </ListItem>
           </List>
 
           <Typography variant="body2">
-            Podanie danych osobowych jest dobrowolne, jednak warunkuje udział w zajęciach sportowych prowadzonych
-            przez IRS i Wargalsport.
+            {t('rodo.point5.footer')}
           </Typography>
         </RodoPoint>
       </Drawer>

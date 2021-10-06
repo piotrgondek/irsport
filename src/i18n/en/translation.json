@@ -1,0 +1,108 @@
+{
+  "appbar": {
+    "menu": {
+      "coach": "Coach",
+      "timetable": "Timetable",
+      "pricing": "Pricing",
+      "location": "Location",
+      "movies": "Movies",
+      "contact": "Contact",
+      "rodo": "RODO"
+    },
+    "irsport": "IRS Sport"
+  },
+  "rodo": {
+    "point1": {
+      "header": "The personal data administrators are",
+      "point1": "IRS, Kraków, ul. Łużycka 14.",
+      "point2": "Wargalsport, Kraków ul. Łużycka 14.",
+      "footer": "The processing of personal data takes place on the basis of co-administration (art. 26 RODO)"
+    },
+    "point2": {
+      "header": "Purpose of data processing",
+      "point1": "conducting sports activities, in particular boxing, kickboxing, taekwondo, fight cross training,",
+      "point2": "participation in sports competitions",
+      "point3": "membership in the IRS Association"
+    },
+    "point3": {
+      "header": "The basis for data processing",
+      "content": "Art. 6 ust. 1 lit b) RODO – performance of a contract to which the data subject is a party."
+    },
+    "point4": {
+      "header": "Personal data is not transferred to recipients",
+      "content": "The data will be stored for the duration of the contract and after its termination for the time necessary to secure the pursuit of claims. "
+    },
+    "point5": {
+      "header": "The data subject has the right",
+      "point1": "access to data,",
+      "point2": "rectification of data,",
+      "point3": "deletion or restriction of data processing,",
+      "point4": "object to processing.",
+      "point5": "lodge a complaint with the supervisory authority",
+      "footer": "Providing personal data is voluntary, however, it determines participation in sports activities conducted by IRS and Wargalsport. "
+    }
+  },
+  "coach": {
+    "name": "Adam Wargal",
+    "description": {
+      "p1": "I started with Taekwondo training in 1993 in one of Krakow's housing estates. As a competitor, I won medals of national competitions in Taekwondo and Kickboxing. I have a 3rd dan Taekwondo and 1st dan Kickboxing. I am a certified instructor of the following disciplines: Taekwondo, Kickboxing, Fitness - strength exercises and the qualifications of a trainer of the discipline: Boxing.",
+      "p2": "I am the president and main trainer at the IRS club. I take part in the preparation of competitors taking part in Boxing, Kickboxing and Taekwondo. My pupils won medals at the Polish Championships, the European Championships, and the World Championships. I am a graduate of Collegium Medicum of the Jagiellonian University in the field of Medical Emergency.",
+      "p3": "During my studies, I also trained Judo in the CMUJ sports section. I organized sports camps and training camps."
+    }
+  },
+  "pricing": {
+    "highlighted": "the most popular",
+    "points": {
+      "1": "Annual entry fee for insurance and sports associations 100 PLN.",
+      "2": "The first training is free.",
+      "3": "Entries valid for one month. "
+    },
+    "offers": {
+      "1": {
+        "lvl": "beginner",
+        "name": "4 entries"
+      },
+      "2": {
+        "lvl": "not advanced",
+        "name": "8 entries"
+      },
+      "3": {
+        "lvl": "intermediate",
+        "name": "12 entries"
+      },
+      "4": {
+        "lvl": "advanced",
+        "name": "16 entries"
+      },
+      "5": {
+        "lvl": "pro",
+        "name": "open"
+      }
+    }
+  },
+  "contact": {
+    "header": "Contact",
+    "address": "ul. Wrocławska 11a Kraków",
+    "phone": "tel: 535 673 205",
+    "email": "instytutrozwojusportu@gmail.com"
+  },
+  "timetable": {
+    "days": {
+      "mo": "Monday",
+      "tu": "Tuesday",
+      "we": "Wednesday",
+      "th": "Thursday",
+      "fr": "Friday"
+    },
+    "boxing": "Boxing",
+    "kickboxing": "Kickboxing",
+    "irsKids": "IRS kids",
+    "combined": "combined",
+    "boxingWomen": "Boxing for women",
+    "fightCross": "Fight Cross",
+    "strengthTraining": "strength and endurance training",
+    "advanced": "advanced",
+    "beginner": "beginner",
+    "sparrings": "sparrings"
+  }
+}

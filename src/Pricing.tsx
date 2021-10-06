@@ -12,6 +12,7 @@ import {
   Typography,
 } from '@mui/material';
 import { Done } from '@mui/icons-material';
+import { useTranslation } from 'react-i18next';
 import SectionGrid from './SectionGrid';
 
 interface PricingEntity {
@@ -23,57 +24,52 @@ interface PricingEntity {
 }
 
 const Pricing = React.forwardRef((_, ref) => {
-  const pricings = React.useMemo<Array<PricingEntity>>(
-    () => [
-      {
-        lvl: 'początkujący',
-        name: '4 wejścia',
-        price: 80,
-      },
-      {
-        lvl: 'niezaawansowany',
-        name: '8 wejść',
-        price: 110,
-      },
-      {
-        lvl: 'średniozaawansowany',
-        name: '12 wejść',
-        price: 130,
-        recommended: true,
-      },
-      {
-        lvl: 'zaawansowany',
-        name: '16 wejść',
-        price: 150,
-      },
-      {
-        lvl: 'stali bywalcy',
-        name: 'open',
-        price: 210,
-        full: true,
-      },
-    ],
-    [],
-  );
+  const { t } = useTranslation();
+  const pricing: Array<PricingEntity> = [
+    {
+      lvl: t('pricing.offers.1.lvl'),
+      name: t('pricing.offers.1.name'),
+      price: 80,
+    },
+    {
+      lvl: t('pricing.offers.2.lvl'),
+      name: t('pricing.offers.2.name'),
+      price: 110,
+    },
+    {
+      lvl: t('pricing.offers.3.lvl'),
+      name: t('pricing.offers.3.name'),
+      price: 130,
+      recommended: true,
+    },
+    {
+      lvl: t('pricing.offers.4.lvl'),
+      name: t('pricing.offers.4.name'),
+      price: 150,
+    },
+    {
+      lvl: t('pricing.offers.5.lvl'),
+      name: t('pricing.offers.5.name'),
+      price: 210,
+      full: true,
+    },
+  ];
 
-  const info = React.useMemo<Array<string>>(
-    () => [
-      'Opłata wpisowa roczna na ubezpieczenie i związki sportowe 100PLN.',
-      'Pierwszy trening gratis.',
-      'Wejścia ważne jeden miesiąc.',
-    ],
-    [],
-  );
+  const info = [
+    t('pricing.points.1'),
+    t('pricing.points.2'),
+    t('pricing.points.3'),
+  ];
 
   return (
     <Box ref={ref as any}>
       <SectionGrid>
-        <Typography variant="h2">Cennik wejść</Typography>
+        <Typography variant="h2">{t('appbar.menu.pricing')}</Typography>
         <Grid
           container
           spacing={2}
         >
-          {pricings.map((offer) => (
+          {pricing.map((offer) => (
             <Grid
               key={offer.name}
               item
@@ -127,7 +123,7 @@ const Pricing = React.forwardRef((_, ref) => {
                         boxShadow: 6,
                         paddingX: 5,
                       }}
-                      label="najczęstrzy wybór"
+                      label={t('pricing.highlighted')}
                       color="info"
                     />
                   )}
