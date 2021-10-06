@@ -39,7 +39,7 @@ const Timetable = React.forwardRef<HTMLElement>((_, ref) => {
   return (
     <Paper ref={ref as any}>
       <SectionGrid>
-        <Typography variant="h2">{t('appbar.menu.timetable')}</Typography>
+        <Typography variant="h4">{t('appbar.menu.timetable')}</Typography>
         <TableContainer>
           <Table>
             <TableHead>
