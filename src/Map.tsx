@@ -37,7 +37,7 @@ const MapContainer = React.forwardRef((_, ref) => {
   return (
     <Box ref={ref as any}>
       <SelectionGrid>
-        <Typography variant="h2">{t('contact.address')}</Typography>
+        <Typography variant="h4">{t('contact.address')}</Typography>
         <MapWrapper />
       </SelectionGrid>
     </Box>

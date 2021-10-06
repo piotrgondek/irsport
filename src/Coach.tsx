@@ -36,8 +36,8 @@ const Coach = React.forwardRef<HTMLElement>((_, ref) => {
                 }}
               />
               <CardContent>
-                <Typography variant="h2">{t('coach.coach')}</Typography>
-                <Typography variant="h4">{t('coach.name')}</Typography>
+                <Typography variant="h4">{t('coach.coach')}</Typography>
+                <Typography variant="h5">{t('coach.name')}</Typography>
                 <Typography variant="body1" gutterBottom>
                   {t('coach.description.p1')}
                 </Typography>
@@ -66,8 +66,8 @@ const Coach = React.forwardRef<HTMLElement>((_, ref) => {
                 }}
               />
               <CardContent>
-                <Typography variant="h2">{t('club.club')}</Typography>
-                <Typography variant="h4">{t('club.name')}</Typography>
+                <Typography variant="h4">{t('club.club')}</Typography>
+                <Typography variant="h5">{t('club.name')}</Typography>
                 <Typography variant="body1" gutterBottom>
                   {t('club.description.p1')}
                 </Typography>

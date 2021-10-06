@@ -64,7 +64,7 @@ const Pricing = React.forwardRef((_, ref) => {
   return (
     <Box ref={ref as any}>
       <SectionGrid>
-        <Typography variant="h2">{t('appbar.menu.pricing')}</Typography>
+        <Typography variant="h4">{t('appbar.menu.pricing')}</Typography>
         <Grid
           container
           spacing={2}
