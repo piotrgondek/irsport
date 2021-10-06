@@ -43,11 +43,21 @@
     }
   },
   "coach": {
+    "coach": "Trener",
     "name": "Adam Wargal",
     "description": {
       "p1": "I started with Taekwondo training in 1993 in one of Krakow's housing estates. As a competitor, I won medals of national competitions in Taekwondo and Kickboxing. I have a 3rd dan Taekwondo and 1st dan Kickboxing. I am a certified instructor of the following disciplines: Taekwondo, Kickboxing, Fitness - strength exercises and the qualifications of a trainer of the discipline: Boxing.",
       "p2": "I am the president and main trainer at the IRS club. I take part in the preparation of competitors taking part in Boxing, Kickboxing and Taekwondo. My pupils won medals at the Polish Championships, the European Championships, and the World Championships. I am a graduate of Collegium Medicum of the Jagiellonian University in the field of Medical Emergency.",
       "p3": "During my studies, I also trained Judo in the CMUJ sports section. I organized sports camps and training camps."
+    }
+  },
+  "club": {
+    "club": "Klub",
+    "name": "IRS",
+    "description": {
+      "p1": "The IRS was established in 2016. Since then, we have been running boxing and kickboxing trainings for children, teenagers and adults. We are affiliated with the Polish Boxing Association and the Polish Kickboxing Association.",
+      "p2": "Our mission is to promote martial arts among people of all ages and to promote a healthy lifestyle. During training, we teach how to fight an opponent, but most of all, we learn to fight our own weaknesses. We infect with positive energy.",
+      "p3": "Take up your gloves and join our IRS team!"
     }
   },
   "pricing": {

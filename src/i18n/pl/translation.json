@@ -43,11 +43,21 @@
     }
   },
   "coach": {
+    "coach": "Trener",
     "name": "Adam Wargal",
     "description": {
       "p1": "Zaczynałem od treningu Taekwondo w 1993 roku na jednym z krakowski osiedli. Jako zawodnik zdobywałem medale zawodów ogólnopolskich w Taekwondo oraz Kickboxingu. Posiadam stopień 3 dan Taekwondo oraz 1 dan Kickboxing.  Posiadam uprawnienia instruktora dyscyplin: Taekwondo, Kickboxing, Fitness – ćwiczenia siłowe oraz uprawnienia trenera dyscypliny: Boks.",
       "p2": "Jestem prezesem i głównym trenerem w klubie Instytut Rozwoju Sportu. Biorę udział w przygotowaniach zawodników startujących w Boksie, Kickboxingu oraz Taekwondo. Moi podopieczni zdobywali medale Mistrzostw Polski, Mistrzostw Europy, Mistrzostw Świata. Jestem absolwentem Collegium Medicum Uniwersytetu Jagiellońskiego na kierunku Ratownictwo Medyczne.",
       "p3": "Podczas studiów trenowałem również Judo w sekcji sportowej CMUJ. Organizowałem obozy oraz zgrupowania sportowe."
+    }
+  },
+  "club": {
+    "club": "Klub",
+    "name": "IRS",
+    "description": {
+      "p1": "IRS powstał w 2016 roku. Od tego czasu prowadzimy treningi z boksu i kickboxingu dla dzieci, młodzieży i dorosłych. Jesteśmy zrzeszeni w Polskim Związku Bokserskim oraz Polskim Związku Kickboxingu.",
+      "p2": "Naszą misją jest promowanie sportów walki wśród osób w każdym wieku oraz promowanie zdrowego stylu życia. Na treningach uczymy walczyć z przeciwnikiem, ale przede wszystkim uczymy walczyć z własnymi słabościami. Zarażamy pozytywną energią.",
+      "p3": "Podejmij rękawice i dołącz do naszej IRSowej drużyny!"
     }
   },
   "pricing": {
