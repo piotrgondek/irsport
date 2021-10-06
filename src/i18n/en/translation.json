@@ -1,7 +1,7 @@
 {
   "appbar": {
     "menu": {
-      "coach": "Coach",
+      "about": "About IRS",
       "timetable": "Timetable",
       "pricing": "Pricing",
       "location": "Location",
@@ -52,7 +52,7 @@
     }
   },
   "club": {
-    "club": "Klub",
+    "club": "Club",
     "name": "IRS",
     "description": {
       "p1": "The IRS was established in 2016. Since then, we have been running boxing and kickboxing trainings for children, teenagers and adults. We are affiliated with the Polish Boxing Association and the Polish Kickboxing Association.",
