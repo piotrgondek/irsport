@@ -4,6 +4,7 @@ import {
   Typography,
 } from '@mui/material';
 import { GoogleApiWrapper, Map, Marker } from 'google-maps-react';
+import { useTranslation } from 'react-i18next';
 import SelectionGrid from './SectionGrid';
 
 const MapWrapper = GoogleApiWrapper({
@@ -30,13 +31,17 @@ const MapWrapper = GoogleApiWrapper({
   </Map>
 ));
 
-const MapContainer = React.forwardRef((_, ref) => (
-  <Box ref={ref as any}>
-    <SelectionGrid>
-      <Typography variant="h2">ul. Wrocławska 11a Kraków</Typography>
-      <MapWrapper />
-    </SelectionGrid>
-  </Box>
-));
+const MapContainer = React.forwardRef((_, ref) => {
+  const { t } = useTranslation();
+
+  return (
+    <Box ref={ref as any}>
+      <SelectionGrid>
+        <Typography variant="h2">{t('contact.address')}</Typography>
+        <MapWrapper />
+      </SelectionGrid>
+    </Box>
+  );
+});
 
 export default MapContainer;

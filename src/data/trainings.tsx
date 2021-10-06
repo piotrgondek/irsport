@@ -1,132 +1,111 @@
-import { Typography } from '@mui/material';
-import * as React from 'react';
+import { CustomTypeOptions } from 'react-i18next';
 
-export const days = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek'];
+type Day = 'mo'| 'tu'| 'we'| 'th'| 'fr';
 
-export const table = {
-  [days[0]]: [
+export const days: Array<Day> = ['mo', 'tu', 'we', 'th', 'fr'];
+
+type TimeTableKeys = keyof CustomTypeOptions['resources']['pl']['timetable'];
+
+export type CellContent = {
+  body1: TimeTableKeys;
+  body2?: TimeTableKeys;
+  overline: '8:00 - 9:00' | '17:00 - 18:00' | '18:00 - 19:00' | '19:00 - 20:00';
+}
+
+type Table = Record<Day, Array<CellContent | null>>
+
+export const table: Table = {
+  mo: [
     null,
-    (
-      <>
-        <Typography variant="body1">Kickboxing</Typography>
-        <Typography variant="body2">IRS kids dzieci</Typography>
-        <Typography variant="overline">17:00 - 18:00</Typography>
-      </>
-    ),
-    (
-      <>
-        <Typography variant="body1">Boks dla kobiet</Typography>
-        <Typography variant="body2">łączona</Typography>
-        <Typography variant="overline">18:00 - 19:00</Typography>
-      </>
-    ),
-    (
-      <>
-        <Typography variant="body1">Boks</Typography>
-        <Typography variant="body2">zaawansowana</Typography>
-        <Typography variant="overline">19:00 - 20:00</Typography>
-      </>
-    ),
+    {
+      body1: 'kickboxing',
+      body2: 'irsKids',
+      overline: '17:00 - 18:00',
+    },
+    {
+      body1: 'boxingWomen',
+      body2: 'combined',
+      overline: '18:00 - 19:00',
+    },
+    {
+      body1: 'boxing',
+      body2: 'advanced',
+      overline: '19:00 - 20:00',
+    },
   ],
-  [days[1]]: [
-    (
-      <>
-        <Typography variant="body1">Boks</Typography>
-        <Typography variant="overline">8:00 - 9:00</Typography>
-      </>
-    ),
-    (
-      <>
-        <Typography variant="body1">Kickboxing</Typography>
-        <Typography variant="body2">łączona</Typography>
-        <Typography variant="overline">17:00 - 18:00</Typography>
-      </>
-    ),
-    (
-      <>
-        <Typography variant="body1">Fight Cross</Typography>
-        <Typography variant="body2">trening siłowo-wytrzymałościowy</Typography>
-        <Typography variant="overline">18:00 - 19:00</Typography>
-      </>
-    ),
-    (
-      <>
-        <Typography variant="body1">Boks</Typography>
-        <Typography variant="body2">początkująca</Typography>
-        <Typography variant="overline">19:00 - 20:00</Typography>
-      </>
-    ),
+  tu: [
+    {
+      body1: 'boxing',
+      overline: '8:00 - 9:00',
+    },
+    {
+      body1: 'kickboxing',
+      body2: 'combined',
+      overline: '17:00 - 18:00',
+    },
+    {
+      body1: 'fightCross',
+      body2: 'strengthTraining',
+      overline: '18:00 - 19:00',
+    },
+    {
+      body1: 'boxing',
+      body2: 'beginner',
+      overline: '19:00 - 20:00',
+    },
   ],
-  [days[2]]: [
+  we: [
     null,
-    (
-      <>
-        <Typography variant="body1">Kickboxing</Typography>
-        <Typography variant="body2">IRS kids dzieci</Typography>
-        <Typography variant="overline">17:00 - 18:00</Typography>
-      </>
-    ),
-    (
-      <>
-        <Typography variant="body1">Boks</Typography>
-        <Typography variant="body2">zaawansowana</Typography>
-        <Typography variant="overline">18:00 - 19:00</Typography>
-      </>
-    ),
-    (
-      <>
-        <Typography variant="body1">Boks</Typography>
-        <Typography variant="body2">sparingi</Typography>
-        <Typography variant="overline">19:00 - 20:00</Typography>
-      </>
-    ),
+    {
+      body1: 'kickboxing',
+      body2: 'irsKids',
+      overline: '17:00 - 18:00',
+    },
+    {
+      body1: 'boxing',
+      body2: 'advanced',
+      overline: '18:00 - 19:00',
+    },
+    {
+      body1: 'boxing',
+      body2: 'sparrings',
+      overline: '19:00 - 20:00',
+    },
   ],
-  [days[3]]: [
-    (
-      <>
-        <Typography variant="body1">Boks</Typography>
-        <Typography variant="overline">8:00 - 9:00</Typography>
-      </>
-    ),
-    (
-      <>
-        <Typography variant="body1">Kickboxing</Typography>
-        <Typography variant="body2">łączona</Typography>
-        <Typography variant="overline">17:00 - 18:00</Typography>
-      </>
-    ),
-    (
-      <>
-        <Typography variant="body1">Boks dla kobiet</Typography>
-        <Typography variant="body2">zaawansowana</Typography>
-        <Typography variant="overline">18:00 - 19:00</Typography>
-      </>
-    ),
-    (
-      <>
-        <Typography variant="body1">Boks</Typography>
-        <Typography variant="body2">zaawansowana</Typography>
-        <Typography variant="overline">19:00 - 20:00</Typography>
-      </>
-    ),
+  th: [
+    {
+      body1: 'boxing',
+      overline: '8:00 - 9:00',
+    },
+    {
+      body1: 'kickboxing',
+      body2: 'combined',
+      overline: '17:00 - 18:00',
+    },
+    {
+      body1: 'boxingWomen',
+      body2: 'advanced',
+      overline: '18:00 - 19:00',
+    },
+    {
+      body1: 'boxing',
+      body2: 'advanced',
+      overline: '19:00 - 20:00',
+    },
   ],
-  [days[4]]: [
+  fr: [
     null,
     null,
-    (
-      <>
-        <Typography variant="body1">Boks dla kobiet</Typography>
-        <Typography variant="body2">początkująca</Typography>
-        <Typography variant="overline">18:00 - 19:00</Typography>
-      </>
-    ),
-    (
-      <>
-        <Typography variant="body1">Boks</Typography>
-        <Typography variant="body2">początkująca</Typography>
-        <Typography variant="overline">19:00 - 20:00</Typography>
-      </>
-    ),
+    {
+      body1: 'boxingWomen',
+      body2: 'beginner',
+      overline: '18:00 - 19:00',
+    },
+    {
+      body1: 'boxing',
+      body2: 'beginner',
+      overline: '19:00 - 20:00',
+    },
   ],
 };
 

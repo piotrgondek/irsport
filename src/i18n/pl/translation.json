@@ -1,0 +1,108 @@
+{
+  "appbar": {
+    "menu": {
+      "coach": "Trener",
+      "timetable": "Harmonogram treningów",
+      "pricing": "Cennik wejść",
+      "location": "Lokalizacja",
+      "movies": "Filmy",
+      "contact": "Kontakt",
+      "rodo": "RODO"
+    },
+    "irsport": "IRS Sport"
+  },
+  "rodo": {
+    "point1": {
+      "header": "Administratorami danych osobowych są",
+      "point1": "Stowarzyszenie Instytut Rozwoju Sportu z siedzibą w Krakowie ul. Łużycka 14.",
+      "point2": "Przedsiębiorstwo Wargalsport z siedzibą w Krakowie ul. Łużycka 14.",
+      "footer": "Przetwarzanie danych osobowych odbywa się na zasadach współadministracji (art. 26 RODO)"
+    },
+    "point2": {
+      "header": "Cel przetwarzania danych",
+      "point1": "prowadzenie zajęć sportowych, w szczególności treningów boksu, kickboxingu, taekwando, fight cross,",
+      "point2": "udział w zawodach sportowych",
+      "point3": "członkostwo w Stowarzyszeniu Instytut Rozwoju Sportu"
+    },
+    "point3": {
+      "header": "Podstawa przetwarzania danych",
+      "content": "Art. 6 ust. 1 lit b) RODO – wykonanie umowy, której stroną jest osoba, której dane dotyczą."
+    },
+    "point4": {
+      "header": "Dane osobowe nie są przekazywane odbiorcom",
+      "content": "Dane będą przechowywane przez okres trwania umowy oraz po jej zakończeniu przez czas niezbędny do zabezpieczenia dochodzenia roszczeń."
+    },
+    "point5": {
+      "header": "Osoba, której dane dotyczą, ma prawo",
+      "point1": "dostępu do dotyczących jej danych,",
+      "point2": "sprostowania dotyczących jej danych,",
+      "point3": "usunięcia lub ograniczenia przetwarzania danych,",
+      "point4": "wniesienia sprzeciwu wobec przetwarzania.",
+      "point5": "wniesienia skargi do organu nadzorczego",
+      "footer": "Podanie danych osobowych jest dobrowolne, jednak warunkuje udział w zajęciach sportowych prowadzonych przez IRS i Wargalsport."
+    }
+  },
+  "coach": {
+    "name": "Adam Wargal",
+    "description": {
+      "p1": "Zaczynałem od treningu Taekwondo w 1993 roku na jednym z krakowski osiedli. Jako zawodnik zdobywałem medale zawodów ogólnopolskich w Taekwondo oraz Kickboxingu. Posiadam stopień 3 dan Taekwondo oraz 1 dan Kickboxing.  Posiadam uprawnienia instruktora dyscyplin: Taekwondo, Kickboxing, Fitness – ćwiczenia siłowe oraz uprawnienia trenera dyscypliny: Boks.",
+      "p2": "Jestem prezesem i głównym trenerem w klubie Instytut Rozwoju Sportu. Biorę udział w przygotowaniach zawodników startujących w Boksie, Kickboxingu oraz Taekwondo. Moi podopieczni zdobywali medale Mistrzostw Polski, Mistrzostw Europy, Mistrzostw Świata. Jestem absolwentem Collegium Medicum Uniwersytetu Jagiellońskiego na kierunku Ratownictwo Medyczne.",
+      "p3": "Podczas studiów trenowałem również Judo w sekcji sportowej CMUJ. Organizowałem obozy oraz zgrupowania sportowe."
+    }
+  },
+  "pricing": {
+    "highlighted": "najczęstrzy wybór",
+    "points": {
+      "1": "Opłata wpisowa roczna na ubezpieczenie i związki sportowe 100PLN.",
+      "2": "Pierwszy trening gratis.",
+      "3": "Wejścia ważne jeden miesiąc."
+    },
+    "offers": {
+      "1": {
+        "lvl": "początkujący",
+        "name": "4 wejścia"
+      },
+      "2": {
+        "lvl": "niezaawansowany",
+        "name": "8 wejść"
+      },
+      "3": {
+        "lvl": "średniozaawansowany",
+        "name": "12 wejść"
+      },
+      "4": {
+        "lvl": "zaawansowany",
+        "name": "16 wejść"
+      },
+      "5": {
+        "lvl": "stali bywalcy",
+        "name": "open"
+      }
+    }
+  },
+  "contact": {
+    "header": "Kontakt",
+    "address": "ul. Wrocławska 11a Kraków",
+    "phone": "tel: 535 673 205",
+    "email": "instytutrozwojusportu@gmail.com"
+  },
+  "timetable": {
+    "days": {
+      "mo": "Poniedziałek",
+      "tu": "Wtorek",
+      "we": "Środa",
+      "th": "Czwartek",
+      "fr": "Piątek"
+    },
+    "boxing": "Boks",
+    "kickboxing": "Kickboxing",
+    "irsKids": "IRS kids dzieci",
+    "combined": "łączona",
+    "boxingWomen": "Boks dla kobiet",
+    "fightCross": "Fight Cross",
+    "strengthTraining": "trening siłowo-wytrzymałościowy",
+    "advanced": "zaawansowana",
+    "beginner": "początkująca",
+    "sparrings": "sparingi"
+  }
+}

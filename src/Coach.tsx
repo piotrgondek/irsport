@@ -6,43 +6,40 @@ import {
   CardMedia,
   Typography,
 } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import adamWargal from './assets/AdamWargal.jpg';
 import SectionGrid from './SectionGrid';
 
-const Coach = React.forwardRef<HTMLElement>((_, ref) => (
-  <Box ref={ref as any}>
-    <SectionGrid>
-      <Card>
-        <CardMedia
-          style={{ paddingTop: '56.25%' }}
-          title="Adam Wargal"
-          image={adamWargal}
-        />
-        <CardContent>
-          <Typography variant="h2">Adam Wargal</Typography>
-          <Typography variant="body1" gutterBottom>
-            Zaczynałem od treningu Taekwondo
-            w 1993 roku na jednym z krakowski osiedli. Jako zawodnik zdobywałem medale
-            zawodów ogólnopolskich w Taekwondo oraz Kickboxingu. Posiadam stopień 3 dan Taekwondo oraz 1 dan
-            Kickboxing.  Posiadam uprawnienia instruktora dyscyplin: Taekwondo, Kickboxing, Fitness – ćwiczenia
-            siłowe oraz uprawnienia trenera dyscypliny: Boks.
-          </Typography>
+const Coach = React.forwardRef<HTMLElement>((_, ref) => {
+  const { t } = useTranslation();
 
-          <Typography variant="body1" gutterBottom>
-            Jestem prezesem i głównym trenerem w klubie Instytut Rozwoju Sportu. Biorę udział w przygotowaniach
-            zawodników startujących w Boksie, Kickboxingu oraz Taekwondo. Moi podopieczni zdobywali medale
-            Mistrzostw Polski, Mistrzostw Europy, Mistrzostw Świata. Jestem absolwentem Collegium Medicum Uniwersytetu
-            Jagiellońskiego na kierunku Ratownictwo Medyczne.
-          </Typography>
+  return (
+    <Box ref={ref as any}>
+      <SectionGrid>
+        <Card>
+          <CardMedia
+            style={{ paddingTop: '56.25%' }}
+            title="Adam Wargal"
+            image={adamWargal}
+          />
+          <CardContent>
+            <Typography variant="h2">{t('coach.name')}</Typography>
+            <Typography variant="body1" gutterBottom>
+              {t('coach.description.p1')}
+            </Typography>
 
-          <Typography variant="body1">
-            Podczas studiów trenowałem również Judo w sekcji sportowej CMUJ. Organizowałem obozy oraz zgrupowania
-            sportowe.
-          </Typography>
-        </CardContent>
-      </Card>
-    </SectionGrid>
-  </Box>
-));
+            <Typography variant="body1" gutterBottom>
+              {t('coach.description.p2')}
+            </Typography>
+
+            <Typography variant="body1">
+              {t('coach.description.p3')}
+            </Typography>
+          </CardContent>
+        </Card>
+      </SectionGrid>
+    </Box>
+  );
+});
 
 export default Coach;
