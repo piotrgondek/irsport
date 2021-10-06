@@ -24,12 +24,12 @@ import {
   Close,
   Menu as MenuIcon,
   AssignmentInd,
-  Person,
   Schedule,
   PlayCircle,
   ContactPhone,
   MonetizationOn,
   LocationOn,
+  Info,
 } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 import RodoPoint from './RodoPoint';
@@ -124,9 +124,9 @@ const AppBar: React.FC<AppBarProps> = (props) => {
             onClick={scrollTo('coach')}
           >
             <ListItemIcon>
-              <Person />
+              <Info />
             </ListItemIcon>
-            <ListItemText>{t('appbar.menu.coach')}</ListItemText>
+            <ListItemText>{t('appbar.menu.about')}</ListItemText>
           </MenuItem>
           <MenuItem
             id="irsTreningi"
