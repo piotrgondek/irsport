@@ -15,8 +15,12 @@ import Movies from './Movies';
 import Footer from './Footer';
 import Pricing from './Pricing';
 import Map from './Map';
+import RodoDrawer from './RodoDrawer';
+import AppContext from './AppContext';
+import reducer, { initState } from './reducer';
 
 const App: React.FC = () => {
+  const [state, dispatch] = React.useReducer(reducer, initState);
   const coachRef = React.useRef<HTMLElement>(null);
   const timetableRef = React.useRef<HTMLElement>(null);
   const moviewsRef = React.useRef<HTMLElement>(null);
@@ -25,35 +29,38 @@ const App: React.FC = () => {
   const mapRef = React.useRef<HTMLElement>(null);
 
   return (
-    <ThemeProvider theme={dark}>
-      <CssBaseline />
-      <AppBar
-        coach={coachRef}
-        pricing={pricingRef}
-        timetable={timetableRef}
-        movies={moviewsRef}
-        footer={footerRef}
-        map={mapRef}
-      />
-      <Intro />
-      <Coach ref={coachRef} />
-      <ThemeProvider theme={light}>
-        <Timetable ref={timetableRef} />
+    <AppContext.Provider value={{ state, dispatch }}>
+      <ThemeProvider theme={dark}>
+        <CssBaseline />
+        <AppBar
+          coach={coachRef}
+          pricing={pricingRef}
+          timetable={timetableRef}
+          movies={moviewsRef}
+          footer={footerRef}
+          map={mapRef}
+        />
+        <RodoDrawer />
+        <Intro />
+        <Coach ref={coachRef} />
+        <ThemeProvider theme={light}>
+          <Timetable ref={timetableRef} />
+        </ThemeProvider>
+        <Pricing ref={pricingRef} />
+        <ThemeProvider theme={light}>
+          <Paper>
+            <Map ref={mapRef} />
+          </Paper>
+        </ThemeProvider>
+        <Movies ref={moviewsRef} />
+        <ThemeProvider theme={light}>
+          <Paper>
+            <Cooperation />
+          </Paper>
+        </ThemeProvider>
+        <Footer ref={footerRef} />
       </ThemeProvider>
-      <Pricing ref={pricingRef} />
-      <ThemeProvider theme={light}>
-        <Paper>
-          <Map ref={mapRef} />
-        </Paper>
-      </ThemeProvider>
-      <Movies ref={moviewsRef} />
-      <ThemeProvider theme={light}>
-        <Paper>
-          <Cooperation />
-        </Paper>
-      </ThemeProvider>
-      <Footer ref={footerRef} />
-    </ThemeProvider>
+    </AppContext.Provider>
   );
 };
 
