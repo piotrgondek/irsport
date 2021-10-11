@@ -52,16 +52,16 @@ const AppMenu: React.FC<AppMenuProps> = ({ sections }) => {
     dispatch({ type: 'OPEN_RODO' });
   };
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleOpenMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleCloseMenu = () => {
     setAnchorEl(null);
   };
 
-  const scrollTo = (section: Section) => () => {
-    handleClose();
+  const handleScrollTo = (section: Section) => () => {
+    handleCloseMenu();
     setSelectedSection(section);
   };
 
@@ -74,21 +74,21 @@ const AppMenu: React.FC<AppMenuProps> = ({ sections }) => {
         color="inherit"
         aria-label="menu"
         sx={{ mr: 2 }}
-        onClick={handleClick}
+        onClick={handleOpenMenu}
       >
         <MenuIcon />
       </IconButton>
       <Menu
         anchorEl={anchorEl}
         open={open}
-        onClose={handleClose}
+        onClose={handleCloseMenu}
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}
       >
         <MenuItem
           id="irsAdamWargal"
-          onClick={scrollTo('coach')}
+          onClick={handleScrollTo('coach')}
         >
           <ListItemIcon>
             <Info />
@@ -97,7 +97,7 @@ const AppMenu: React.FC<AppMenuProps> = ({ sections }) => {
         </MenuItem>
         <MenuItem
           id="irsTreningi"
-          onClick={scrollTo('timetable')}
+          onClick={handleScrollTo('timetable')}
         >
           <ListItemIcon>
             <Schedule />
@@ -106,7 +106,7 @@ const AppMenu: React.FC<AppMenuProps> = ({ sections }) => {
         </MenuItem>
         <MenuItem
           id="irsCennink"
-          onClick={scrollTo('pricing')}
+          onClick={handleScrollTo('pricing')}
         >
           <ListItemIcon>
             <MonetizationOn />
@@ -115,7 +115,7 @@ const AppMenu: React.FC<AppMenuProps> = ({ sections }) => {
         </MenuItem>
         <MenuItem
           id="irsMap"
-          onClick={scrollTo('map')}
+          onClick={handleScrollTo('map')}
         >
           <ListItemIcon>
             <LocationOn />
@@ -124,7 +124,7 @@ const AppMenu: React.FC<AppMenuProps> = ({ sections }) => {
         </MenuItem>
         <MenuItem
           id="irsFilmy"
-          onClick={scrollTo('movies')}
+          onClick={handleScrollTo('movies')}
         >
           <ListItemIcon>
             <PlayCircle />
@@ -134,7 +134,7 @@ const AppMenu: React.FC<AppMenuProps> = ({ sections }) => {
         {md && (
         <MenuItem
           id="irsFooter"
-          onClick={scrollTo('footer')}
+          onClick={handleScrollTo('footer')}
         >
           <ListItemIcon>
             <ContactPhone />
