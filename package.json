@@ -6,7 +6,7 @@
   "dependencies": {
     "@commitlint/cli": "13.2.1",
     "@commitlint/config-angular": "14.1.0",
-    "@cypress/react": "5.10.1",
+    "@cypress/react": "5.10.3",
     "@cypress/webpack-dev-server": "1.7.0",
     "@emotion/react": "11.5.0",
     "@emotion/styled": "11.3.0",
