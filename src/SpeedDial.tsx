@@ -15,7 +15,11 @@ const SpeedDial: React.FC = () => {
   const actions = React.useMemo(() => [
     {
       icon: (
-        <IconButton href="mailto:instytutrozwojusportu@gmail.com" target="_blank">
+        <IconButton
+          href="mailto:instytutrozwojusportu@gmail.com"
+          target="_blank"
+          rel="noopener"
+        >
           <Mail />
         </IconButton>
       ),
@@ -23,7 +27,11 @@ const SpeedDial: React.FC = () => {
     },
     {
       icon: (
-        <IconButton href="https://goo.gl/maps/iEsyVu59UeEajRh18" target="_blank">
+        <IconButton
+          href="https://goo.gl/maps/iEsyVu59UeEajRh18"
+          target="_blank"
+          rel="noopener"
+        >
           <LocationOn />
         </IconButton>
       ),
@@ -31,7 +39,11 @@ const SpeedDial: React.FC = () => {
     },
     {
       icon: (
-        <IconButton href="tel:535673205" target="_blank">
+        <IconButton
+          href="tel:535673205"
+          target="_blank"
+          rel="noopener"
+        >
           <Phone />
         </IconButton>
       ),

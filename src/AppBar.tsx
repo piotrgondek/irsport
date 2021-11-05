@@ -59,6 +59,7 @@ const AppBar: React.FC<AppBarProps> = (props) => {
           edge="end"
           href="//youtube.com/channel/UCu0dFoZJMJmgubPZqP0Q6Qw/videos"
           target="_blank"
+          rel="noopener"
         >
           <YouTube />
         </IconButton>
@@ -66,6 +67,7 @@ const AppBar: React.FC<AppBarProps> = (props) => {
           edge="end"
           href="//facebook.com/IRSsportywalki"
           target="_blank"
+          rel="noopener"
         >
           <Facebook />
         </IconButton>
