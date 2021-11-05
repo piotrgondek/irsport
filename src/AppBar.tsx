@@ -57,14 +57,14 @@ const AppBar: React.FC<AppBarProps> = (props) => {
         </Typography>
         <IconButton
           edge="end"
-          href="https://www.youtube.com/channel/UCu0dFoZJMJmgubPZqP0Q6Qw/videos"
+          href="//youtube.com/channel/UCu0dFoZJMJmgubPZqP0Q6Qw/videos"
           target="_blank"
         >
           <YouTube />
         </IconButton>
         <IconButton
           edge="end"
-          href="https://www.facebook.com/IRSsportywalki"
+          href="//facebook.com/IRSsportywalki"
           target="_blank"
         >
           <Facebook />

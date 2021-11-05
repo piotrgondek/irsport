@@ -83,7 +83,7 @@ const Movies = React.forwardRef((_, ref) => {
                   : (
                     <CardMedia
                       onClick={playVideo(video)}
-                      image={`http://img.youtube.com/vi/${video}/0.jpg`}
+                      image={`//img.youtube.com/vi/${video}/0.jpg`}
                       sx={{
                         backgroundPosition: 'center',
                         backgroundSize: '100%',

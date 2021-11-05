@@ -43,7 +43,7 @@
     }
   },
   "coach": {
-    "coach": "Trener",
+    "coach": "Coach",
     "name": "Adam Wargal",
     "description": {
       "p1": "I started with Taekwondo training in 1993 in one of Krakow's housing estates. As a competitor, I won medals of national competitions in Taekwondo and Kickboxing. I have a 3rd dan Taekwondo and 1st dan Kickboxing. I am a certified instructor of the following disciplines: Taekwondo, Kickboxing, Fitness - strength exercises and the qualifications of a trainer of the discipline: Boxing.",
@@ -94,7 +94,9 @@
     "header": "Contact",
     "address": "ul. Wrocławska 11a Kraków",
     "phone": "tel: 535 673 205",
-    "email": "instytutrozwojusportu@gmail.com"
+    "email": "instytutrozwojusportu@gmail.com",
+    "yt": "YouTube",
+    "fb": "Facebook"
   },
   "timetable": {
     "days": {
