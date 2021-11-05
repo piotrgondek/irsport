@@ -40,7 +40,6 @@ const App: React.FC = () => {
           footer={footerRef}
           map={mapRef}
         />
-        <RodoDrawer />
         <Intro />
         <Coach ref={coachRef} />
         <ThemeProvider theme={light}>
@@ -59,6 +58,7 @@ const App: React.FC = () => {
           </Paper>
         </ThemeProvider>
         <Footer ref={footerRef} />
+        <RodoDrawer />
       </ThemeProvider>
     </AppContext.Provider>
   );
