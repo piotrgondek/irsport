@@ -54,6 +54,7 @@ const Footer = React.forwardRef((_, ref) => {
                 <Link
                   href="tel:535673205"
                   target="_blank"
+                  rel="noopener"
                 >
                   {t('contact.phone')}
                 </Link>
@@ -62,6 +63,7 @@ const Footer = React.forwardRef((_, ref) => {
                 <Link
                   href="mailto:instytutrozwojusportu@gmail.com"
                   target="_blank"
+                  rel="noopener"
                 >
                   {t('contact.email')}
                 </Link>
@@ -70,6 +72,7 @@ const Footer = React.forwardRef((_, ref) => {
                 <Link
                   href="https://goo.gl/maps/iEsyVu59UeEajRh18"
                   target="_blank"
+                  rel="noopener"
                 >
                   {t('contact.address')}
                 </Link>
@@ -98,6 +101,7 @@ const Footer = React.forwardRef((_, ref) => {
                 <Link
                   href="//facebook.com/IRSsportywalki"
                   target="_blank"
+                  rel="noopener"
                 >
                   {t('contact.fb')}
                 </Link>
@@ -106,6 +110,7 @@ const Footer = React.forwardRef((_, ref) => {
                 <Link
                   href="//youtube.com/channel/UCu0dFoZJMJmgubPZqP0Q6Qw/videos"
                   target="_blank"
+                  rel="noopener"
                 >
                   {t('contact.yt')}
                 </Link>
