@@ -6,7 +6,6 @@ import {
   ListItemText,
   Menu,
   MenuItem,
-  useMediaQuery,
 } from '@mui/material';
 import {
   AssignmentInd,
@@ -20,7 +19,6 @@ import {
 } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 import { Section } from './AppBar';
-import { dark } from './themes';
 import AppContext from './AppContext';
 
 interface AppMenuProps {
@@ -31,7 +29,6 @@ const AppMenu: React.FC<AppMenuProps> = ({ sections }) => {
   const { dispatch } = React.useContext(AppContext);
   const { t } = useTranslation();
   const [selectedSection, setSelectedSection] = React.useState<Section | undefined>();
-  const md = useMediaQuery(dark.breakpoints.up('md'));
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -131,7 +128,6 @@ const AppMenu: React.FC<AppMenuProps> = ({ sections }) => {
           </ListItemIcon>
           <ListItemText>{t('appbar.menu.movies')}</ListItemText>
         </MenuItem>
-        {md && (
         <MenuItem
           id="irsFooter"
           onClick={handleScrollTo('footer')}
@@ -141,7 +137,6 @@ const AppMenu: React.FC<AppMenuProps> = ({ sections }) => {
           </ListItemIcon>
           <ListItemText>{t('appbar.menu.contact')}</ListItemText>
         </MenuItem>
-        )}
         <Divider />
         <MenuItem
           id="irsRODO"

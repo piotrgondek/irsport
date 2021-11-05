@@ -94,7 +94,9 @@
     "header": "Contact",
     "address": "ul. Wrocławska 11a Kraków",
     "phone": "tel: 535 673 205",
-    "email": "instytutrozwojusportu@gmail.com"
+    "email": "instytutrozwojusportu@gmail.com",
+    "yt": "YouTube",
+    "fb": "Facebook"
   },
   "timetable": {
     "days": {
