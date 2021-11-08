@@ -7,7 +7,7 @@ on:
     branches: [master]
 
 jobs:
-  build:
+  install:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -30,9 +30,35 @@ jobs:
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: yarn install
 
+  build:
+    runs-on: ubuntu-latest
+    needs: install
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js lts/*
+        uses: actions/setup-node@v2
+        with:
+          node-version: lts/*
+      - name: Cache node modules
+        id: cache-nodemodules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: |
+            node_modules
+            /home/runner/.cache/Cypress
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+      - name: Install
+        if: steps.cache-nodemodules.outputs.cache-hit != 'true'
+        run: yarn install
+      - name: Build
+        run: yarn run build
+
   eslint:
     runs-on: ubuntu-latest
-    needs: build
+    needs: install
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js lts/*
@@ -58,7 +84,7 @@ jobs:
 
   tests:
     runs-on: ubuntu-latest
-    needs: build
+    needs: install
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js lts/*
@@ -94,7 +120,7 @@ jobs:
           path: cypress/*
 
   deploy:
-    needs: ['eslint', 'tests']
+    needs: ['build', 'eslint', 'tests']
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
@@ -120,7 +146,7 @@ jobs:
       - name: Deploy
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          yarn run deploy -u "github-actions-bot <support+actions@github.com>"
+          yarn run deploy:ci -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

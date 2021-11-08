@@ -38,15 +38,16 @@
     "web-vitals": "2.1.2"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "yarn run build",
+    "deploy": "yarn run deploy:ci",
+    "deploy:ci": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "cypress run",
     "eject": "react-scripts eject",
     "prepare": "husky install",
     "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "eslint-fix": "npm run eslint -- --fix",
+    "eslint-fix": "yarn run eslint -- --fix",
     "semantic-release": "semantic-release"
   },
   "browserslist": {
