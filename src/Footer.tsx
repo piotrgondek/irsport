@@ -11,13 +11,26 @@ import {
   Typography,
   useMediaQuery,
 } from '@mui/material';
-import { ConnectWithoutContact, ContactPhone, LocationOn, Mail, Phone } from '@mui/icons-material';
+import {
+  ConnectWithoutContact,
+  ContactPhone,
+  LocationOn,
+  Mail,
+  Phone,
+  List,
+} from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 import { dark } from './themes';
+import AppContext from './AppContext';
 
 const Footer = React.forwardRef((_, ref) => {
   const { t } = useTranslation();
   const md = useMediaQuery(dark.breakpoints.up('md'));
+  const { dispatch } = React.useContext(AppContext);
+
+  const openRodo = () => {
+    dispatch({ type: 'OPEN_RODO' });
+  };
 
   return (
     <>
@@ -49,12 +62,20 @@ const Footer = React.forwardRef((_, ref) => {
                 </Link>
               </Typography>
               <Typography variant="body2">
-                <Link href="mailto:instytutrozwojusportu@gmail.com" target="_blank" rel="noopener">
+                <Link
+                  href="mailto:instytutrozwojusportu@gmail.com"
+                  target="_blank"
+                  rel="noopener"
+                >
                   {t('contact.email')}
                 </Link>
               </Typography>
               <Typography variant="body2">
-                <Link href="https://goo.gl/maps/iEsyVu59UeEajRh18" target="_blank" rel="noopener">
+                <Link
+                  href="https://goo.gl/maps/iEsyVu59UeEajRh18"
+                  target="_blank"
+                  rel="noopener"
+                >
                   {t('contact.address')}
                 </Link>
               </Typography>
@@ -75,14 +96,41 @@ const Footer = React.forwardRef((_, ref) => {
             </CardContent>
             <CardContent>
               <Typography variant="body2">
-                <Link href="//facebook.com/IRSsportywalki" target="_blank" rel="noopener">
+                <Link
+                  href="//facebook.com/IRSsportywalki"
+                  target="_blank"
+                  rel="noopener"
+                >
                   {t('contact.fb')}
                 </Link>
               </Typography>
               <Typography variant="body2">
-                <Link href="//youtube.com/channel/UCu0dFoZJMJmgubPZqP0Q6Qw/videos" target="_blank" rel="noopener">
+                <Link
+                  href="//youtube.com/channel/UCu0dFoZJMJmgubPZqP0Q6Qw/videos"
+                  target="_blank"
+                  rel="noopener"
+                >
                   {t('contact.yt')}
                 </Link>
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item>
+          <Card
+            variant="outlined"
+            sx={{
+              border: 'none',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <CardContent>
+              <List sx={{ fontSize: '3rem' }} />
+            </CardContent>
+            <CardContent>
+              <Typography variant="body2">
+                <Link onClick={openRodo}>{t('appbar.menu.rodo')}</Link>
               </Typography>
             </CardContent>
           </Card>
@@ -100,8 +148,16 @@ const Footer = React.forwardRef((_, ref) => {
             elevation={3}
           >
             <BottomNavigation value={1}>
-              <BottomNavigationAction href="mailto:instytutrozwojusportu@gmail.com" label="irs" icon={<Mail />} />
-              <BottomNavigationAction href="tel:535673205" label="535 673 205" icon={<Phone />} />
+              <BottomNavigationAction
+                href="mailto:instytutrozwojusportu@gmail.com"
+                label="irs"
+                icon={<Mail />}
+              />
+              <BottomNavigationAction
+                href="tel:535673205"
+                label="535 673 205"
+                icon={<Phone />}
+              />
               <BottomNavigationAction
                 href="https://goo.gl/maps/iEsyVu59UeEajRh18"
                 label="adam wargal"
