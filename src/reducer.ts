@@ -16,7 +16,6 @@ const actions = {
 
 export type Actions = keyof typeof actions;
 
-const reducer = (state: AppState, action: { type: Actions }) =>
-  actions[action.type](state);
+const reducer = (state: AppState, action: { type: Actions }) => actions[action.type](state);
 
 export default reducer;

@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Drawer,
-  Fab,
-  List,
-  ListItem,
-  ListItemText,
-  Typography,
-} from '@mui/material';
+import { Drawer, Fab, List, ListItem, ListItemText, Typography } from '@mui/material';
 import { Close } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 import RodoPoint from './RodoPoint';

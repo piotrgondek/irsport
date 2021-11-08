@@ -17,13 +17,20 @@ import {
   LocationOn,
   Mail,
   Phone,
+  List,
 } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 import { dark } from './themes';
+import AppContext from './AppContext';
 
 const Footer = React.forwardRef((_, ref) => {
   const { t } = useTranslation();
   const md = useMediaQuery(dark.breakpoints.up('md'));
+  const { dispatch } = React.useContext(AppContext);
+
+  const openRodo = () => {
+    dispatch({ type: 'OPEN_RODO' });
+  };
 
   return (
     <>
@@ -105,6 +112,25 @@ const Footer = React.forwardRef((_, ref) => {
                 >
                   {t('contact.yt')}
                 </Link>
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item>
+          <Card
+            variant="outlined"
+            sx={{
+              border: 'none',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <CardContent>
+              <List sx={{ fontSize: '3rem' }} />
+            </CardContent>
+            <CardContent>
+              <Typography variant="body2">
+                <Link onClick={openRodo}>{t('appbar.menu.rodo')}</Link>
               </Typography>
             </CardContent>
           </Card>

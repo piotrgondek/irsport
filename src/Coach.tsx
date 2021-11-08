@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Card,
-  CardContent,
-  CardMedia,
-  Grid,
-  Typography,
-} from '@mui/material';
+import { Box, Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import adamWargal from './assets/AdamWargal.jpg';
 import IRS from './assets/IRS.jpg';
@@ -39,9 +32,7 @@ const Coach = React.forwardRef<HTMLElement>((_, ref) => {
                   {t('coach.description.p2')}
                 </Typography>
 
-                <Typography variant="body1">
-                  {t('coach.description.p3')}
-                </Typography>
+                <Typography variant="body1">{t('coach.description.p3')}</Typography>
               </CardContent>
             </Card>
           </Grid>
@@ -65,9 +56,7 @@ const Coach = React.forwardRef<HTMLElement>((_, ref) => {
                   {t('club.description.p2')}
                 </Typography>
 
-                <Typography variant="body1">
-                  {t('club.description.p3')}
-                </Typography>
+                <Typography variant="body1">{t('club.description.p3')}</Typography>
               </CardContent>
             </Card>
           </Grid>
