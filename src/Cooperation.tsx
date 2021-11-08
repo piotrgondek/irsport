@@ -5,20 +5,23 @@ import ckSystem from './assets/logos/ck-system.png';
 import fit from './assets/logos/fit.jpg';
 
 const Cooperation: React.FC = () => {
-  const images = React.useMemo(() => [
-    {
-      src: benefitSystems,
-      name: 'Benefit Systems',
-    },
-    {
-      src: ckSystem,
-      name: 'CK System',
-    },
-    {
-      src: fit,
-      name: 'FitProfit',
-    },
-  ], []);
+  const images = React.useMemo(
+    () => [
+      {
+        src: benefitSystems,
+        name: 'Benefit Systems',
+      },
+      {
+        src: ckSystem,
+        name: 'CK System',
+      },
+      {
+        src: fit,
+        name: 'FitProfit',
+      },
+    ],
+    []
+  );
 
   return (
     <Grid

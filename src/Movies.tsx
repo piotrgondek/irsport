@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Card,
-  CardContent,
-  CardMedia,
-  Grid,
-} from '@mui/material';
+import { Box, Card, CardContent, CardMedia, Grid } from '@mui/material';
 import { PlayCircleFilledWhite } from '@mui/icons-material';
 import YouTube from 'react-youtube';
 import SectionGrid from './SectionGrid';
@@ -23,7 +17,7 @@ const Movies = React.forwardRef((_, ref) => {
       'sut_mn5XRXk',
       'ibcZHeJip_Y',
     ],
-    [],
+    []
   );
 
   const playVideo = (video: string) => () => {
@@ -33,78 +27,67 @@ const Movies = React.forwardRef((_, ref) => {
   return (
     <Box ref={ref as any}>
       <SectionGrid>
-        <Grid
-          container
-          spacing={2}
-        >
+        <Grid container spacing={2}>
           {videos.map((video) => (
-            <Grid
-              key={video}
-              item
-              xl={4}
-              md={6}
-              xs={12}
-            >
+            <Grid key={video} item xl={4} md={6} xs={12}>
               <Card>
-                {videoId === video
-                  ? (
-                    <CardContent
-                      sx={{
-                        height: {
-                          xs: '160px',
-                          md: '200px',
-                        },
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
+                {videoId === video ? (
+                  <CardContent
+                    sx={{
+                      height: {
+                        xs: '160px',
+                        md: '200px',
+                      },
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      p: 0,
+                      '&:last-child': {
                         p: 0,
-                        '&:last-child': {
-                          p: 0,
-                        },
-                        '> div': {
-                          width: 1,
-                          height: 1,
+                      },
+                      '> div': {
+                        width: 1,
+                        height: 1,
+                      },
+                    }}
+                  >
+                    <YouTube
+                      videoId={video}
+                      opts={{
+                        width: '100%',
+                        height: '100%',
+                        playerVars: {
+                          autoplay: 1,
+                          color: 'white',
                         },
                       }}
-                    >
-                      <YouTube
-                        videoId={video}
-                        opts={{
-                          width: '100%',
-                          height: '100%',
-                          playerVars: {
-                            autoplay: 1,
-                            color: 'white',
-                          },
-                        }}
-                      />
-                    </CardContent>
-                  )
-                  : (
-                    <CardMedia
-                      onClick={playVideo(video)}
-                      image={`//img.youtube.com/vi/${video}/0.jpg`}
+                    />
+                  </CardContent>
+                ) : (
+                  <CardMedia
+                    onClick={playVideo(video)}
+                    image={`//img.youtube.com/vi/${video}/0.jpg`}
+                    sx={{
+                      backgroundPosition: 'center',
+                      backgroundSize: '100%',
+                      cursor: 'pointer',
+                      height: {
+                        xs: '160px',
+                        md: '200px',
+                      },
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <PlayCircleFilledWhite
                       sx={{
-                        backgroundPosition: 'center',
-                        backgroundSize: '100%',
-                        cursor: 'pointer',
-                        height: {
-                          xs: '160px',
-                          md: '200px',
-                        },
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
+                        fontSize: '5rem',
+                        color: (theme) => theme.palette.common.white,
                       }}
-                    >
-                      <PlayCircleFilledWhite
-                        sx={{
-                          fontSize: '5rem',
-                          color: (theme) => theme.palette.common.white,
-                        }}
-                      />
-                    </CardMedia>
-                  )}
+                    />
+                  </CardMedia>
+                )}
               </Card>
             </Grid>
           ))}

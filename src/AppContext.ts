@@ -2,11 +2,11 @@ import React from 'react';
 import { Actions, AppState } from './reducer';
 
 type Context = {
-  state: AppState,
+  state: AppState;
   dispatch: React.Dispatch<{
-    type: Actions
-  }>
-}
+    type: Actions;
+  }>;
+};
 
 const AppContext = React.createContext<Context>({} as Context);
 

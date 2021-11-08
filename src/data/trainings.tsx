@@ -1,6 +1,6 @@
 import { CustomTypeOptions } from 'react-i18next';
 
-type Day = 'mo'| 'tu'| 'we'| 'th'| 'fr';
+type Day = 'mo' | 'tu' | 'we' | 'th' | 'fr';
 
 export const days: Array<Day> = ['mo', 'tu', 'we', 'th', 'fr'];
 
@@ -10,9 +10,9 @@ export type CellContent = {
   body1: TimeTableKeys;
   body2?: TimeTableKeys;
   overline: '8:00 - 9:00' | '17:00 - 18:00' | '18:00 - 19:00' | '19:00 - 20:00';
-}
+};
 
-type Table = Record<Day, Array<CellContent | null>>
+type Table = Record<Day, Array<CellContent | null>>;
 
 export const table: Table = {
   mo: [

@@ -1,10 +1,6 @@
 import React from 'react';
 import './App.css';
-import {
-  CssBaseline,
-  Paper,
-  ThemeProvider,
-} from '@mui/material';
+import { CssBaseline, Paper, ThemeProvider } from '@mui/material';
 import { dark, light } from './themes';
 import AppBar from './AppBar';
 import Intro from './Intro';

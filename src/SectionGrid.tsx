@@ -17,14 +17,7 @@ const SectionGrid: React.FC = ({ children }) => (
       minHeight: '100vh',
     }}
   >
-    <Grid
-      item
-      xl={7}
-      lg={8}
-      md={9}
-      sm={10}
-      xs={11}
-    >
+    <Grid item xl={7} lg={8} md={9} sm={10} xs={11}>
       {children}
     </Grid>
   </Grid>

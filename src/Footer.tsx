@@ -13,7 +13,10 @@ import {
 } from '@mui/material';
 import {
   ConnectWithoutContact,
-  ContactPhone, LocationOn, Mail, Phone,
+  ContactPhone,
+  LocationOn,
+  Mail,
+  Phone,
 } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 import { dark } from './themes';
@@ -32,9 +35,7 @@ const Footer = React.forwardRef((_, ref) => {
           alignItems: 'baseline',
         }}
       >
-        <Grid
-          item
-        >
+        <Grid item>
           <Card
             variant="outlined"
             sx={{
@@ -44,18 +45,12 @@ const Footer = React.forwardRef((_, ref) => {
             }}
           >
             <CardContent>
-              <ContactPhone
-                sx={{ fontSize: '3rem' }}
-              />
+              <ContactPhone sx={{ fontSize: '3rem' }} />
             </CardContent>
             <CardContent>
               <Typography variant="subtitle1">{t('contact.header')}</Typography>
               <Typography variant="body2">
-                <Link
-                  href="tel:535673205"
-                  target="_blank"
-                  rel="noopener"
-                >
+                <Link href="tel:535673205" target="_blank" rel="noopener">
                   {t('contact.phone')}
                 </Link>
               </Typography>
@@ -80,9 +75,7 @@ const Footer = React.forwardRef((_, ref) => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid
-          item
-        >
+        <Grid item>
           <Card
             variant="outlined"
             sx={{
@@ -92,9 +85,7 @@ const Footer = React.forwardRef((_, ref) => {
             }}
           >
             <CardContent>
-              <ConnectWithoutContact
-                sx={{ fontSize: '3rem' }}
-              />
+              <ConnectWithoutContact sx={{ fontSize: '3rem' }} />
             </CardContent>
             <CardContent>
               <Typography variant="body2">
@@ -123,7 +114,10 @@ const Footer = React.forwardRef((_, ref) => {
         <>
           <Paper
             sx={{
-              position: 'fixed', bottom: 0, left: 0, right: 0,
+              position: 'fixed',
+              bottom: 0,
+              left: 0,
+              right: 0,
             }}
             elevation={3}
           >

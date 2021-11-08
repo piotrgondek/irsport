@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  CardMedia,
-} from '@mui/material';
+import { Box, CardMedia } from '@mui/material';
 import intro from './assets/intro.mp4';
 import intro2 from './assets/intro2.mp4';
 

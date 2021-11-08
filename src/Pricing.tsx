@@ -16,11 +16,11 @@ import { useTranslation } from 'react-i18next';
 import SectionGrid from './SectionGrid';
 
 interface PricingEntity {
-  lvl: string
-  name: string
-  price: number
-  full?: boolean
-  recommended?: boolean
+  lvl: string;
+  name: string;
+  price: number;
+  full?: boolean;
+  recommended?: boolean;
 }
 
 const Pricing = React.forwardRef((_, ref) => {
@@ -65,17 +65,9 @@ const Pricing = React.forwardRef((_, ref) => {
     <Box ref={ref as any}>
       <SectionGrid>
         <Typography variant="h4">{t('appbar.menu.pricing')}</Typography>
-        <Grid
-          container
-          spacing={2}
-        >
+        <Grid container spacing={2}>
           {pricing.map((offer) => (
-            <Grid
-              key={offer.name}
-              item
-              md={offer.full ? 12 : 6}
-              xs={12}
-            >
+            <Grid key={offer.name} item md={offer.full ? 12 : 6} xs={12}>
               <Card
                 sx={{
                   position: 'relative',
@@ -96,9 +88,7 @@ const Pricing = React.forwardRef((_, ref) => {
                     textAlign: 'center',
                   }}
                 >
-                  <Typography variant="h5">
-                    {offer.lvl}
-                  </Typography>
+                  <Typography variant="h5">{offer.lvl}</Typography>
                   <Typography
                     variant="subtitle1"
                     sx={{
