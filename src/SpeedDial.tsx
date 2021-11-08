@@ -4,54 +4,47 @@ import {
   SpeedDial as MuiSpeedDial,
   SpeedDialAction,
 } from '@mui/material';
-import {
-  Contacts,
-  Phone,
-  Mail,
-  LocationOn,
-} from '@mui/icons-material';
+import { Contacts, Phone, Mail, LocationOn } from '@mui/icons-material';
 
 const SpeedDial: React.FC = () => {
-  const actions = React.useMemo(() => [
-    {
-      icon: (
-        <IconButton
-          href="mailto:instytutrozwojusportu@gmail.com"
-          target="_blank"
-          rel="noopener"
-        >
-          <Mail />
-        </IconButton>
-      ),
-      name: 'instytutrozwojusportu@gmail.com',
-    },
-    {
-      icon: (
-        <IconButton
-          href="https://goo.gl/maps/iEsyVu59UeEajRh18"
-          target="_blank"
-          rel="noopener"
-        >
-          <LocationOn />
-        </IconButton>
-      ),
-      name: 'ul. Wrocławska 11a Kraków',
-    },
-    {
-      icon: (
-        <IconButton
-          href="tel:535673205"
-          target="_blank"
-          rel="noopener"
-        >
-          <Phone />
-        </IconButton>
-      ),
-      name: '535 673 205',
-      isMain: true,
-    },
-  ],
-  []);
+  const actions = React.useMemo(
+    () => [
+      {
+        icon: (
+          <IconButton
+            href="mailto:instytutrozwojusportu@gmail.com"
+            target="_blank"
+            rel="noopener"
+          >
+            <Mail />
+          </IconButton>
+        ),
+        name: 'instytutrozwojusportu@gmail.com',
+      },
+      {
+        icon: (
+          <IconButton
+            href="https://goo.gl/maps/iEsyVu59UeEajRh18"
+            target="_blank"
+            rel="noopener"
+          >
+            <LocationOn />
+          </IconButton>
+        ),
+        name: 'ul. Wrocławska 11a Kraków',
+      },
+      {
+        icon: (
+          <IconButton href="tel:535673205" target="_blank" rel="noopener">
+            <Phone />
+          </IconButton>
+        ),
+        name: '535 673 205',
+        isMain: true,
+      },
+    ],
+    []
+  );
 
   return (
     <MuiSpeedDial
@@ -67,9 +60,7 @@ const SpeedDial: React.FC = () => {
           lg: theme.spacing(6),
         }),
       }}
-      icon={(
-        <Contacts />
-    )}
+      icon={<Contacts />}
     >
       {actions.map((action) => (
         <SpeedDialAction
@@ -77,7 +68,11 @@ const SpeedDial: React.FC = () => {
           icon={action.icon}
           tooltipTitle={action.name}
           sx={{
-            backgroundColor: ({ palette: { primary: { dark, main } } }) => (action.isMain ? dark : main),
+            backgroundColor: ({
+              palette: {
+                primary: { dark, main },
+              },
+            }) => (action.isMain ? dark : main),
           }}
         />
       ))}

@@ -26,3 +26,5 @@ yarn-error.log*
 cypress/fixtures
 cypress/snapshots/**/__diff_output__
 cypress/screenshots/**/*(failed).png
+
+.vim/

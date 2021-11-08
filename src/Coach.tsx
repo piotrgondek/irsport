@@ -18,15 +18,8 @@ const Coach = React.forwardRef<HTMLElement>((_, ref) => {
   return (
     <Box ref={ref as any}>
       <SectionGrid>
-        <Grid
-          container
-          spacing={4}
-        >
-          <Grid
-            item
-            xs={12}
-            md={6}
-          >
+        <Grid container spacing={4}>
+          <Grid item xs={12} md={6}>
             <Card>
               <CardMedia
                 title="Adam Wargal"
@@ -52,11 +45,7 @@ const Coach = React.forwardRef<HTMLElement>((_, ref) => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            md={6}
-          >
+          <Grid item xs={12} md={6}>
             <Card>
               <CardMedia
                 title="IRS"

@@ -13,12 +13,9 @@ const resources = {
   },
 } as const;
 
-i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    lng: 'pl',
-    resources,
-  });
+i18n.use(LanguageDetector).use(initReactI18next).init({
+  lng: 'pl',
+  resources,
+});
 
 export default resources;

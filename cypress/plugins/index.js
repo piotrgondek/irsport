@@ -18,10 +18,11 @@ import { addMatchImageSnapshotPlugin } from 'cypress-image-snapshot/plugin';
 /**
  * @type {Cypress.PluginConfig}
  */
-// eslint-disable-next-line no-unused-vars
-export default (on, config) => {
+const config = (on, config) => {
   injectDevServer(on, config);
   addMatchImageSnapshotPlugin(on, config);
 
   return config;
 };
+
+export default config;

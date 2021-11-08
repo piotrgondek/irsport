@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Typography,
-} from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { GoogleApiWrapper, Map, Marker } from 'google-maps-react';
 import { useTranslation } from 'react-i18next';
 import SelectionGrid from './SectionGrid';

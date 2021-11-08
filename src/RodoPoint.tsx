@@ -1,25 +1,22 @@
 import React from 'react';
-import {
-  Box,
-  Card,
-  CardContent,
-  Typography,
-} from '@mui/material';
+import { Box, Card, CardContent, Typography } from '@mui/material';
 import { Done } from '@mui/icons-material';
 
 interface RodoPointProps {
-  header: string
+  header: string;
 }
 
 const RodoPoint: React.FC<RodoPointProps> = ({ header, children }) => (
-  <Box sx={{
-    m: 2,
-  }}
-  >
-    <Card sx={{
-      display: 'flex',
-      alignItems: 'center',
+  <Box
+    sx={{
+      m: 2,
     }}
+  >
+    <Card
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+      }}
     >
       <CardContent>
         <Done
@@ -33,9 +30,7 @@ const RodoPoint: React.FC<RodoPointProps> = ({ header, children }) => (
         />
       </CardContent>
       <CardContent>
-        <Typography variant="h6">
-          {header}
-        </Typography>
+        <Typography variant="h6">{header}</Typography>
         {children}
       </CardContent>
     </Card>

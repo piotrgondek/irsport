@@ -16,15 +16,13 @@ describe('App', () => {
         },
         {
           statusCode: 404,
-        },
+        }
       ).as('intro');
 
-      cy.intercept(
-        {
-          method: 'GET',
-          url: '*',
-        },
-      ).as('gets');
+      cy.intercept({
+        method: 'GET',
+        url: '*',
+      }).as('gets');
 
       cy.visit('/');
 
@@ -41,10 +39,9 @@ describe('App', () => {
       cy.get('.close-rodo').click();
       cy.matchImageSnapshot(`[${viewport}] RODO invisible`);
 
-      cy.matchImageSnapshot(`[${viewport}] Whole page`,
-        {
-          capture: 'fullPage',
-        });
+      cy.matchImageSnapshot(`[${viewport}] Whole page`, {
+        capture: 'fullPage',
+      });
     });
   });
 });
