@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Typography,
-} from '@mui/material';
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { days, table, events, CellContent } from './data/trainings';
 import SectionGrid from './SectionGrid';
@@ -22,9 +13,7 @@ const CellRow: React.FC<CellRowProps> = ({ cellContent, variant }) => {
   const { t } = useTranslation();
 
   return cellContent && cellContent[variant] ? (
-    <Typography variant="body1">
-      {t(`timetable.${cellContent[variant]}` as any)}
-    </Typography>
+    <Typography variant="body1">{t(`timetable.${cellContent[variant]}` as any)}</Typography>
   ) : null;
 };
 
@@ -47,9 +36,7 @@ const Timetable = React.forwardRef<HTMLElement>((_, ref) => {
                       width: '1rem',
                     }}
                   >
-                    <Typography variant="subtitle1">
-                      {t(`timetable.days.${day}` as any)}
-                    </Typography>
+                    <Typography variant="subtitle1">{t(`timetable.days.${day}` as any)}</Typography>
                   </TableCell>
                 ))}
               </TableRow>
@@ -59,17 +46,9 @@ const Timetable = React.forwardRef<HTMLElement>((_, ref) => {
                 <TableRow key={event}>
                   {days.map((day) => (
                     <TableCell key={day}>
-                      <CellRow
-                        variant="body1"
-                        cellContent={memTable[day][event]}
-                      />
-                      <CellRow
-                        variant="body2"
-                        cellContent={memTable[day][event]}
-                      />
-                      <Typography variant="overline">
-                        {memTable[day][event]?.overline}
-                      </Typography>
+                      <CellRow variant="body1" cellContent={memTable[day][event]} />
+                      <CellRow variant="body2" cellContent={memTable[day][event]} />
+                      <Typography variant="overline">{memTable[day][event]?.overline}</Typography>
                     </TableCell>
                   ))}
                 </TableRow>

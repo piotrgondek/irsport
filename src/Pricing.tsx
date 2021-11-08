@@ -55,11 +55,7 @@ const Pricing = React.forwardRef((_, ref) => {
     },
   ];
 
-  const info = [
-    t('pricing.points.1'),
-    t('pricing.points.2'),
-    t('pricing.points.3'),
-  ];
+  const info = [t('pricing.points.1'), t('pricing.points.2'), t('pricing.points.3')];
 
   return (
     <Box ref={ref as any}>
@@ -99,10 +95,7 @@ const Pricing = React.forwardRef((_, ref) => {
                   >
                     {offer.name}
                   </Typography>
-                  <Chip
-                    label={`${offer.price}PLN`}
-                    color={offer.recommended ? 'success' : 'default'}
-                  />
+                  <Chip label={`${offer.price}PLN`} color={offer.recommended ? 'success' : 'default'} />
                   {offer.recommended && (
                     <Chip
                       sx={{

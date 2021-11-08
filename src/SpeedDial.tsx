@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  IconButton,
-  SpeedDial as MuiSpeedDial,
-  SpeedDialAction,
-} from '@mui/material';
+import { IconButton, SpeedDial as MuiSpeedDial, SpeedDialAction } from '@mui/material';
 import { Contacts, Phone, Mail, LocationOn } from '@mui/icons-material';
 
 const SpeedDial: React.FC = () => {
@@ -11,11 +7,7 @@ const SpeedDial: React.FC = () => {
     () => [
       {
         icon: (
-          <IconButton
-            href="mailto:instytutrozwojusportu@gmail.com"
-            target="_blank"
-            rel="noopener"
-          >
+          <IconButton href="mailto:instytutrozwojusportu@gmail.com" target="_blank" rel="noopener">
             <Mail />
           </IconButton>
         ),
@@ -23,11 +15,7 @@ const SpeedDial: React.FC = () => {
       },
       {
         icon: (
-          <IconButton
-            href="https://goo.gl/maps/iEsyVu59UeEajRh18"
-            target="_blank"
-            rel="noopener"
-          >
+          <IconButton href="https://goo.gl/maps/iEsyVu59UeEajRh18" target="_blank" rel="noopener">
             <LocationOn />
           </IconButton>
         ),

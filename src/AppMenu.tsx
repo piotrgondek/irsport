@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Divider,
-  IconButton,
-  ListItemIcon,
-  ListItemText,
-  Menu,
-  MenuItem,
-} from '@mui/material';
+import { Divider, IconButton, ListItemIcon, ListItemText, Menu, MenuItem } from '@mui/material';
 import {
   AssignmentInd,
   ContactPhone,
@@ -28,9 +21,7 @@ interface AppMenuProps {
 const AppMenu: React.FC<AppMenuProps> = ({ sections }) => {
   const { dispatch } = React.useContext(AppContext);
   const { t } = useTranslation();
-  const [selectedSection, setSelectedSection] = React.useState<
-    Section | undefined
-  >();
+  const [selectedSection, setSelectedSection] = React.useState<Section | undefined>();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
