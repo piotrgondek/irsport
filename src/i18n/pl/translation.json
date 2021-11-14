@@ -116,5 +116,12 @@
     "advanced": "zaawansowana",
     "beginner": "początkująca",
     "sparrings": "sparingi"
+  },
+  "info": {
+    "title": "Informacja",
+    "content": {
+      "1": "W dniach 15-19 listopada klub będzie zamknięty.",
+      "2": "Za utrudnienia przepraszamy!"
+    }
   }
 }

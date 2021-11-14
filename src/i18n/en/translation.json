@@ -116,5 +116,12 @@
     "advanced": "advanced",
     "beginner": "beginner",
     "sparrings": "sparrings"
+  },
+  "info": {
+    "title": "Info",
+    "content": {
+      "1": "The club will be closed on November 15-19.",
+      "2": "We apologize for inconveniences!"
+    }
   }
 }
