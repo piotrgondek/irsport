@@ -14,6 +14,7 @@ import Map from './Map';
 import RodoDrawer from './RodoDrawer';
 import AppContext from './AppContext';
 import reducer, { initState } from './reducer';
+import Info from './Info';
 
 const App: React.FC = () => {
   const [state, dispatch] = React.useReducer(reducer, initState);
@@ -55,6 +56,7 @@ const App: React.FC = () => {
         </ThemeProvider>
         <Footer ref={footerRef} />
         <RodoDrawer />
+        <Info />
       </ThemeProvider>
     </AppContext.Provider>
   );
