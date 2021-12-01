@@ -31,7 +31,6 @@ describe('App', () => {
       cy.document().its('fonts.status').should('equal', 'loaded');
 
       cy.matchImageSnapshot(`[${viewport}] Info`);
-      cy.get('.MuiBackdrop-root').click({ force: true });
 
       cy.get('#irsMenu').click();
       cy.matchImageSnapshot(`[${viewport}] Opened menu`);
