@@ -1232,17 +1232,17 @@
     resolve-global "1.0.0"
     yargs "^17.0.0"
 
-"@commitlint/config-angular-type-enum@^14.0.0":
-  version "14.0.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/config-angular-type-enum/-/config-angular-type-enum-14.0.0.tgz#29f05fc212b4320e11b1a6bf538d68bba7178464"
-  integrity sha512-c4MX+h4+8TmqELehb6IJfGQ7v/Wp07OfJQpnSnUPksHskjCkojrVnX3JI9Z5BtK7KQHCzJlI6j1CcvehnLSzWw==
+"@commitlint/config-angular-type-enum@^15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-angular-type-enum/-/config-angular-type-enum-15.0.0.tgz#52a2b6c90e577d0cd794231d9ee24fc6d96bf675"
+  integrity sha512-KBGoII2yo76KtbKbeCym5PxCt5CZvti7YbCEGOF5GiyZd/9AaJur/UhbzX3pcoLMgXd9u3Ru+qydm79TlRLuJA==
 
-"@commitlint/config-angular@14.1.0":
-  version "14.1.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/config-angular/-/config-angular-14.1.0.tgz#0ddfb7c0eb83c44ef6f2c35b9444649eb639bd8a"
-  integrity sha512-LuI3W0uUR12LAqL9AEtbf+AfvkUzRkzkp/C1//Q7t0nC4+BXrN4MtF0V8B5VHeEqBdVqDzL1w0B1G446OrZmCA==
+"@commitlint/config-angular@15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-angular/-/config-angular-15.0.0.tgz#e6f174ae46a7d122fa628a58c867a2a93082c8f0"
+  integrity sha512-1gpyAZkGB+v9hTvw4G8AGU7vzq49/pANifShUsoyuSLAmHzxC3YgE+ZyqlVoB+T6gjE90NXjUQbLmNpi/7ZFYg==
   dependencies:
-    "@commitlint/config-angular-type-enum" "^14.0.0"
+    "@commitlint/config-angular-type-enum" "^15.0.0"
 
 "@commitlint/ensure@^14.1.0":
   version "14.1.0"
@@ -1447,17 +1447,6 @@
     source-map "^0.5.7"
     stylis "^4.0.3"
 
-"@emotion/cache@^11.5.0":
-  version "11.5.0"
-  resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-11.5.0.tgz#a5eb78cbef8163939ee345e3ddf0af217b845e62"
-  integrity sha512-mAZ5QRpLriBtaj/k2qyrXwck6yeoz1V5lMt/jfj6igWU35yYlNKs2LziXVgvH81gnJZ+9QQNGelSsnuoAy6uIw==
-  dependencies:
-    "@emotion/memoize" "^0.7.4"
-    "@emotion/sheet" "^1.0.3"
-    "@emotion/utils" "^1.0.0"
-    "@emotion/weak-memoize" "^0.2.5"
-    stylis "^4.0.10"
-
 "@emotion/cache@^11.6.0":
   version "11.6.0"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-11.6.0.tgz#65fbdbbe4382f1991d8b20853c38e63ecccec9a1"
@@ -1486,15 +1475,15 @@
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.5.tgz#2c40f81449a4e554e9fc6396910ed4843ec2be50"
   integrity sha512-igX9a37DR2ZPGYtV6suZ6whr8pTFtyHL3K/oLUotxpSVO2ASaprmAe2Dkq7tBo7CRY7MMDrAa9nuQP9/YG8FxQ==
 
-"@emotion/react@11.5.0":
-  version "11.5.0"
-  resolved "https://registry.yarnpkg.com/@emotion/react/-/react-11.5.0.tgz#19b5771bbfbda5e8517e948a2d9064810f0022bd"
-  integrity sha512-MYq/bzp3rYbee4EMBORCn4duPQfgpiEB5XzrZEBnUZAL80Qdfr7CEv/T80jwaTl/dnZmt9SnTa8NkTrwFNpLlw==
+"@emotion/react@11.7.0":
+  version "11.7.0"
+  resolved "https://registry.yarnpkg.com/@emotion/react/-/react-11.7.0.tgz#b179da970ac0e8415de3ac165deadf8d9c4bf89f"
+  integrity sha512-WL93hf9+/2s3cA1JVJlz8+Uy6p6QWukqQFOm2OZO5ki51hfucHMOmbSjiyC3t2Y4RI8XUmBoepoc/24ny/VBbA==
   dependencies:
     "@babel/runtime" "^7.13.10"
-    "@emotion/cache" "^11.5.0"
+    "@emotion/cache" "^11.6.0"
     "@emotion/serialize" "^1.0.2"
-    "@emotion/sheet" "^1.0.3"
+    "@emotion/sheet" "^1.1.0"
     "@emotion/utils" "^1.0.0"
     "@emotion/weak-memoize" "^0.2.5"
     hoist-non-react-statics "^3.3.1"
@@ -1509,11 +1498,6 @@
     "@emotion/unitless" "^0.7.5"
     "@emotion/utils" "^1.0.0"
     csstype "^3.0.2"
-
-"@emotion/sheet@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@emotion/sheet/-/sheet-1.0.3.tgz#00c326cd7985c5ccb8fe2c1b592886579dcfab8f"
-  integrity sha512-YoX5GyQ4db7LpbmXHMuc8kebtBGP6nZfRC5Z13OKJMixBEwdZrJ914D6yJv/P+ZH/YY3F5s89NYX2hlZAf3SRQ==
 
 "@emotion/sheet@^1.1.0":
   version "1.1.0"
