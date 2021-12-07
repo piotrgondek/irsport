@@ -11,7 +11,7 @@
     "@emotion/react": "11.7.0",
     "@emotion/styled": "11.6.0",
     "@fontsource/roboto": "4.5.1",
-    "@mui/icons-material": "5.2.0",
+    "@mui/icons-material": "5.2.1",
     "@mui/material": "5.2.2",
     "@types/cypress-image-snapshot": "3.1.6",
     "@types/node": "16.11.11",
