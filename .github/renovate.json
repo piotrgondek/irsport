@@ -1,8 +1,6 @@
 {
   "enabled": true,
   "extends": ["config:base", ":pinAllExceptPeerDependencies"],
-  "rangeStrategy": "pin",
-  "baseBranches": ["dependency-updates"],
   "npm": {
     "stabilityDays": 3
   },
