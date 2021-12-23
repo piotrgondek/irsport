@@ -1,0 +1,21 @@
+{
+  "enabled": true,
+  "extends": ["config:base", ":pinAllExceptPeerDependencies"],
+  "npm": {
+    "stabilityDays": 3
+  },
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "matchPackageNames": ["@types/react"],
+      "matchPackagePrefixes": ["react"]
+    },
+    {
+      "matchPackageNames": ["@types/eslint", "babel-eslint"],
+      "matchPackagePrefixes": ["@typescript-eslint/", "eslint"]
+    }
+  ]
+}
