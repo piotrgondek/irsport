@@ -68,6 +68,10 @@
       "3": "Entries valid for one month. "
     },
     "offers": {
+      "0": {
+        "lvl": "demo",
+        "name": "1 entry"
+      },
       "1": {
         "lvl": "beginner",
         "name": "4 entries"

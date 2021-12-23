@@ -29,29 +29,33 @@ const Pricing = React.forwardRef((_, ref) => {
     {
       lvl: t('pricing.offers.1.lvl'),
       name: t('pricing.offers.1.name'),
-      price: 80,
+      price: 100,
     },
     {
       lvl: t('pricing.offers.2.lvl'),
       name: t('pricing.offers.2.name'),
-      price: 110,
+      price: 130,
     },
     {
       lvl: t('pricing.offers.3.lvl'),
       name: t('pricing.offers.3.name'),
-      price: 130,
+      price: 150,
       recommended: true,
     },
     {
       lvl: t('pricing.offers.4.lvl'),
       name: t('pricing.offers.4.name'),
-      price: 150,
+      price: 170,
     },
     {
       lvl: t('pricing.offers.5.lvl'),
       name: t('pricing.offers.5.name'),
-      price: 210,
-      full: true,
+      price: 230,
+    },
+    {
+      lvl: t('pricing.offers.0.lvl'),
+      name: t('pricing.offers.0.name'),
+      price: 30,
     },
   ];
 
