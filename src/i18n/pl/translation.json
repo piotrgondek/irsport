@@ -68,6 +68,10 @@
       "3": "Wejścia ważne jeden miesiąc."
     },
     "offers": {
+      "0": {
+        "lvl": "demo",
+        "name": "1 wejście"
+      },
       "1": {
         "lvl": "początkujący",
         "name": "4 wejścia"
