@@ -84,7 +84,6 @@ export const table: Table = {
     },
     {
       body1: 'boxingWomen',
-      body2: 'advanced',
       overline: '18:00 - 19:00',
     },
     {
@@ -98,7 +97,6 @@ export const table: Table = {
     null,
     {
       body1: 'boxingWomen',
-      body2: 'beginner',
       overline: '18:00 - 19:00',
     },
     {
