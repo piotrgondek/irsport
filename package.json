@@ -7,7 +7,7 @@
     "@commitlint/cli": "15.0.0",
     "@commitlint/config-angular": "15.0.0",
     "@cypress/react": "5.10.3",
-    "@cypress/webpack-dev-server": "1.7.0",
+    "@cypress/webpack-dev-server": "1.8.0",
     "@emotion/react": "11.7.1",
     "@emotion/styled": "11.6.0",
     "@fontsource/roboto": "4.5.1",
