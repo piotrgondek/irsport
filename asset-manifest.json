@@ -1,29 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.169c1302.chunk.css",
-    "main.js": "/static/js/main.2ea32304.chunk.js",
-    "main.js.map": "/static/js/main.2ea32304.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9694351c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9694351c.js.map",
-    "static/css/2.d0df8735.chunk.css": "/static/css/2.d0df8735.chunk.css",
-    "static/js/2.8b0bd31b.chunk.js": "/static/js/2.8b0bd31b.chunk.js",
-    "static/js/2.8b0bd31b.chunk.js.map": "/static/js/2.8b0bd31b.chunk.js.map",
+    "main.css": "/static/css/main.0a68c0fb.css",
+    "main.js": "/static/js/main.abe83cc3.js",
+    "static/media/intro.mp4": "/static/media/intro.c45ec456f9472fb01b65.mp4",
+    "static/media/intro2.mp4": "/static/media/intro2.d459f4c972667df7d1cd.mp4",
+    "static/media/AdamWargal.jpg": "/static/media/AdamWargal.813bdb3984d37615fdfc.jpg",
+    "static/media/IRS.jpg": "/static/media/IRS.9979cafda1995c100700.jpg",
+    "static/media/roboto-all-400-normal.woff": "/static/media/roboto-all-400-normal.376ea5d93f71583052f6.woff",
+    "static/media/IRS.svg": "/static/media/IRS.c37c6d2450f783b00efbc6cbe91d4aba.svg",
+    "static/media/roboto-latin-400-normal.woff2": "/static/media/roboto-latin-400-normal.4673b4537a84c7f7a130.woff2",
+    "static/media/roboto-cyrillic-ext-400-normal.woff2": "/static/media/roboto-cyrillic-ext-400-normal.493afe7ae8ecfe268800.woff2",
+    "static/media/roboto-latin-ext-400-normal.woff2": "/static/media/roboto-latin-ext-400-normal.c3dcdbd5bb4d4af80817.woff2",
+    "static/media/roboto-cyrillic-400-normal.woff2": "/static/media/roboto-cyrillic-400-normal.5e493812deabd1d01e60.woff2",
+    "static/media/roboto-greek-400-normal.woff2": "/static/media/roboto-greek-400-normal.1cbfc636c911faa4d0ca.woff2",
+    "static/media/roboto-vietnamese-400-normal.woff2": "/static/media/roboto-vietnamese-400-normal.c0bec65d01f776c00c91.woff2",
+    "static/media/roboto-greek-ext-400-normal.woff2": "/static/media/roboto-greek-ext-400-normal.bb723e8458c9c653e505.woff2",
     "index.html": "/index.html",
-    "static/css/2.d0df8735.chunk.css.map": "/static/css/2.d0df8735.chunk.css.map",
-    "static/css/main.169c1302.chunk.css.map": "/static/css/main.169c1302.chunk.css.map",
-    "static/js/2.8b0bd31b.chunk.js.LICENSE.txt": "/static/js/2.8b0bd31b.chunk.js.LICENSE.txt",
-    "static/media/AdamWargal.813bdb39.jpg": "/static/media/AdamWargal.813bdb39.jpg",
-    "static/media/IRS.9979cafd.jpg": "/static/media/IRS.9979cafd.jpg",
-    "static/media/IRS.c37c6d24.svg": "/static/media/IRS.c37c6d24.svg",
-    "static/media/intro.c45ec456.mp4": "/static/media/intro.c45ec456.mp4",
-    "static/media/intro2.d459f4c9.mp4": "/static/media/intro2.d459f4c9.mp4",
-    "static/media/index.css": "/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2"
+    "main.0a68c0fb.css.map": "/static/css/main.0a68c0fb.css.map",
+    "main.abe83cc3.js.map": "/static/js/main.abe83cc3.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.9694351c.js",
-    "static/css/2.d0df8735.chunk.css",
-    "static/js/2.8b0bd31b.chunk.js",
-    "static/css/main.169c1302.chunk.css",
-    "static/js/main.2ea32304.chunk.js"
+    "static/css/main.0a68c0fb.css",
+    "static/js/main.abe83cc3.js"
   ]
 }
