@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '@mui/material';
 import benefitSystems from './assets/logos/benefit-systems.jpg';
-import ckSystem from './assets/logos/ck-system.png';
+import medicover from './assets/logos/Mcov-sport-pion.jpg';
 import fit from './assets/logos/fit.jpg';
 
 const Cooperation: React.FC = () => {
@@ -12,8 +12,8 @@ const Cooperation: React.FC = () => {
         name: 'Benefit Systems',
       },
       {
-        src: ckSystem,
-        name: 'CK System',
+        src: medicover,
+        name: 'Medicover',
       },
       {
         src: fit,
