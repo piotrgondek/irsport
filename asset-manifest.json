@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0a68c0fb.css",
-    "main.js": "/static/js/main.bc79c54c.js",
+    "main.js": "/static/js/main.7ac1d2a4.js",
     "static/media/intro.mp4": "/static/media/intro.c45ec456f9472fb01b65.mp4",
     "static/media/intro2.mp4": "/static/media/intro2.d459f4c972667df7d1cd.mp4",
     "static/media/AdamWargal.jpg": "/static/media/AdamWargal.813bdb3984d37615fdfc.jpg",
@@ -10,6 +10,7 @@
     "static/media/IRS.svg": "/static/media/IRS.c37c6d2450f783b00efbc6cbe91d4aba.svg",
     "static/media/roboto-latin-400-normal.woff2": "/static/media/roboto-latin-400-normal.4673b4537a84c7f7a130.woff2",
     "static/media/roboto-cyrillic-ext-400-normal.woff2": "/static/media/roboto-cyrillic-ext-400-normal.493afe7ae8ecfe268800.woff2",
+    "static/media/Mcov-sport-pion.jpg": "/static/media/Mcov-sport-pion.af07282dbf31adc0c33a.jpg",
     "static/media/roboto-latin-ext-400-normal.woff2": "/static/media/roboto-latin-ext-400-normal.c3dcdbd5bb4d4af80817.woff2",
     "static/media/roboto-cyrillic-400-normal.woff2": "/static/media/roboto-cyrillic-400-normal.5e493812deabd1d01e60.woff2",
     "static/media/roboto-greek-400-normal.woff2": "/static/media/roboto-greek-400-normal.1cbfc636c911faa4d0ca.woff2",
@@ -17,10 +18,10 @@
     "static/media/roboto-greek-ext-400-normal.woff2": "/static/media/roboto-greek-ext-400-normal.bb723e8458c9c653e505.woff2",
     "index.html": "/index.html",
     "main.0a68c0fb.css.map": "/static/css/main.0a68c0fb.css.map",
-    "main.bc79c54c.js.map": "/static/js/main.bc79c54c.js.map"
+    "main.7ac1d2a4.js.map": "/static/js/main.7ac1d2a4.js.map"
   },
   "entrypoints": [
     "static/css/main.0a68c0fb.css",
-    "static/js/main.bc79c54c.js"
+    "static/js/main.7ac1d2a4.js"
   ]
 }
