@@ -11,7 +11,7 @@ export type RefsContextProps = {
 
 export const RefsContext = React.createContext({} as RefsContextProps);
 
-const RefsProvider: React.FC = ({ children }) => {
+export const RefsProvider: React.FC = ({ children }) => {
   const coachRef = React.useRef<HTMLElement>(null);
   const timetableRef = React.useRef<HTMLDivElement>(null);
   const moviesRef = React.useRef<HTMLElement>(null);
@@ -30,5 +30,3 @@ const RefsProvider: React.FC = ({ children }) => {
 
   return <RefsContext.Provider value={value}>{children}</RefsContext.Provider>;
 };
-
-export default RefsProvider;

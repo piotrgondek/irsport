@@ -10,10 +10,8 @@ type AppStateContextProps = {
 
 export const AppStateContext = React.createContext({} as AppStateContextProps);
 
-const AppStateProvider: React.FC = ({ children }) => {
+export const AppStateProvider: React.FC = ({ children }) => {
   const [state, dispatch] = React.useReducer(reducer, initState);
 
   return <AppStateContext.Provider value={{ state, dispatch }}>{children}</AppStateContext.Provider>;
 };
-
-export default AppStateProvider;

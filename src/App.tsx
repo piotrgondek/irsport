@@ -13,8 +13,8 @@ import Pricing from './Pricing';
 import Map from './Map';
 import RodoDrawer from './RodoDrawer';
 import Info from './Info';
-import RefsProvider from './common/contexts/RefsContext';
-import AppStateProvider from './common/contexts/AppStateContext';
+import { RefsProvider } from './common/contexts/RefsContext';
+import { AppStateProvider } from './common/contexts/AppStateContext';
 
 const App: React.FC = () => {
   return (
