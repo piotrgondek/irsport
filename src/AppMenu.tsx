@@ -11,15 +11,15 @@ import {
   Schedule,
 } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
-import AppContext from './AppContext';
 import { RefsContextProps } from './common/contexts/RefsContext';
 import useRefs from './common/hooks/useRefs';
+import useAppState from './common/hooks/useAppState';
 
 type Section = keyof RefsContextProps;
 
 const AppMenu: React.FC = () => {
   const sections = useRefs();
-  const { dispatch } = React.useContext(AppContext);
+  const { dispatch } = useAppState();
   const { t } = useTranslation();
   const [selectedSection, setSelectedSection] = React.useState<Section | undefined>();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);

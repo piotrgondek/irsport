@@ -14,14 +14,14 @@ import {
 import { ConnectWithoutContact, ContactPhone, LocationOn, Mail, Phone, List } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 import { dark } from './themes';
-import AppContext from './AppContext';
 import useRefs from './common/hooks/useRefs';
+import useAppState from './common/hooks/useAppState';
 
 const Footer: React.FC = () => {
   const { footerRef } = useRefs();
   const { t } = useTranslation();
   const md = useMediaQuery(dark.breakpoints.up('md'));
-  const { dispatch } = React.useContext(AppContext);
+  const { dispatch } = useAppState();
 
   const openRodo = () => {
     dispatch({ type: 'OPEN_RODO' });
