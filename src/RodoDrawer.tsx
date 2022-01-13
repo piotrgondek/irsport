@@ -3,10 +3,10 @@ import { Drawer, Fab, List, ListItem, ListItemText, Typography } from '@mui/mate
 import { Close } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 import RodoPoint from './RodoPoint';
-import AppContext from './AppContext';
+import useAppState from './common/hooks/useAppState';
 
 const RodoDrawer: React.FC = () => {
-  const { state, dispatch } = React.useContext(AppContext);
+  const { state, dispatch } = useAppState();
   const { t } = useTranslation();
 
   const handleCloseDrawer = () => {

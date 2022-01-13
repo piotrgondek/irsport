@@ -11,15 +11,15 @@ import {
   Schedule,
 } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
-import { Section } from './AppBar';
-import AppContext from './AppContext';
+import { RefsContextProps } from './common/contexts/RefsContext';
+import useRefs from './common/hooks/useRefs';
+import useAppState from './common/hooks/useAppState';
 
-interface AppMenuProps {
-  sections: Record<Section, React.MutableRefObject<HTMLElement | null>>;
-}
+type Section = keyof RefsContextProps;
 
-const AppMenu: React.FC<AppMenuProps> = ({ sections }) => {
-  const { dispatch } = React.useContext(AppContext);
+const AppMenu: React.FC = () => {
+  const sections = useRefs();
+  const { dispatch } = useAppState();
   const { t } = useTranslation();
   const [selectedSection, setSelectedSection] = React.useState<Section | undefined>();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -74,37 +74,37 @@ const AppMenu: React.FC<AppMenuProps> = ({ sections }) => {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem id="irsAdamWargal" onClick={handleScrollTo('coach')}>
+        <MenuItem id="irsAdamWargal" onClick={handleScrollTo('coachRef')}>
           <ListItemIcon>
             <Info />
           </ListItemIcon>
           <ListItemText>{t('appbar.menu.about')}</ListItemText>
         </MenuItem>
-        <MenuItem id="irsTreningi" onClick={handleScrollTo('timetable')}>
+        <MenuItem id="irsTreningi" onClick={handleScrollTo('timetableRef')}>
           <ListItemIcon>
             <Schedule />
           </ListItemIcon>
           <ListItemText>{t('appbar.menu.timetable')}</ListItemText>
         </MenuItem>
-        <MenuItem id="irsCennink" onClick={handleScrollTo('pricing')}>
+        <MenuItem id="irsCennink" onClick={handleScrollTo('pricingRef')}>
           <ListItemIcon>
             <MonetizationOn />
           </ListItemIcon>
           <ListItemText>{t('appbar.menu.pricing')}</ListItemText>
         </MenuItem>
-        <MenuItem id="irsMap" onClick={handleScrollTo('map')}>
+        <MenuItem id="irsMap" onClick={handleScrollTo('mapRef')}>
           <ListItemIcon>
             <LocationOn />
           </ListItemIcon>
           <ListItemText>{t('appbar.menu.location')}</ListItemText>
         </MenuItem>
-        <MenuItem id="irsFilmy" onClick={handleScrollTo('movies')}>
+        <MenuItem id="irsFilmy" onClick={handleScrollTo('moviesRef')}>
           <ListItemIcon>
             <PlayCircle />
           </ListItemIcon>
           <ListItemText>{t('appbar.menu.movies')}</ListItemText>
         </MenuItem>
-        <MenuItem id="irsFooter" onClick={handleScrollTo('footer')}>
+        <MenuItem id="irsFooter" onClick={handleScrollTo('footerRef')}>
           <ListItemIcon>
             <ContactPhone />
           </ListItemIcon>

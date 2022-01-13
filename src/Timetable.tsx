@@ -3,6 +3,7 @@ import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow
 import { useTranslation } from 'react-i18next';
 import { days, table, events, CellContent } from './data/trainings';
 import SectionGrid from './SectionGrid';
+import useRefs from './common/hooks/useRefs';
 
 interface CellRowProps {
   cellContent: CellContent | null;
@@ -17,12 +18,13 @@ const CellRow: React.FC<CellRowProps> = ({ cellContent, variant }) => {
   ) : null;
 };
 
-const Timetable = React.forwardRef<HTMLElement>((_, ref) => {
+const Timetable: React.FC = () => {
+  const { timetableRef } = useRefs();
   const { t } = useTranslation();
   const memTable = React.useMemo(() => table, []);
 
   return (
-    <Paper ref={ref as any}>
+    <Paper ref={timetableRef}>
       <SectionGrid>
         <Typography variant="h4">{t('appbar.menu.timetable')}</Typography>
         <TableContainer>
@@ -59,6 +61,6 @@ const Timetable = React.forwardRef<HTMLElement>((_, ref) => {
       </SectionGrid>
     </Paper>
   );
-});
+};
 
 export default Timetable;

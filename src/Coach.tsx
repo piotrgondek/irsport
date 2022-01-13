@@ -4,12 +4,14 @@ import { useTranslation } from 'react-i18next';
 import adamWargal from './assets/AdamWargal.jpg';
 import IRS from './assets/IRS.jpg';
 import SectionGrid from './SectionGrid';
+import useRefs from './common/hooks/useRefs';
 
-const Coach = React.forwardRef<HTMLElement>((_, ref) => {
+const Coach: React.FC = () => {
+  const { coachRef } = useRefs();
   const { t } = useTranslation();
 
   return (
-    <Box ref={ref as any}>
+    <Box ref={coachRef}>
       <SectionGrid>
         <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
@@ -64,6 +66,6 @@ const Coach = React.forwardRef<HTMLElement>((_, ref) => {
       </SectionGrid>
     </Box>
   );
-});
+};
 
 export default Coach;
