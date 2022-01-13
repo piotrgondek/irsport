@@ -15,49 +15,39 @@ import RodoDrawer from './RodoDrawer';
 import AppContext from './AppContext';
 import reducer, { initState } from './reducer';
 import Info from './Info';
+import RefsProvider from './common/contexts/RefsContext';
 
 const App: React.FC = () => {
   const [state, dispatch] = React.useReducer(reducer, initState);
-  const coachRef = React.useRef<HTMLElement>(null);
-  const timetableRef = React.useRef<HTMLElement>(null);
-  const moviewsRef = React.useRef<HTMLElement>(null);
-  const footerRef = React.useRef<HTMLElement>(null);
-  const pricingRef = React.useRef<HTMLElement>(null);
-  const mapRef = React.useRef<HTMLElement>(null);
 
   return (
     <AppContext.Provider value={{ state, dispatch }}>
-      <ThemeProvider theme={dark}>
-        <CssBaseline />
-        <AppBar
-          coach={coachRef}
-          pricing={pricingRef}
-          timetable={timetableRef}
-          movies={moviewsRef}
-          footer={footerRef}
-          map={mapRef}
-        />
-        <Intro />
-        <Coach ref={coachRef} />
-        <ThemeProvider theme={light}>
-          <Timetable ref={timetableRef} />
+      <RefsProvider>
+        <ThemeProvider theme={dark}>
+          <CssBaseline />
+          <AppBar />
+          <Intro />
+          <Coach />
+          <ThemeProvider theme={light}>
+            <Timetable />
+          </ThemeProvider>
+          <Pricing />
+          <ThemeProvider theme={light}>
+            <Paper>
+              <Map />
+            </Paper>
+          </ThemeProvider>
+          <Movies />
+          <ThemeProvider theme={light}>
+            <Paper>
+              <Cooperation />
+            </Paper>
+          </ThemeProvider>
+          <Footer />
+          <RodoDrawer />
+          <Info />
         </ThemeProvider>
-        <Pricing ref={pricingRef} />
-        <ThemeProvider theme={light}>
-          <Paper>
-            <Map ref={mapRef} />
-          </Paper>
-        </ThemeProvider>
-        <Movies ref={moviewsRef} />
-        <ThemeProvider theme={light}>
-          <Paper>
-            <Cooperation />
-          </Paper>
-        </ThemeProvider>
-        <Footer ref={footerRef} />
-        <RodoDrawer />
-        <Info />
-      </ThemeProvider>
+      </RefsProvider>
     </AppContext.Provider>
   );
 };

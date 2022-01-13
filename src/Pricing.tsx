@@ -14,6 +14,7 @@ import {
 import { Done } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 import SectionGrid from './SectionGrid';
+import useRefs from './common/hooks/useRefs';
 
 interface PricingEntity {
   lvl: string;
@@ -23,7 +24,8 @@ interface PricingEntity {
   recommended?: boolean;
 }
 
-const Pricing = React.forwardRef((_, ref) => {
+const Pricing: React.FC = () => {
+  const { pricingRef } = useRefs();
   const { t } = useTranslation();
   const pricing: Array<PricingEntity> = [
     {
@@ -62,7 +64,7 @@ const Pricing = React.forwardRef((_, ref) => {
   const info = [t('pricing.points.1'), t('pricing.points.2'), t('pricing.points.3')];
 
   return (
-    <Box ref={ref as any}>
+    <Box ref={pricingRef}>
       <SectionGrid>
         <Typography variant="h4">{t('appbar.menu.pricing')}</Typography>
         <Grid container spacing={2}>
@@ -132,6 +134,6 @@ const Pricing = React.forwardRef((_, ref) => {
       </SectionGrid>
     </Box>
   );
-});
+};
 
 export default Pricing;

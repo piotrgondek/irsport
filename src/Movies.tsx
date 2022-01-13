@@ -3,12 +3,23 @@ import { Box, Card, CardContent, CardMedia, Grid } from '@mui/material';
 import { PlayCircleFilledWhite } from '@mui/icons-material';
 import YouTube from 'react-youtube';
 import SectionGrid from './SectionGrid';
+import useRefs from './common/hooks/useRefs';
 
-const Movies = React.forwardRef((_, ref) => {
+const Movies: React.FC = () => {
   const [videoId, setVideoId] = React.useState<string | undefined>();
+  const { moviesRef } = useRefs();
 
   const videos = React.useMemo<string[]>(
-    () => ['SEQ5EuoYbjg', '-5G9aAxYNVc', 'VPZaUuaf-y8', 'uJPirDGjdKE', 'OiN01w9Dyds', 'VaQuUCqgTnA', 'sut_mn5XRXk', 'ibcZHeJip_Y'],
+    () => [
+      'SEQ5EuoYbjg',
+      '-5G9aAxYNVc',
+      'VPZaUuaf-y8',
+      'uJPirDGjdKE',
+      'OiN01w9Dyds',
+      'VaQuUCqgTnA',
+      'sut_mn5XRXk',
+      'ibcZHeJip_Y',
+    ],
     []
   );
 
@@ -17,7 +28,7 @@ const Movies = React.forwardRef((_, ref) => {
   };
 
   return (
-    <Box ref={ref as any}>
+    <Box ref={moviesRef}>
       <SectionGrid>
         <Grid container spacing={2}>
           {videos.map((video) => (
@@ -87,6 +98,6 @@ const Movies = React.forwardRef((_, ref) => {
       </SectionGrid>
     </Box>
   );
-});
+};
 
 export default Movies;
