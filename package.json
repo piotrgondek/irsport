@@ -4,7 +4,7 @@
   "homepage": "https://irsport.pl",
   "private": true,
   "dependencies": {
-    "@commitlint/cli": "16.0.2",
+    "@commitlint/cli": "16.1.0",
     "@commitlint/config-angular": "16.0.0",
     "@cypress/react": "5.12.1",
     "@cypress/webpack-dev-server": "1.8.0",
