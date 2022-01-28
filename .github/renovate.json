@@ -10,12 +10,9 @@
       "automerge": true
     },
     {
-      "matchPackageNames": ["@types/react"],
-      "matchPackagePrefixes": ["react"]
-    },
-    {
-      "matchPackageNames": ["@types/eslint", "babel-eslint"],
-      "matchPackagePrefixes": ["@typescript-eslint/", "eslint"]
+      "matchPackagePatterns": "*",
+      "groupName": "all dependencies",
+      "groupSlug": "all"
     }
   ]
 }
