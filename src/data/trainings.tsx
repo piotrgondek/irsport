@@ -24,7 +24,6 @@ export const table: Table = {
     },
     {
       body1: 'boxingWomen',
-      body2: 'combined',
       overline: '18:00 - 19:00',
     },
     {
