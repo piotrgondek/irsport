@@ -6,7 +6,7 @@ describe('App', () => {
   ].forEach(([width, height]) => {
     const viewport = `${width}x${height}`;
 
-    it(`${viewport}`, () => {
+    it.skip(`${viewport}`, () => {
       cy.viewport(width, height);
 
       cy.intercept(
