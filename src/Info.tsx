@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Modal, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
-const endDate = new Date(2021, 10, 20).getTime();
+const endDate = new Date(2022, 9, 23).getTime();
 
 const Info: React.FC = () => {
   const { t } = useTranslation();
