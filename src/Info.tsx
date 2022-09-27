@@ -2,11 +2,12 @@ import React from 'react';
 import { Box, Modal, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const endDate = new Date(2022, 9, 23).getTime();
 
 const Info: React.FC = () => {
   const { t } = useTranslation();
-  const [open, setOpen] = React.useState(() => new Date().getTime() < endDate);
+  const [open, setOpen] = React.useState(false); //() => new Date().getTime() < endDate);
   const handleClose = () => setOpen(false);
 
   return (
