@@ -18,7 +18,6 @@ import useRefs from './common/hooks/useRefs';
 
 interface PricingEntity {
   lvl: string;
-  name: string;
   price: number;
   full?: boolean;
   recommended?: boolean;
@@ -29,34 +28,28 @@ const Pricing: React.FC = () => {
   const { t } = useTranslation();
   const pricing: Array<PricingEntity> = [
     {
-      lvl: t('pricing.offers.1.lvl'),
-      name: t('pricing.offers.1.name'),
+      lvl: t('pricing.offers.1.name'),
       price: 100,
     },
     {
-      lvl: t('pricing.offers.2.lvl'),
-      name: t('pricing.offers.2.name'),
+      lvl: t('pricing.offers.2.name'),
       price: 130,
     },
     {
-      lvl: t('pricing.offers.3.lvl'),
-      name: t('pricing.offers.3.name'),
+      lvl: t('pricing.offers.3.name'),
       price: 150,
       recommended: true,
     },
     {
-      lvl: t('pricing.offers.4.lvl'),
-      name: t('pricing.offers.4.name'),
+      lvl: t('pricing.offers.4.name'),
       price: 170,
     },
     {
-      lvl: t('pricing.offers.5.lvl'),
-      name: t('pricing.offers.5.name'),
+      lvl: t('pricing.offers.5.name'),
       price: 230,
     },
     {
-      lvl: t('pricing.offers.0.lvl'),
-      name: t('pricing.offers.0.name'),
+      lvl: t('pricing.offers.0.name'),
       price: 30,
     },
   ];
@@ -69,7 +62,7 @@ const Pricing: React.FC = () => {
         <Typography variant="h4">{t('appbar.menu.pricing')}</Typography>
         <Grid container spacing={2}>
           {pricing.map((offer) => (
-            <Grid key={offer.name} item md={offer.full ? 12 : 6} xs={12}>
+            <Grid key={offer.lvl} item md={offer.full ? 12 : 6} xs={12}>
               <Card
                 sx={{
                   position: 'relative',
@@ -90,16 +83,8 @@ const Pricing: React.FC = () => {
                     textAlign: 'center',
                   }}
                 >
-                  <Typography variant="h5">{offer.lvl}</Typography>
-                  <Typography
-                    variant="subtitle1"
-                    sx={{
-                      marginY: {
-                        md: 2,
-                      },
-                    }}
-                  >
-                    {offer.name}
+                  <Typography variant="h5" sx={{ paddingBottom: 2 }}>
+                    {offer.lvl}
                   </Typography>
                   <Chip label={`${offer.price}PLN`} color={offer.recommended ? 'success' : 'default'} />
                   {offer.recommended && (
