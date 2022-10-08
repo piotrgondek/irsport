@@ -117,10 +117,12 @@
     "combined": "combined",
     "boxingWomen": "Boxing for women",
     "fightCross": "Fight Cross",
+    "shieldInstruments": "shield instruments",
     "strengthTraining": "strength and endurance training",
-    "advanced": "advanced",
+    "advanced": "competition group",
     "beginner": "beginner",
-    "sparrings": "sparrings"
+    "sparrings": "sparrings",
+    "enrolments": "enrolment for training"
   },
   "info": {
     "title": "Info",

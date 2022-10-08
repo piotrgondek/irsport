@@ -117,10 +117,12 @@
     "combined": "łączona",
     "boxingWomen": "Boks dla kobiet",
     "fightCross": "Fight Cross",
+    "shieldInstruments": "przyrządy tarcza",
     "strengthTraining": "trening siłowo-wytrzymałościowy",
-    "advanced": "zaawansowana",
+    "advanced": "grupa zawodnicza",
     "beginner": "początkująca",
-    "sparrings": "sparingi"
+    "sparrings": "sparingi",
+    "enrolments": "obowiązują zapisy"
   },
   "info": {
     "title": "Informacja",
