@@ -2,6 +2,7 @@ import React from 'react';
 import { Divider, IconButton, ListItemIcon, ListItemText, Menu, MenuItem } from '@mui/material';
 import {
   AssignmentInd,
+  AssignmentLate,
   ContactPhone,
   Info,
   LocationOn,
@@ -14,6 +15,7 @@ import { useTranslation } from 'react-i18next';
 import { RefsContextProps } from './common/contexts/RefsContext';
 import useRefs from './common/hooks/useRefs';
 import useAppState from './common/hooks/useAppState';
+import regulamin from './assets/regulamin sali i szatni IRS.pdf';
 
 type Section = keyof RefsContextProps;
 
@@ -51,6 +53,10 @@ const AppMenu: React.FC = () => {
   const handleScrollTo = (section: Section) => () => {
     handleCloseMenu();
     setSelectedSection(section);
+  };
+
+  const handleOpenStatue = () => {
+    window.open(regulamin, '_blank')?.focus();
   };
 
   return (
@@ -116,6 +122,12 @@ const AppMenu: React.FC = () => {
             <AssignmentInd />
           </ListItemIcon>
           <ListItemText>{t('appbar.menu.rodo')}</ListItemText>
+        </MenuItem>
+        <MenuItem id="irsRegulamin" onClick={handleOpenStatue} className="open-statue">
+          <ListItemIcon>
+            <AssignmentLate />
+          </ListItemIcon>
+          <ListItemText>{t('appbar.menu.statute')}</ListItemText>
         </MenuItem>
       </Menu>
     </>

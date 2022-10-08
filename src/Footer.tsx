@@ -16,6 +16,7 @@ import { useTranslation } from 'react-i18next';
 import { dark } from './themes';
 import useRefs from './common/hooks/useRefs';
 import useAppState from './common/hooks/useAppState';
+import regulamin from './assets/regulamin sali i szatni IRS.pdf';
 
 const Footer: React.FC = () => {
   const { footerRef } = useRefs();
@@ -25,6 +26,10 @@ const Footer: React.FC = () => {
 
   const openRodo = () => {
     dispatch({ type: 'OPEN_RODO' });
+  };
+
+  const openStatue = () => {
+    window.open(regulamin, '_blank')?.focus();
   };
 
   return (
@@ -110,6 +115,9 @@ const Footer: React.FC = () => {
             <CardContent>
               <Typography variant="body2">
                 <Link onClick={openRodo}>{t('appbar.menu.rodo')}</Link>
+              </Typography>
+              <Typography variant="body2">
+                <Link onClick={openStatue}>{t('appbar.menu.statute')}</Link>
               </Typography>
             </CardContent>
           </Card>
