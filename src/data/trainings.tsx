@@ -9,7 +9,7 @@ type TimeTableKeys = keyof CustomTypeOptions['resources']['pl']['timetable'];
 export type CellContent = {
   body1: TimeTableKeys;
   body2?: TimeTableKeys;
-  overline: '8:00 - 9:00' | '17:00 - 17:45' | '18:00 - 19:00' | '19:00 - 20:00' | '20:00 - 21:00';
+  overline: '8:00 - 9:00' | '17:00 - 17:45' | '17:00 - 18:00' | '18:00 - 19:00' | '19:00 - 20:00' | '20:00 - 21:00';
 };
 
 type Table = Record<Day, Array<CellContent | null>>;
@@ -41,7 +41,7 @@ export const table: Table = {
     {
       body1: 'kickboxing',
       body2: 'combined',
-      overline: '17:00 - 17:45',
+      overline: '17:00 - 18:00',
     },
     {
       body1: 'shieldInstruments',
@@ -80,13 +80,17 @@ export const table: Table = {
     {
       body1: 'kickboxing',
       body2: 'combined',
-      overline: '17:00 - 17:45',
+      overline: '17:00 - 18:00',
     },
     {
       body1: 'boxingWomen',
       overline: '18:00 - 19:00',
     },
-    null,
+    {
+      body1: 'boxing',
+      body2: 'advanced',
+      overline: '19:00 - 20:00',
+    },
     {
       body1: 'boxing',
       body2: 'advanced',
@@ -102,7 +106,7 @@ export const table: Table = {
     },
     {
       body1: 'boxing',
-      body2: 'beginner',
+      body2: 'sparrings',
       overline: '19:00 - 20:00',
     },
   ],
