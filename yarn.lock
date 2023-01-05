@@ -2500,10 +2500,10 @@
     prop-types "^15.8.1"
     react-is "^18.2.0"
 
-"@mui/core-downloads-tracker@^5.11.2":
-  version "5.11.2"
-  resolved "https://registry.yarnpkg.com/@mui/core-downloads-tracker/-/core-downloads-tracker-5.11.2.tgz#0ff8066bee7e9654fd978cb671e9c12c9d2a65b7"
-  integrity sha512-ztLQELdSSuJFXezng8g5eCzy8mogtzMM8JcfG3HIGgUJ2RlAiBXI2Qe0adKmrJlF4FMat8vTaTeoiRNBZH4t1Q==
+"@mui/core-downloads-tracker@^5.11.3":
+  version "5.11.3"
+  resolved "https://registry.yarnpkg.com/@mui/core-downloads-tracker/-/core-downloads-tracker-5.11.3.tgz#72c04a9f12b29186877992648d7cf1c22b95ba5c"
+  integrity sha512-Bgb6//KtxY7IC7M5Pa5RKFX1wttc213mqpKqydnz3wn4BGDXfA5c0vf5nTu5zqsJeB4T3ysAJTRJhQ/E1GsZDQ==
 
 "@mui/icons-material@5.11.0":
   version "5.11.0"
@@ -2512,14 +2512,14 @@
   dependencies:
     "@babel/runtime" "^7.20.6"
 
-"@mui/material@5.11.2":
-  version "5.11.2"
-  resolved "https://registry.yarnpkg.com/@mui/material/-/material-5.11.2.tgz#8f0ce18d2cf9da9276f6f19b40a681225098ea09"
-  integrity sha512-PeraRDsghnDLzejorfe9ps1syxlB8UrGs+UKwg9GGlndv5Tghm+9nwuibrP2TCDC14mlryF+u2WlAOYaPPMwGA==
+"@mui/material@5.11.3":
+  version "5.11.3"
+  resolved "https://registry.yarnpkg.com/@mui/material/-/material-5.11.3.tgz#e1be6d26eecde61878280cb6792797a77696b09a"
+  integrity sha512-Oz+rMFiMtxzzDLUxKyyj4mSxF9ShmsBoJ9qvglXCYqklgSrEl1R/Z4hfPZ+2pWd5CriO8U/0CFHr4DksrlTiCw==
   dependencies:
     "@babel/runtime" "^7.20.7"
     "@mui/base" "5.0.0-alpha.112"
-    "@mui/core-downloads-tracker" "^5.11.2"
+    "@mui/core-downloads-tracker" "^5.11.3"
     "@mui/system" "^5.11.2"
     "@mui/types" "^7.2.3"
     "@mui/utils" "^5.11.2"
@@ -6230,10 +6230,10 @@ escodegen@^2.0.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@8.5.0:
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.5.0.tgz#5a81680ec934beca02c7b1a61cf8ca34b66feab1"
-  integrity sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==
+eslint-config-prettier@8.6.0:
+  version "8.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.6.0.tgz#dec1d29ab728f4fa63061774e1672ac4e363d207"
+  integrity sha512-bAF0eLpLVqP5oEVUFKpMA+NnRFICwn9X8B5jrR9FcqnYBuPbqWEjTEspPWMj5ye6czoSLDweCzSo3Ko7gGrZaA==
 
 eslint-config-react-app@^7.0.1:
   version "7.0.1"
