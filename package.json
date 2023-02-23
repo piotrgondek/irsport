@@ -12,7 +12,7 @@
     "@emotion/styled": "11.10.6",
     "@fontsource/roboto": "4.5.8",
     "@mui/icons-material": "5.11.9",
-    "@mui/material": "5.11.9",
+    "@mui/material": "5.11.10",
     "@types/cypress-image-snapshot": "3.1.6",
     "@types/node": "16.18.12",
     "@types/react": "17.0.53",
