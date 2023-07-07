@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
                 </Link>
               </Typography>
               <Typography variant="body2">
-                <Link href="https://goo.gl/maps/iEsyVu59UeEajRh18" target="_blank" rel="noopener">
+                <Link href="https://goo.gl/maps/fqceCdW2TsFp84U4A" target="_blank" rel="noopener">
                   {t('contact.address')}
                 </Link>
               </Typography>
