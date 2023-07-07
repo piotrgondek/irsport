@@ -20,10 +20,10 @@ const MapWrapper = GoogleApiWrapper({
       height: '100%',
     }}
     initialCenter={{
-      lat: 50.07583557437312,
-      lng: 19.930395333048864,
+      lat: 50.078004875806045,
+      lng: 19.943461644309167,
     }}
-    {...{ zoom: 21 }}
+    {...{ zoom: 15 }}
   >
     <Marker />
   </Map>
