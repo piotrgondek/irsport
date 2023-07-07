@@ -138,7 +138,7 @@ const Footer: React.FC = () => {
               <BottomNavigationAction href="mailto:instytutrozwojusportu@gmail.com" label="irs" icon={<Mail />} />
               <BottomNavigationAction href="tel:535673205" label="535 673 205" icon={<Phone />} />
               <BottomNavigationAction
-                href="https://goo.gl/maps/iEsyVu59UeEajRh18"
+                href="https://goo.gl/maps/fqceCdW2TsFp84U4A"
                 label="adam wargal"
                 icon={<LocationOn />}
               />
