@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b4db2b69.css",
-    "main.js": "/static/js/main.15e2fc63.js",
+    "main.js": "/static/js/main.f3f2d326.js",
     "static/media/intro.mp4": "/static/media/intro.c45ec456f9472fb01b65.mp4",
     "static/media/intro2.mp4": "/static/media/intro2.d459f4c972667df7d1cd.mp4",
     "static/media/logo PZKB.jpg": "/static/media/logo PZKB.5301efa9989ddf6eb328.jpg",
@@ -20,10 +20,10 @@
     "index.html": "/index.html",
     "static/media/roboto-greek-ext-400-normal.woff2": "/static/media/roboto-greek-ext-400-normal.169619821ea93019d1bb.woff2",
     "main.b4db2b69.css.map": "/static/css/main.b4db2b69.css.map",
-    "main.15e2fc63.js.map": "/static/js/main.15e2fc63.js.map"
+    "main.f3f2d326.js.map": "/static/js/main.f3f2d326.js.map"
   },
   "entrypoints": [
     "static/css/main.b4db2b69.css",
-    "static/js/main.15e2fc63.js"
+    "static/js/main.f3f2d326.js"
   ]
 }
