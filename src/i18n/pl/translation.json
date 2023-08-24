@@ -101,11 +101,14 @@
       "tu": "Wtorek",
       "we": "Środa",
       "th": "Czwartek",
-      "fr": "Piątek"
+      "fr": "Piątek",
+      "sa": "Sobota"
     },
     "boxing": "Boks",
     "kickboxing": "Kickboxing",
     "irsKids": "IRS kids dzieci",
+    "4to7": "4-7 lat",
+    "8to13": "8-13 lat",
     "combined": "łączona",
     "boxingWomen": "Boks dla kobiet",
     "fightCross": "Fight Cross",
@@ -115,7 +118,9 @@
     "competition": "grupa zawodnicza",
     "beginner": "początkująca",
     "sparrings": "sparingi",
-    "enrolments": "obowiązują zapisy"
+    "enrolments": "obowiązują zapisy",
+    "open": "Trening otwarty",
+    "boxingSparrings": "Box sparringi"
   },
   "info": {
     "title": "Informacja",
