@@ -29,23 +29,15 @@ const Pricing: React.FC = () => {
   const pricing: Array<PricingEntity> = [
     {
       lvl: t('pricing.offers.1.name'),
-      price: 110,
+      price: 120,
     },
     {
       lvl: t('pricing.offers.2.name'),
-      price: 140,
-    },
-    {
-      lvl: t('pricing.offers.3.name'),
-      price: 160,
+      price: 180,
       recommended: true,
     },
     {
-      lvl: t('pricing.offers.4.name'),
-      price: 180,
-    },
-    {
-      lvl: t('pricing.offers.5.name'),
+      lvl: t('pricing.offers.3.name'),
       price: 240,
     },
     {
