@@ -43,6 +43,11 @@ export const table: Table = {
       overline: '18:00 - 19:00',
     },
     {
+      body1: 'boxingWomen',
+      body2: 'advanced',
+      overline: '19:00 - 20:00',
+    },
+    {
       body1: 'boxing',
       body2: 'advanced',
       overline: '20:00 - 21:00',

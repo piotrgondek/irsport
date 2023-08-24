@@ -106,7 +106,7 @@
     },
     "boxing": "Boks",
     "kickboxing": "Kickboxing",
-    "irsKids": "IRS kids dzieci",
+    "irsKids": "IRS kids",
     "4to7": "4-7 lat",
     "8to13": "8-13 lat",
     "combined": "łączona",
@@ -114,13 +114,13 @@
     "fightCross": "Fight Cross",
     "shieldInstruments": "Worki przyrządy tarcza",
     "strengthTraining": "trening siłowo-wytrzymałościowy",
-    "advanced": "grupa zaawansowana",
-    "competition": "grupa zawodnicza",
+    "advanced": "zaawansowana",
+    "competition": "zawodnicza",
     "beginner": "początkująca",
     "sparrings": "sparingi",
     "enrolments": "obowiązują zapisy",
     "open": "Trening otwarty",
-    "boxingSparrings": "Box sparringi"
+    "boxingSparrings": "Boks sparingi"
   },
   "info": {
     "title": "Informacja",
