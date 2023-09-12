@@ -1,10 +1,11 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import benefitSystems from './assets/logos/benefit-systems.jpg';
 import medicover from './assets/logos/Mcov-sport-pion.jpg';
 import fit from './assets/logos/fit.jpg';
 import pzkb1 from './assets/logos/logo PZKB.jpg';
 import pzkb2 from './assets/logos/pobraneLogo PZB.jpg';
+import ont from './assets/darczyncy/ONT.png';
 
 const images = [
   {
@@ -29,23 +30,53 @@ const images = [
   },
 ];
 
+const darczyncy = [
+  {
+    src: ont,
+    name: 'Oprogramowanie Naukowo-Techniczne',
+  },
+];
+
 const Cooperation: React.FC = () => {
   return (
-    <Grid
-      container
-      direction="row"
-      justifyContent="space-evenly"
-      alignItems="center"
-      sx={{
-        paddingY: 4,
-      }}
-    >
-      {images.map((image) => (
-        <Grid item key={image.name}>
-          <img src={image.src} alt={image.name} style={{ maxWidth: '200px' }} />
-        </Grid>
-      ))}
-    </Grid>
+    <>
+      <Typography variant="h4" align="center" sx={{ paddingY: 4 }}>
+        Nasi darczyńcy
+      </Typography>
+      <Grid
+        container
+        direction="row"
+        justifyContent="space-evenly"
+        alignItems="center"
+        sx={{
+          paddingY: 4,
+        }}
+      >
+        {darczyncy.map((image) => (
+          <Grid item key={image.name}>
+            <img src={image.src} alt={image.name} style={{ maxWidth: '200px' }} />
+          </Grid>
+        ))}
+      </Grid>
+      <Typography variant="h4" align="center" sx={{ paddingY: 4 }}>
+        Współpracujemy z
+      </Typography>
+      <Grid
+        container
+        direction="row"
+        justifyContent="space-evenly"
+        alignItems="center"
+        sx={{
+          paddingY: 4,
+        }}
+      >
+        {images.map((image) => (
+          <Grid item key={image.name}>
+            <img src={image.src} alt={image.name} style={{ maxWidth: '200px' }} />
+          </Grid>
+        ))}
+      </Grid>
+    </>
   );
 };
 
