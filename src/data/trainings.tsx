@@ -15,6 +15,7 @@ export type CellContent = {
     | '16:00 - 17:00'
     | '16:15 - 17:00'
     | '17:00 - 18:00'
+    | '17:15 - 18:00'
     | '18:00 - 19:00'
     | '19:00 - 20:00'
     | '20:00 - 21:00'
@@ -27,15 +28,10 @@ export const table: Table = {
   mo: [
     null,
     null,
+    null,
     {
       body1: 'irsKids',
-      body2: '8to13',
-      overline: '16:00 - 17:00',
-    },
-    {
-      body1: 'kickboxing',
-      body2: 'beginner',
-      overline: '17:00 - 18:00',
+      overline: '17:15 - 18:00',
     },
     {
       body1: 'boxingWomen',
@@ -60,14 +56,10 @@ export const table: Table = {
       overline: '8:00 - 9:00',
     },
     null,
-    {
-      body1: 'irsKids',
-      body2: '4to7',
-      overline: '16:15 - 17:00',
-    },
+    null,
     {
       body1: 'kickboxing',
-      body2: 'advanced',
+      body2: 'combined',
       overline: '17:00 - 18:00',
     },
     {
@@ -84,15 +76,10 @@ export const table: Table = {
   we: [
     null,
     null,
+    null,
     {
       body1: 'irsKids',
-      body2: '8to13',
-      overline: '16:00 - 17:00',
-    },
-    {
-      body1: 'kickboxing',
-      body2: 'beginner',
-      overline: '17:00 - 18:00',
+      overline: '17:15 - 18:00',
     },
     {
       body1: 'boxing',
@@ -115,14 +102,10 @@ export const table: Table = {
       overline: '8:00 - 9:00',
     },
     null,
-    {
-      body1: 'irsKids',
-      body2: '4to7',
-      overline: '16:15 - 17:00',
-    },
+    null,
     {
       body1: 'kickboxing',
-      body2: 'advanced',
+      body2: 'combined',
       overline: '17:00 - 18:00',
     },
     {
