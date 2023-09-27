@@ -6,6 +6,7 @@ import fit from './assets/logos/fit.jpg';
 import pzkb1 from './assets/logos/logo PZKB.jpg';
 import pzkb2 from './assets/logos/pobraneLogo PZB.jpg';
 import ont from './assets/darczyncy/ONT.png';
+import ministerstwo from './assets/darczyncy/ministerstwo.jpg';
 
 const images = [
   {
@@ -35,6 +36,10 @@ const darczyncy = [
     src: ont,
     name: 'Oprogramowanie Naukowo-Techniczne',
   },
+  {
+    src: ministerstwo,
+    name: 'Rządowy Program "KLUB"',
+  },
 ];
 
 const Cooperation: React.FC = () => {
@@ -54,7 +59,7 @@ const Cooperation: React.FC = () => {
       >
         {darczyncy.map((image) => (
           <Grid item key={image.name}>
-            <img src={image.src} alt={image.name} style={{ maxWidth: '200px' }} />
+            <img src={image.src} alt={image.name} width="300px" />
           </Grid>
         ))}
       </Grid>
@@ -72,7 +77,7 @@ const Cooperation: React.FC = () => {
       >
         {images.map((image) => (
           <Grid item key={image.name}>
-            <img src={image.src} alt={image.name} style={{ maxWidth: '200px' }} />
+            <img src={image.src} alt={image.name} width="200px" />
           </Grid>
         ))}
       </Grid>
