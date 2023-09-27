@@ -28,25 +28,23 @@ export const table: Table = {
   mo: [
     null,
     null,
-    null,
     {
       body1: 'irsKids',
       overline: '17:15 - 18:00',
     },
     {
       body1: 'boxingWomen',
-      body2: 'beginner',
+      body2: 'combined',
       overline: '18:00 - 19:00',
-    },
-    {
-      body1: 'boxingWomen',
-      body2: 'advanced',
-      overline: '19:00 - 20:00',
     },
     {
       body1: 'boxing',
       body2: 'advanced',
-      overline: '20:00 - 21:00',
+      overline: '19:00 - 20:00',
+    },
+    {
+      body1: 'open',
+      overline: '20:00 - 21:30',
     },
   ],
   tu: [
@@ -55,7 +53,6 @@ export const table: Table = {
       body2: 'combined',
       overline: '8:00 - 9:00',
     },
-    null,
     null,
     {
       body1: 'kickboxing',
@@ -74,7 +71,6 @@ export const table: Table = {
     },
   ],
   we: [
-    null,
     null,
     null,
     {
@@ -102,7 +98,6 @@ export const table: Table = {
       overline: '8:00 - 9:00',
     },
     null,
-    null,
     {
       body1: 'kickboxing',
       body2: 'combined',
@@ -110,7 +105,7 @@ export const table: Table = {
     },
     {
       body1: 'boxingWomen',
-      body2: 'advanced',
+      body2: 'combined',
       overline: '18:00 - 19:00',
     },
     {
@@ -123,10 +118,9 @@ export const table: Table = {
     null,
     null,
     null,
-    null,
     {
       body1: 'boxingWomen',
-      body2: 'beginner',
+      body2: 'combined',
       overline: '18:00 - 19:00',
     },
     {
