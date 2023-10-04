@@ -15,7 +15,7 @@
     "@mui/material": "5.14.11",
     "@types/cypress-image-snapshot": "3.1.7",
     "@types/node": "16.18.55",
-    "@types/react": "17.0.66",
+    "@types/react": "17.0.67",
     "@types/react-dom": "17.0.21",
     "cypress": "8.7.0",
     "cypress-image-snapshot": "4.0.1",
