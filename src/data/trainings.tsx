@@ -49,8 +49,8 @@ export const table: Table = {
   ],
   tu: [
     {
-      body1: 'boxing',
-      body2: 'combined',
+      body1: 'combinedBoxing',
+      body2: 'enrolments',
       overline: '8:00 - 9:00',
     },
     null,
@@ -93,8 +93,8 @@ export const table: Table = {
   ],
   th: [
     {
-      body1: 'boxing',
-      body2: 'combined',
+      body1: 'combinedBoxing',
+      body2: 'enrolments',
       overline: '8:00 - 9:00',
     },
     null,
@@ -136,8 +136,8 @@ export const table: Table = {
   sa: [
     null,
     {
-      body1: 'boxing',
-      body2: 'combined',
+      body1: 'combinedBoxing',
+      body2: 'enrolments',
       overline: '11:00 - 12:30',
     },
   ],
