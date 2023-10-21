@@ -3275,10 +3275,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/cypress-image-snapshot@3.1.7":
-  version "3.1.7"
-  resolved "https://registry.yarnpkg.com/@types/cypress-image-snapshot/-/cypress-image-snapshot-3.1.7.tgz#069ec0eb57b3a7a84e6b58321dc5e5557dc72591"
-  integrity sha512-pTcbVQQKpTBHfDAGYAVtRDjRHz2ngTGfGYIhV/5fqf51qhtxMctICtC5iBh2EqK6HLB5jyMlFakqRVZAdxtSDA==
+"@types/cypress-image-snapshot@3.1.8":
+  version "3.1.8"
+  resolved "https://registry.yarnpkg.com/@types/cypress-image-snapshot/-/cypress-image-snapshot-3.1.8.tgz#0c6b10d41861eb945edab5d40965c80597fea613"
+  integrity sha512-bZIVxSWb7/QkSN7pgvMtmY0EUeuO1KvtmEMVl3RZdw6avzI+Uaco2mJ4Wl+M008VMW2p+BRvXzDOkhw9xVl7mA==
 
 "@types/eslint-scope@^3.7.0":
   version "3.7.2"
@@ -3451,10 +3451,10 @@
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.4.tgz#cd667bcfdd025213aafb7ca5915a932590acdcdc"
   integrity sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==
 
-"@types/react-dom@17.0.21":
-  version "17.0.21"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.21.tgz#85d56965483ce4850f5f03f9234e54a1f47786e5"
-  integrity sha512-3rQEFUNUUz2MYiRwJJj6UekcW7rFLOtmK7ajQP7qJpjNdggInl3I/xM4I3Hq1yYPdCGVMgax1gZsB7BBTtayXg==
+"@types/react-dom@17.0.22":
+  version "17.0.22"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.22.tgz#34317e08be27b33fa9e7cdb56125b22538261bad"
+  integrity sha512-wHt4gkdSMb4jPp1vc30MLJxoWGsZs88URfmt3FRXoOEYrrqK3I8IuZLE/uFBb4UT6MRfI0wXFu4DS7LS0kUC7Q==
   dependencies:
     "@types/react" "^17"
 
