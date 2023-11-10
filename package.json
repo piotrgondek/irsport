@@ -13,7 +13,7 @@
     "@fontsource/roboto": "4.5.8",
     "@mui/icons-material": "5.14.16",
     "@mui/material": "5.14.17",
-    "@types/cypress-image-snapshot": "3.1.8",
+    "@types/cypress-image-snapshot": "3.1.9",
     "@types/node": "16.18.60",
     "@types/react": "17.0.69",
     "@types/react-dom": "17.0.22",
