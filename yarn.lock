@@ -3407,10 +3407,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.11.tgz#6ea7342dfb379ea1210835bada87b3c512120234"
   integrity sha512-KB0sixD67CeecHC33MYn+eYARkqTheIRNuu97y2XMjR7Wu3XibO1vaY6VBV6O/a89SPI81cEUIYT87UqUWlZNw==
 
-"@types/node@16.18.72":
-  version "16.18.72"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.18.72.tgz#a2337dda32ec1123894a15cebe3eb3b79ea2fa08"
-  integrity sha512-Kck1Du/zQyLbq5YlBKCtrUlyyP02lYjREjKKYImtf6MZgXrLoRVjexMv0wxiDzIJPnk86i+HrvGNyI03qoewEg==
+"@types/node@16.18.73":
+  version "16.18.73"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.18.73.tgz#cbbbff4c3e85020e042e65a2a836e1d1d5bfad06"
+  integrity sha512-GaTgwUNzESSlX9uhTX2RQcwj2KBf/Wda+52TTtuMpgzR2Rvw7NNypQ8BJdc5Wk6osxZHcUZAKip5PtqWsUl31Q==
 
 "@types/node@>=12":
   version "17.0.17"
