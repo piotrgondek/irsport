@@ -7,6 +7,7 @@ import pzkb1 from './assets/logos/logo PZKB.jpg';
 import pzkb2 from './assets/logos/pobraneLogo PZB.jpg';
 import ont from './assets/darczyncy/ONT.png';
 import ministerstwo from './assets/darczyncy/ministerstwo.jpg';
+import szkola from './assets/darczyncy/wszibwk.png';
 
 const images = [
   {
@@ -39,6 +40,10 @@ const darczyncy = [
   {
     src: ministerstwo,
     name: 'Rządowy Program "KLUB"',
+  },
+  {
+    src: szkola,
+    name: 'Wyższa Szkoła Zarządzania i Bankowości w Krakowie',
   },
 ];
 
