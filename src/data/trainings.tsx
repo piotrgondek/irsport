@@ -42,10 +42,6 @@ export const table: Table = {
       body2: 'advanced',
       overline: '19:00 - 20:00',
     },
-    {
-      body1: 'open',
-      overline: '20:00 - 21:30',
-    },
   ],
   tu: [
     {
@@ -61,7 +57,6 @@ export const table: Table = {
     },
     {
       body1: 'fightCross',
-      body2: 'shieldInstruments',
       overline: '18:00 - 19:00',
     },
     {
@@ -85,10 +80,6 @@ export const table: Table = {
     {
       body1: 'boxingSparrings',
       overline: '19:00 - 20:00',
-    },
-    {
-      body1: 'open',
-      overline: '20:00 - 21:30',
     },
   ],
   th: [
@@ -126,10 +117,6 @@ export const table: Table = {
       body1: 'boxing',
       body2: 'beginner',
       overline: '19:00 - 20:00',
-    },
-    {
-      body1: 'open',
-      overline: '20:00 - 21:30',
     },
   ],
 };
