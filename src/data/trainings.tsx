@@ -1,8 +1,8 @@
 import { CustomTypeOptions } from 'react-i18next';
 
-type Day = 'mo' | 'tu' | 'we' | 'th' | 'fr' | 'sa';
+type Day = 'mo' | 'tu' | 'we' | 'th' | 'fr';
 
-export const days: Array<Day> = ['mo', 'tu', 'we', 'th', 'fr', 'sa'];
+export const days: Array<Day> = ['mo', 'tu', 'we', 'th', 'fr'];
 
 type TimeTableKeys = keyof CustomTypeOptions['resources']['pl']['timetable'];
 
@@ -104,13 +104,12 @@ export const table: Table = {
       overline: '17:00 - 18:00',
     },
     {
-      body1: 'boxingWomen',
+      body1: 'boxing',
       body2: 'combined',
       overline: '18:00 - 19:00',
     },
     {
-      body1: 'boxing',
-      body2: 'advanced',
+      body1: 'stretchingNeuromobilty',
       overline: '19:00 - 20:00',
     },
   ],
@@ -131,14 +130,6 @@ export const table: Table = {
     {
       body1: 'open',
       overline: '20:00 - 21:30',
-    },
-  ],
-  sa: [
-    null,
-    {
-      body1: 'combinedBoxing',
-      body2: 'enrolments',
-      overline: '11:00 - 12:30',
     },
   ],
 };
