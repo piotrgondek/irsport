@@ -27,7 +27,6 @@ type Table = Record<Day, Array<CellContent | null>>;
 export const table: Table = {
   mo: [
     null,
-    null,
     {
       body1: 'irsKids',
       overline: '17:15 - 18:00',
@@ -49,7 +48,6 @@ export const table: Table = {
       body2: 'enrolments',
       overline: '8:00 - 9:00',
     },
-    null,
     {
       body1: 'kickboxing',
       body2: 'combined',
@@ -66,7 +64,6 @@ export const table: Table = {
     },
   ],
   we: [
-    null,
     null,
     {
       body1: 'irsKids',
@@ -88,7 +85,6 @@ export const table: Table = {
       body2: 'enrolments',
       overline: '8:00 - 9:00',
     },
-    null,
     {
       body1: 'kickboxing',
       body2: 'combined',
@@ -105,7 +101,6 @@ export const table: Table = {
     },
   ],
   fr: [
-    null,
     null,
     null,
     {
