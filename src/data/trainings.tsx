@@ -26,7 +26,6 @@ type Table = Record<Day, Array<CellContent | null>>;
 
 export const table: Table = {
   mo: [
-    null,
     {
       body1: 'irsKids',
       overline: '17:15 - 18:00',
@@ -38,19 +37,13 @@ export const table: Table = {
     },
     {
       body1: 'boxing',
-      body2: 'advanced',
+      body2: 'beginner',
       overline: '19:00 - 20:00',
     },
   ],
   tu: [
     {
       body1: 'combinedBoxing',
-      body2: 'enrolments',
-      overline: '8:00 - 9:00',
-    },
-    {
-      body1: 'kickboxing',
-      body2: 'combined',
       overline: '17:00 - 18:00',
     },
     {
@@ -59,66 +52,53 @@ export const table: Table = {
     },
     {
       body1: 'boxing',
-      body2: 'beginner',
-      overline: '19:00 - 20:00',
-    },
-    {
-      body1: 'jiuJitsuGroundFloor',
-      overline: '20:00 - 21:00'
+      body2: 'advanced',
+      overline: '19:00 - 20:00'
     }
   ],
   we: [
-    null,
     {
       body1: 'irsKids',
       overline: '17:15 - 18:00',
     },
     {
-      body1: 'boxing',
-      body2: 'advanced',
+      body1: 'stretching',
       overline: '18:00 - 19:00',
     },
     {
-      body1: 'boxingSparrings',
+      body1: 'boxing',
+      body2: 'beginner',
       overline: '19:00 - 20:00',
     },
   ],
   th: [
-    {
-      body1: 'combinedBoxing',
-      body2: 'enrolments',
-      overline: '8:00 - 9:00',
-    },
     {
       body1: 'kickboxing',
       body2: 'combined',
       overline: '17:00 - 18:00',
     },
     {
-      body1: 'boxing',
-      body2: 'combined',
+      body1: 'tools',
       overline: '18:00 - 19:00',
     },
     {
-      body1: 'stretchingNeuromobilty',
+      body1: 'boxing',
+      body2: 'advanced',
       overline: '19:00 - 20:00',
     },
     {
-      body1: 'jiuJitsuGroundFloor',
+      body1: 'selfDefence',
       overline: '20:00 - 21:00'
     }
   ],
   fr: [
     null,
-    null,
     {
       body1: 'boxingWomen',
-      body2: 'combined',
       overline: '18:00 - 19:00',
     },
     {
-      body1: 'boxing',
-      body2: 'beginner',
+      body1: 'sparrings',
       overline: '19:00 - 20:00',
     },
   ],
