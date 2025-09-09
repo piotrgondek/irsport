@@ -43,7 +43,7 @@ export const table: Table = {
   ],
   tu: [
     {
-      body1: 'combinedBoxing',
+      body1: 'combinedKickboxing',
       overline: '17:00 - 18:00',
     },
     {
