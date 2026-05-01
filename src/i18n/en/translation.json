@@ -8,7 +8,8 @@
       "movies": "Movies",
       "contact": "Contact",
       "rodo": "RODO",
-      "statute": "Statute"
+      "statute": "Statute",
+      "childProtectionPolicy": "Child protection policy"
     },
     "irsport": "IRS Sport"
   },
@@ -50,6 +51,29 @@
       "p1": "I started with Taekwondo training in 1993 in one of Krakow's housing estates. As a competitor, I won medals of national competitions in Taekwondo and Kickboxing. I have a 3rd dan Taekwondo and 1st dan Kickboxing. I am a certified instructor of the following disciplines: Taekwondo, Kickboxing, Fitness - strength exercises and the qualifications of a trainer of the discipline: Boxing.",
       "p2": "I am the president and main trainer at the IRS club. I take part in the preparation of competitors taking part in Boxing, Kickboxing and Taekwondo. My pupils won medals at the Polish Championships, the European Championships, and the World Championships. I am a graduate of Collegium Medicum of the Jagiellonian University in the field of Medical Emergency.",
       "p3": "During my studies, I also trained Judo in the CMUJ sports section. I organized sports camps and training camps."
+    },
+    "profiles": {
+      "angelika": {
+        "name": "Angelika Grońska",
+        "description": {
+          "p1": "I began my martial arts journey with kickboxing and later moved into boxing, which became my main discipline. Over the years of competing, I gained experience both nationally and internationally.",
+          "p2": "I am a five-time medalist of the Polish Championships in boxing and kickboxing, a Boxing World Cup vice champion, and a multi-medalist of international boxing tournaments. For many years I was a member of the national team, which gave me a solid athletic and coaching foundation.",
+          "p3": "Today I use that experience in coaching. At IRS I lead classes based on proven training methods, focusing on technique, footwork, motor preparation, and safety. I adapt each training session to the level and goals of the participants, whether they are children, beginners, or competitors.",
+          "p4": "I see boxing not only as a competitive sport, but also as a tool for building character, confidence, and physical fitness. I try to pass these values on to everyone who trains with me at IRS."
+        }
+      },
+      "wojciech": {
+        "name": "Wojciech Łachowski",
+        "description": {
+          "p1": "I have trained boxing for 8 years and have been leading classes for 3 years. I am characterized by attention to technical detail and an individual approach to every participant. I draw my coaching knowledge not only from practice and observing other coaches, but also from studying hundreds of hours of training and fight footage from athletes around the world. Privately, I work on city digitization, and in my free time I ride a motorcycle and dance swing."
+        }
+      },
+      "sebastian": {
+        "name": "Sebastian Ryżak",
+        "description": {
+          "p1": "I started my martial arts journey at the age of 13. Since then, I have continuously developed my skills. As a competitor, I won medals many times at sports competitions. I hold a 1st dan in Taekwondo and a 1st kyu in Kickboxing. Along the way, I discovered the broad and diverse world of martial arts and combat sports. Today I focus on passing my knowledge and skills to my students during training and in our conversations."
+        }
+      }
     }
   },
   "club": {
@@ -64,9 +88,8 @@
   "pricing": {
     "highlighted": "the most popular",
     "points": {
-      "1": "Annual entry fee for insurance and sports associations 100 PLN.",
-      "2": "The first training is free.",
-      "3": "Entries valid for one month. "
+      "1": "The first training is free.",
+      "2": "Entries valid for one month."
     },
     "offers": {
       "0": {

@@ -8,7 +8,8 @@
       "movies": "Filmy",
       "contact": "Kontakt",
       "rodo": "RODO",
-      "statute": "Regulamin"
+      "statute": "Regulamin",
+      "childProtectionPolicy": "Polityka ochrony dzieci"
     },
     "irsport": "IRS Sport"
   },
@@ -50,6 +51,29 @@
       "p1": "Zaczynałem od treningu Taekwondo w 1993 roku na jednym z krakowski osiedli. Jako zawodnik zdobywałem medale zawodów ogólnopolskich w Taekwondo oraz Kickboxingu. Posiadam stopień 3 dan Taekwondo oraz 1 dan Kickboxing.  Posiadam uprawnienia instruktora dyscyplin: Taekwondo, Kickboxing, Fitness – ćwiczenia siłowe oraz uprawnienia trenera dyscypliny: Boks.",
       "p2": "Jestem prezesem i głównym trenerem w klubie Instytut Rozwoju Sportu. Biorę udział w przygotowaniach zawodników startujących w Boksie, Kickboxingu oraz Taekwondo. Moi podopieczni zdobywali medale Mistrzostw Polski, Mistrzostw Europy, Mistrzostw Świata. Jestem absolwentem Collegium Medicum Uniwersytetu Jagiellońskiego na kierunku Ratownictwo Medyczne.",
       "p3": "Podczas studiów trenowałem również Judo w sekcji sportowej CMUJ. Organizowałem obozy oraz zgrupowania sportowe."
+    },
+    "profiles": {
+      "angelika": {
+        "name": "Angelika Grońska",
+        "description": {
+          "p1": "Swoją przygodę ze sportami walki rozpoczęłam od kickboxingu, a następnie związałam się z boksem, który stał się moją główną dyscypliną. Przez lata startów zdobyłam doświadczenie zarówno na arenie krajowej, jak i międzynarodowej.",
+          "p2": "Jestem pięciokrotną medalistką Mistrzostw Polski w boksie i kickboxingu, wicemistrzynią Pucharu Świata w boksie oraz multimedalistką międzynarodowych turniejów bokserskich. Przez wiele lat byłam zawodniczką kadry narodowej, co dało mi solidne zaplecze sportowe i szkoleniowe.",
+          "p3": "Dziś swoje doświadczenie wykorzystuję w pracy trenerskiej. W IRS prowadzę zajęcia w oparciu o sprawdzone metody treningowe, koncentrując się na technice, pracy nóg, przygotowaniu motorycznym oraz bezpieczeństwie. Każdy trening dostosowuję do poziomu i celu ćwiczących, zarówno dzieci, osób początkujących, jak i zawodników.",
+          "p4": "Boks traktuję nie tylko jako sport rywalizacji, ale także jako narzędzie do budowania charakteru, pewności siebie i sprawności fizycznej. Te wartości staram się przekazywać każdej osobie trenującej ze mną w IRS."
+        }
+      },
+      "wojciech": {
+        "name": "Wojciech Łachowski",
+        "description": {
+          "p1": "Trenuję boks od 8 lat, od 3 lat prowadzę zajęcia. Charakteryzuje mnie dbałość o szczegóły techniczne oraz indywidualne podejście do każdego uczestnika zajęć. Swoją wiedzę trenerską czerpię nie tylko z praktyki ćwiczeń i obserwacji innych trenerów, ale także ze studiowania setek godzin materiałów z treningów i walk zawodników z całego świata. Prywatnie zajmuję się cyfryzacją miast, a w wolnych chwilach jeżdżę na motocyklu i tańczę tańce swingowe."
+        }
+      },
+      "sebastian": {
+        "name": "Sebastian Ryżak",
+        "description": {
+          "p1": "Swoją przygodę ze sztukami walki rozpocząłem w wieku 13 lat. Od tego czasu nieustannie doskonalę swoje umiejętności. Jako zawodnik zdobywałem wielokrotnie medale na zawodach sportowych. Posiadam 1 dan Taekwondo oraz 1 kyu Kickboxingu. Podczas swojej drogi poznałem wspaniały i różnorodny świat sztuk i sportów walki. Obecnie skupiam się na przekazywaniu swojej wiedzy i umiejętności moim podopiecznym na treningach i w czasie wspólnych rozmów."
+        }
+      }
     }
   },
   "club": {
@@ -64,9 +88,8 @@
   "pricing": {
     "highlighted": "najczęstszy wybór",
     "points": {
-      "1": "Opłata wpisowa roczna na ubezpieczenie i związki sportowe 100PLN.",
-      "2": "Pierwszy trening gratis.",
-      "3": "Wejścia ważne jeden miesiąc."
+      "1": "Pierwszy trening gratis.",
+      "2": "Wejścia ważne jeden miesiąc."
     },
     "offers": {
       "0": {

@@ -10,16 +10,16 @@ export type CellContent = {
   body1: TimeTableKeys;
   body2?: TimeTableKeys;
   overline:
-  | '8:00 - 9:00'
-  | '11:00 - 12:30'
-  | '16:00 - 17:00'
-  | '16:15 - 17:00'
-  | '17:00 - 18:00'
-  | '17:15 - 18:00'
-  | '18:00 - 19:00'
-  | '19:00 - 20:00'
-  | '20:00 - 21:00'
-  | '20:00 - 21:30';
+    | '8:00 - 9:00'
+    | '11:00 - 12:30'
+    | '16:00 - 17:00'
+    | '16:15 - 17:00'
+    | '17:00 - 18:00'
+    | '17:15 - 18:00'
+    | '18:00 - 19:00'
+    | '19:00 - 20:00'
+    | '20:00 - 21:00'
+    | '20:00 - 21:30';
 };
 
 type Table = Record<Day, Array<CellContent | null>>;
@@ -53,8 +53,8 @@ export const table: Table = {
     {
       body1: 'boxing',
       body2: 'advanced',
-      overline: '19:00 - 20:00'
-    }
+      overline: '19:00 - 20:00',
+    },
   ],
   we: [
     {
@@ -62,7 +62,7 @@ export const table: Table = {
       overline: '17:15 - 18:00',
     },
     {
-      body1: 'stretching',
+      body1: 'sparrings',
       overline: '18:00 - 19:00',
     },
     {
@@ -86,10 +86,6 @@ export const table: Table = {
       body2: 'advanced',
       overline: '19:00 - 20:00',
     },
-    {
-      body1: 'selfDefence',
-      overline: '20:00 - 21:00'
-    }
   ],
   fr: [
     null,

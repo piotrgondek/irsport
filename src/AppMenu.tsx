@@ -1,6 +1,7 @@
 import React from 'react';
 import { Divider, IconButton, ListItemIcon, ListItemText, Menu, MenuItem } from '@mui/material';
 import {
+  Assignment,
   AssignmentInd,
   AssignmentLate,
   ContactPhone,
@@ -15,6 +16,7 @@ import { useTranslation } from 'react-i18next';
 import { RefsContextProps } from './common/contexts/RefsContext';
 import useRefs from './common/hooks/useRefs';
 import useAppState from './common/hooks/useAppState';
+import childProtectionPolicy from './assets/polityki-ochrony-dzieci-IRS-Krakow1.pdf';
 import regulamin from './assets/regulamin sali i szatni IRS.pdf';
 
 type Section = keyof RefsContextProps;
@@ -128,6 +130,18 @@ const AppMenu: React.FC = () => {
             <AssignmentLate />
           </ListItemIcon>
           <ListItemText>{t('appbar.menu.statute')}</ListItemText>
+        </MenuItem>
+        <MenuItem
+          id="irsChildProtectionPolicy"
+          component="a"
+          href={childProtectionPolicy}
+          target="_blank"
+          rel="noopener"
+        >
+          <ListItemIcon>
+            <Assignment />
+          </ListItemIcon>
+          <ListItemText>{t('appbar.menu.childProtectionPolicy')}</ListItemText>
         </MenuItem>
       </Menu>
     </>

@@ -16,6 +16,7 @@ import { useTranslation } from 'react-i18next';
 import { dark } from './themes';
 import useRefs from './common/hooks/useRefs';
 import useAppState from './common/hooks/useAppState';
+import childProtectionPolicy from './assets/polityki-ochrony-dzieci-IRS-Krakow1.pdf';
 import regulamin from './assets/regulamin sali i szatni IRS.pdf';
 
 const Footer: React.FC = () => {
@@ -118,6 +119,11 @@ const Footer: React.FC = () => {
               </Typography>
               <Typography variant="body2">
                 <Link onClick={openStatue}>{t('appbar.menu.statute')}</Link>
+              </Typography>
+              <Typography variant="body2">
+                <Link href={childProtectionPolicy} target="_blank" rel="noopener">
+                  {t('appbar.menu.childProtectionPolicy')}
+                </Link>
               </Typography>
             </CardContent>
           </Card>

@@ -29,16 +29,16 @@ const Pricing: React.FC = () => {
   const pricing: Array<PricingEntity> = [
     {
       lvl: t('pricing.offers.1.name'),
-      price: 140,
+      price: 160,
     },
     {
       lvl: t('pricing.offers.2.name'),
-      price: 200,
+      price: 220,
       recommended: true,
     },
     {
       lvl: t('pricing.offers.3.name'),
-      price: 250,
+      price: 270,
     },
     {
       lvl: t('pricing.offers.0.name'),
@@ -46,7 +46,7 @@ const Pricing: React.FC = () => {
     },
   ];
 
-  const info = [t('pricing.points.1'), t('pricing.points.2'), t('pricing.points.3')];
+  const info = [t('pricing.points.1'), t('pricing.points.2')];
 
   return (
     <Box ref={pricingRef}>
