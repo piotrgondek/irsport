@@ -1,17 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.b4db2b69.css",
-    "main.js": "/static/js/main.3f583581.js",
+    "main.js": "/static/js/main.d65a0a08.js",
     "static/media/intro.mp4": "/static/media/intro.c45ec456f9472fb01b65.mp4",
+    "static/media/IMG_0498.jpeg": "/static/media/IMG_0498.0c38224f2d255724db48.jpeg",
+    "static/media/IMG_0325.jpeg": "/static/media/IMG_0325.ca80f592909e856d3438.jpeg",
     "static/media/intro2.mp4": "/static/media/intro2.d459f4c972667df7d1cd.mp4",
+    "static/media/IMG_0189.jpeg": "/static/media/IMG_0189.eb3358c4d2f2a153f23a.jpeg",
+    "static/media/20260319_165430.jpg": "/static/media/20260319_165430.54c531c05df4056f46da.jpg",
     "static/media/logo PZKB.jpg": "/static/media/logo PZKB.5301efa9989ddf6eb328.jpg",
-    "static/media/AdamWargal.jpg": "/static/media/AdamWargal.813bdb3984d37615fdfc.jpg",
     "static/media/regulamin sali i szatni IRS.pdf": "/static/media/regulamin sali i szatni IRS.5c35a46e17f85918f2d2.pdf",
-    "static/media/wszibwk.png": "/static/media/wszibwk.d03598461b9fdfa71363.png",
-    "static/media/flaga.png": "/static/media/flaga.75f1b3d0d0d54c8751e7.png",
-    "static/media/ONT.png": "/static/media/ONT.91c32754057a86c7121a.png",
+    "static/media/polityki-ochrony-dzieci-IRS-Krakow1.pdf": "/static/media/polityki-ochrony-dzieci-IRS-Krakow1.33a1da153a77e3f3b56b.pdf",
     "static/media/IRS.jpg": "/static/media/IRS.9979cafda1995c100700.jpg",
     "static/media/roboto-all-400-normal.woff": "/static/media/roboto-all-400-normal.c5d001fa922fa66a147f.woff",
+    "static/media/krakow.png": "/static/media/krakow.3f2973f54d8493031402.png",
     "static/media/IRS.svg": "/static/media/IRS.c37c6d2450f783b00efbc6cbe91d4aba.svg",
     "static/media/roboto-latin-400-normal.woff2": "/static/media/roboto-latin-400-normal.b009a76ad6afe4ebd301.woff2",
     "static/media/roboto-cyrillic-ext-400-normal.woff2": "/static/media/roboto-cyrillic-ext-400-normal.804378952da8a10faae2.woff2",
@@ -23,10 +25,10 @@
     "index.html": "/index.html",
     "static/media/roboto-greek-ext-400-normal.woff2": "/static/media/roboto-greek-ext-400-normal.169619821ea93019d1bb.woff2",
     "main.b4db2b69.css.map": "/static/css/main.b4db2b69.css.map",
-    "main.3f583581.js.map": "/static/js/main.3f583581.js.map"
+    "main.d65a0a08.js.map": "/static/js/main.d65a0a08.js.map"
   },
   "entrypoints": [
     "static/css/main.b4db2b69.css",
-    "static/js/main.3f583581.js"
+    "static/js/main.d65a0a08.js"
   ]
 }
